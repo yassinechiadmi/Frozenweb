@@ -4,7 +4,7 @@
 		<li><a href="index.php"><i aria-hidden="true"></i> Home </a></li>
         <li><a href="Forum.php"><i aria-hidden="true"></i> Page 2 </a></li>
         <li><a href="p3.php"><i aria-hidden="true"></i> Page 3 </a></li>
-        <li><a href="p4.php"><i aria-hidden="true"></i> Page 4 </a></li>
+        <li><a href="FAQ.php"><i aria-hidden="true"></i> FAQ </a></li>
 		<li><a href="p5.php"><i aria-hidden="true"></i> Page 5 </a></li>
 		<?php
 		if(isset($_SESSION["username"]) == NULL){

@@ -156,7 +156,7 @@ if(isset($_POST['identifiant']) && isset($_POST['password']) &&  isset($_POST['A
 	
 	$db_username = 'root'; 
     $db_password = 'root'; 
-    $db_name     = 'users'; // buildDB 
+    $db_name     = 'projetfindannee'; // buildDB 
     $db_host     = 'localhost';
 	
     $db = mysqli_connect($db_host, $db_username, $db_password,$db_name);
@@ -167,8 +167,8 @@ if(isset($_POST['identifiant']) && isset($_POST['password']) &&  isset($_POST['A
 	
 
 		
-    $requete="INSERT INTO comptelol VALUES (NULL, '$annee','$name','$ident','$password','$passwordconf','$nom','$prenom','$sexe')";//'$sexe')"; 
-	$variable = mysqli_query($db, "SELECT * FROM compte WHERE username='$ident'"); 
+    $requete="INSERT INTO user VALUES (NULL, '$annee','$name','$ident','$password','$passwordconf','$nom','$prenom','$sexe')";"; 
+	$variable = mysqli_query($db, "SELECT * FROM user WHERE username ='$ident'"); 
 		
 		if(($password!=$passwordconf)){
 			

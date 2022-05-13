@@ -77,14 +77,14 @@ input[type=submit]:hover {
     $hostname= "localhost"; //nom du serveur (localhost)
 	$username="root";//nom d'utilisateur pour accéder au serveur (root)
 	$password="root"; //mot de passe pour accéder au serveur (root)
-	$dbname="users"; //nom de la base de données
+	$dbname="projetfindannee"; //nom de la base de données
 	
 	$connexion = mysqli_connect($hostname, $username, $password, $dbname);
 
 ?>
 
 <?php
-	if(empty($_SESSION["nom"])){
+	if(empty($_SESSION["pseudo"])){
 ?>
 
 <div id="case">
@@ -109,10 +109,9 @@ input[type=submit]:hover {
 	if(isset($_POST['login']) && isset($_POST['password'])){
 		$login= $_POST['login'];
 		$mdp = $_POST['password'];
-		$requete = mysqli_query($connexion, "SELECT password FROM compte WHERE username = '$login'");
+		$requete = mysqli_query($connexion, "SELECT password FROM user WHERE username = '$login'");
 		if(mysqli_num_rows($requete) > 0){
 			$row = mysqli_fetch_assoc($requete);
-			echo $row['username'];
 			
 			if($mdp == $row['password']){
 			$_SESSION["username"]=$login;
