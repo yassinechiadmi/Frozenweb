@@ -12,28 +12,48 @@
 
 
 <body>
+	
 <?php require("nav.php");?>
 <script src="faq.js"> </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/gsap.min.js"></script>
-<h1>Overview</h1>
+
 <div class="container-faq">
+<h1 class="faqh">Overview</h1>
 
+	<button onclick="myFunction(this);">
+		<div class="question">
+			<div class="visible-pannel">
+				<h2>Questions</h2>
+				<img src="plus.jpg" alt="ouais de ouf">
+				<!-- <button><img src="plus.jpg" alt="ouais de ouf"></button> -->
+			</div>
+			<div class="toggle-pannel">
+				<h4>Titre</h4>
+				<p>Blablablababalbalbalabalbabalbalablablablaba</p>
+			</div>
+		</div>
+	</button>
+
+	<button onclick="myFunction(this);">
 	<div class="question">
 		<div class="visible-pannel">
 			<h2>Questions</h2>
-			<button id="a" onClick="toggleButton(this)">
-				<img src="ressources/croix.jpg" alt="ouais de ouf">
-			</button>
+			<img src="plus.jpg" alt="ouais de ouf">
+
+			<!-- <img src="ice.jpg" alt="ouais de ouf"> -->
 		</div>
 		<div class="toggle-pannel">
 			<h4>Titre</h4>
 			<p>Blablablababalbalbalabalbabalbalablablablaba</p>
 		</div>
 	</div>
-
+	</button>
+	<button onclick="myFunction(this);">
 	<div class="question">
 		<div class="visible-pannel">
 			<h2>Questions</h2>
+			<img src="plus.jpg" alt="ouais de ouf">
+
 			<!--<img src="ice.jpg" alt="ouais de ouf">-->
 		</div>
 		<div class="toggle-pannel">
@@ -41,28 +61,19 @@
 			<p>Blablablababalbalbalabalbabalbalablablablaba</p>
 		</div>
 	</div>
-
+	</button>
+	<button onclick="myFunction(this);">
 	<div class="question">
 		<div class="visible-pannel">
 			<h2>Questions</h2>
-			<!--<img src="ice.jpg" alt="ouais de ouf">-->
+			<img src="plus.jpg" alt="ouais de ouf">
 		</div>
 		<div class="toggle-pannel">
 			<h4>Titre</h4>
 			<p>Blablablababalbalbalabalbabalbalablablablaba</p>
 		</div>
 	</div>
-
-	<div class="question">
-		<div class="visible-pannel">
-			<h2>Questions</h2>
-			<!--<img src="ice.jpg" alt="ouais de ouf">-->
-		</div>
-		<div class="toggle-pannel">
-			<h4>Titre</h4>
-			<p>Blablablababalbalbalabalbabalbalablablablaba</p>
-		</div>
-	</div>
+	</button>
 </div>
 
 

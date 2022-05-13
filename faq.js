@@ -1,33 +1,41 @@
-const allCross = document.querySelectorAll('.visible-pannel img');
-const allImg = document.getElementsByTagName('button');
-console.log(allImg)
-console.log(allCross);
+// let allCross = document.getElementsByClassName('question');
+// const allImg = document.getElementsByTagName('img');
+// console.log(allCross);
 
-allCross.forEach(element => {
+function myFunction(e){
+    let el = e.querySelector('img');
+    let txt = e.querySelector('.toggle-pannel');
 
-    element.addEventListener('click', function(e){
-
-        // const height = this.parentNode.parentNode.childNodes[3].scrollHeight;
-        
-        // const currentCHoice = this.parentNode.parentNode.childNodes[3];
-        
-        if(e.src == 'ressources/croix.jpg'){
-            console.log("testtt");
-            e.src = '/ressources/minus.png';
-            /*gsap.to(currentCHoice, {duration: 0.2, height: height + 40, opacity: 1,
-            padding: '20px 15px'})*/
-        } else if (e.src.includes('minus')){
-            e.src = '/ressources/croix.jpg';
-            /*gsap.to(currentCHoice, {duration: 0.2, height: 0, opacity: 0,
-            padding: '0px 15px'})*/
-        }
-    })
-})
-
-function toggleButton(button) {
-    console.log(button.firstElementChild)
-
-    if (button.firstElementChild == "ressources/croix.jpg") {
-        console.log(button.firstElementChild.src)
+    if(el.src.includes('plus.jpg')){
+        el.src = 'moins.png';
+        txt.style.display = 'block';
+        txt.style.transform = 'scale(1)';
+        txt.style.opacity = '1';
+    } else if (el.src.includes('moins.png')){
+        el.src = 'plus.jpg';
+        txt.style.display = 'none';
+        txt.style.transform = 'scale(0)';
+        txt.style.opacity = '0';
     }
+
 }
+// allCross.addEventListener('click', function(){
+
+    // const height = this.parentNode.parentNode.childNodes[3].scrollHeight;
+    
+    // const currentCHoice = this.parentNode.parentNode.childNodes[3];
+    
+    // if(this.src.includes('plus')){
+    //     this.src = 'moins.png';
+    //     gsap.to(currentCHoice, {duration: 0.2, height: height + 40, opacity: 1,
+    //     padding: '20px 15px'})
+    // } else if (this.src.includes('moins')){
+    //     this.src = 'plus.jpg';
+    //     gsap.to(currentCHoice, {duration: 0.2, height: 0, opacity: 0,
+    //         padding: '0px 15px'})
+    // }
+// })
+// allCross.forEach(element => {
+
+   
+// })

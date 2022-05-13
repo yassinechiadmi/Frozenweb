@@ -12,9 +12,8 @@
 
 
 <body>
-<?php require("nav.php");?>
-
 <div class="page1">
+<?php require("nav.php");?>
   <h1><br><br> Bienvenue dans NomduJeu </h1> 
   <div class="case1">
 	  <p>C'est un plaisir de vous accueillir sur notre site, si tu es ici c'est que notre jeu t'intéresse alors laisse moi te le présenter en quelques mots. <br>Tout d'abord si tu es fan des jeux de réflexion où ton cerveau est mis à l'épreuve  tu es le bienvenue parmi nous.<br> De plus si tu aimes les ambiances glaciales et rafraichissantes viens donc glisser sur la patinoire et trouve la voie de la liberté !</p>
