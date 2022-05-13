@@ -1,12 +1,10 @@
-<footer>
-<div class="reseaux">
-	<h3> Nos réseaux </h3>
-	<ul>
-		<li> <a href="https://discord.gg/VN5NPnjkj9"> <i class="fa-brands fa-discord"></i> </a>
-		<li> <a href="https://twitter.com/Froz_glisse"> <i class="fa-brands fa-twitter-square"></i>
-		<li> <a href="https://www.instagram.com/froz_glisse/"> <i class="fa-brands fa-instagram-square"></i>
-		<li> <a href=""> <i class="fa-solid fa-comments-question-check"></i>
-	</ul>
-  </div>
-  
-  </footer>
+<foot>
+	<div class="wut">
+      <h3>Nos réseaux</h3>
+      <ul>
+        <li>  <a href="https://discord.gg/VN5NPnjkj9" target="_blank"> <i id="fb" class="fa-brands fa-discord fa-6x"></i> </a> </li>
+        <li>  <a href="https://www.instagram.com/froz_glisse/" target="_blank" > <i id="insta" class="fab fa-instagram-square fa-6x"></i> </a> </li>
+        <li>  <a href="https://twitter.com/Froz_glisse" target="_blank"> <i id="tw" class="fab fa-twitter-square fa-6x"></i> </a> </li>
+      </ul>
+    </div>
+</foot>

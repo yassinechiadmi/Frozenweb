@@ -70,11 +70,9 @@ input[type=submit]:hover {
 *{
 	 border-radius: 10px;
 }
-
 </style>
 
 <body>
-
 <?php
     $hostname= "localhost"; //nom du serveur (localhost)
 	$username="root";//nom d'utilisateur pour accéder au serveur (root)

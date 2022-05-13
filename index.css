@@ -1,0 +1,50 @@
+.page1{
+	background-image: url("icegif.gif");
+}
+
+h2{
+	color:black;
+}
+
+.page2{
+	background-image: url("ice3.png");
+}
+
+.page3{
+	background-image: url("ice4.png");
+}
+
+.case1{
+  padding-bottom: 25%;
+}
+
+.case1 p{
+	float:left;
+	border: solid;
+	color:white;
+	font-size: 15px;
+	line-height: 4;
+}
+
+
+
+.logo{
+	float:right;
+	width:30%;
+	height:30%;
+	
+}
+
+h1{
+	text-indent : 5%;
+	color:white;
+}
+
+.image{
+  width: 20%;
+}
+
+.faqcase{
+	border:solid;
+	width:50%;
+}

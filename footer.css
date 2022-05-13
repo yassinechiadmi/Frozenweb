@@ -1,0 +1,51 @@
+/*Foot*/
+foot div{
+  position: relative;
+  width: 100%;
+  text-align: center;
+  background-color: rgb(72, 69, 126);
+  margin-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 0;
+}
+
+foot div h3 {
+  padding-top: 10px;
+  color:#FFFFFF;
+}
+
+foot div ul{
+  list-style-type: none;
+  display: block;
+}
+
+foot div ul li{
+  width: 100px;
+  height:100px;
+  display:inline-block;
+}
+
+i {
+  color:#FFFFFF;
+}
+
+#fb:hover {
+  color:rgb(114, 100, 237);
+}
+
+#insta:hover {
+  color:rgb(237, 0, 245);
+}
+
+#tw:hover {
+  color:rgb(59, 193, 255);
+}
+
+foot div p{
+  clear: both;
+  color:#FFFFFF;
+}
+
+foot div a {
+  color:#FFFFFF;
+}/*Fin du foot*/
