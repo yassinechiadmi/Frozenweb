@@ -18,6 +18,49 @@
 <h1>Overview</h1>
 <div class="container-faq">
 
+	<button onclick="myFunction(this);">
+		<div class="question">
+			<div class="visible-pannel">
+				<h2>Questions</h2>
+				<img src="plus.jpg" alt="ouais de ouf">
+				<!-- <button><img src="plus.jpg" alt="ouais de ouf"></button> -->
+			</div>
+			<div class="toggle-pannel">
+				<h4>Titre</h4>
+				<p>Blablablababalbalbalabalbabalbalablablablaba</p>
+			</div>
+		</div>
+	</button>
+
+	<button onclick="myFunction(this);">
+	<div class="question">
+		<div class="visible-pannel">
+			<h2>Questions</h2>
+			<img src="plus.jpg" alt="ouais de ouf">
+
+			<!-- <img src="ice.jpg" alt="ouais de ouf"> -->
+		</div>
+		<div class="toggle-pannel">
+			<h4>Titre</h4>
+			<p>Blablablababalbalbalabalbabalbalablablablaba</p>
+		</div>
+	</div>
+	</button>
+	<button onclick="myFunction(this);">
+	<div class="question">
+		<div class="visible-pannel">
+			<h2>Questions</h2>
+			<img src="plus.jpg" alt="ouais de ouf">
+
+			<!--<img src="ice.jpg" alt="ouais de ouf">-->
+		</div>
+		<div class="toggle-pannel">
+			<h4>Titre</h4>
+			<p>Blablablababalbalbalabalbabalbalablablablaba</p>
+		</div>
+	</div>
+	</button>
+	<button onclick="myFunction(this);">
 	<div class="question">
 		<div class="visible-pannel">
 			<h2>Questions</h2>
@@ -28,39 +71,7 @@
 			<p>Blablablababalbalbalabalbabalbalablablablaba</p>
 		</div>
 	</div>
-
-	<div class="question">
-		<div class="visible-pannel">
-			<h2>Questions</h2>
-			<!--<img src="ice.jpg" alt="ouais de ouf">-->
-		</div>
-		<div class="toggle-pannel">
-			<h4>Titre</h4>
-			<p>Blablablababalbalbalabalbabalbalablablablaba</p>
-		</div>
-	</div>
-
-	<div class="question">
-		<div class="visible-pannel">
-			<h2>Questions</h2>
-			<!--<img src="ice.jpg" alt="ouais de ouf">-->
-		</div>
-		<div class="toggle-pannel">
-			<h4>Titre</h4>
-			<p>Blablablababalbalbalabalbabalbalablablablaba</p>
-		</div>
-	</div>
-
-	<div class="question">
-		<div class="visible-pannel">
-			<h2>Questions</h2>
-			<!--<img src="ice.jpg" alt="ouais de ouf">-->
-		</div>
-		<div class="toggle-pannel">
-			<h4>Titre</h4>
-			<p>Blablablababalbalbalabalbabalbalablablablaba</p>
-		</div>
-	</div>
+	</button>
 </div>
 
 
