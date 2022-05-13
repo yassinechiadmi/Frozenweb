@@ -21,7 +21,9 @@
 	<div class="question">
 		<div class="visible-pannel">
 			<h2>Questions</h2>
-			<img src="plus.jpg" alt="ouais de ouf">
+			<button id="a" onClick="toggleButton(this)">
+				<img src="ressources/croix.jpg" alt="ouais de ouf">
+			</button>
 		</div>
 		<div class="toggle-pannel">
 			<h4>Titre</h4>

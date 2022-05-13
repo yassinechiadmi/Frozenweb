@@ -1,21 +1,17 @@
 /*MENU DU SITE*/
 
 nav ul{
-	border:outset #F9FB85;
     list-style-type: none;
-    margin: auto;
-    padding: 0;
-	width:auto;
-    background-color: #D5D8DC;
-    overflow: hidden;
+    margin: auto; 
+     padding: 0;
+	width:50%;
 }
 
 nav li a{
-    display: block;
-    color: white;
-    padding: 8px 30px;
+    color:White;
+    padding: 18px ;
     text-decoration: none;
-	font-size : 15px ;
+	font-size : 200% ;
 }
 
 /*On place les cases les unes à côté des autres afin d'obtenir un menu horizontal.*/
@@ -25,10 +21,8 @@ nav li{
 
 /*Ici on change la mise en forme de la case quand le curseur passe dessus.*/
 nav li a:hover{
-    background-color: #C51E00;
-	  background-size:100%;
+	background-size:100%;
     color: white;
-	  font-size : 100% ;
 }
 
 .cnxn{
