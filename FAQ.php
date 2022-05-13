@@ -17,9 +17,12 @@
 <script src="faq.js"> </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/gsap.min.js"></script>
 
+<<<<<<< HEAD
 <div class="container-faq">
 <h1 class="faqh">Overview</h1>
 
+=======
+>>>>>>> 5e4838fb902e4b10e115a906366c899e1a9fa5c3
 	<button onclick="myFunction(this);">
 		<div class="question">
 			<div class="visible-pannel">

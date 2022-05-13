@@ -17,8 +17,12 @@ body{
 
 .container-faq{
 	width: 70%;
+<<<<<<< HEAD
 	border-radius:20px;
 	max-width:900px;
+=======
+	/* max-width:900px; */
+>>>>>>> 5e4838fb902e4b10e115a906366c899e1a9fa5c3
 	min-width:700px;
 	background-color: #FFFF;
 	height: auto;
@@ -27,7 +31,10 @@ body{
 	flex-direction: column;
 	row-gap:20px;
 	justify-content:center;
+<<<<<<< HEAD
 	
+=======
+>>>>>>> 5e4838fb902e4b10e115a906366c899e1a9fa5c3
 	/* align-items : flex-start; */
 }
 
@@ -71,7 +78,11 @@ button{
 	display: none;
 	opacity: 0;
 	transform: scale(0);
+<<<<<<< HEAD
     transition-duration: 0.3s;
+=======
+    transition-duration: 0.3s;;
+>>>>>>> 5e4838fb902e4b10e115a906366c899e1a9fa5c3
 }
 
 .toggle-pannel h4{
