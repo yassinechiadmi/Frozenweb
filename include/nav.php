@@ -1,5 +1,5 @@
 <header>
-	<a id="home" href="index.php"><img src="icone.jpg" width=100px height=50px></img></a>
+	<a id="home" href="index.php"><img src="rs/icone.jpg" width=100px height=50px></img></a>
 	<nav> <!--Menu du site-->
 
         <a href="Forum.php">Page 2</a>

@@ -1,5 +1,5 @@
 .page1{
-	background-image: url("icegif.gif");
+	background-image: url("../rs/icegif.gif");
 }
 
 h2{
@@ -7,11 +7,11 @@ h2{
 }
 
 .page2{
-	background-image: url("ice3.png");
+	background-image: url("../rs/ice3.png");
 }
 
 .page3{
-	background-image: url("ice4.png");
+	background-image: url("../rs/ice4.png");
 }
 
 .case1{

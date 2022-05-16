@@ -1,18 +1,7 @@
-<!DOCTYPE html>
-<html lang="fr">
 
-<head>
-  <title>Home</title> 
-  <link rel="stylesheet" href ="index.css"/>
-  <link rel="stylesheet" href ="footer.css"/>
-  <link rel="stylesheet" href ="default.css"/>
-  <link rel="stylesheet" href ="header.css"/>
-  <script src="https://kit.fontawesome.com/78909c4315.js" crossorigin="anonymous"></script>
-</head>
-
-
+<?php require("include/head.php") ?>
 <body>
-<?php require("nav.php");?>
+<?php require("include/nav.php");?>
 <div class="page1">
 	<div id="p1-txt">
 		<h1>Bienvenue dans NomduJeu </h1> 
@@ -87,6 +76,6 @@
 		</li>
 	</ul>
 </div>
-<?php require("foot.php")?>
+<?php require("include/foot.php")?>
 </body>
 </html>
