@@ -1,14 +1,4 @@
 
-h2{
-	color:black;
-}
-
-
-
-.page3{
-	background-image: url("../rs/ice4.png");
-}
-
 .case1{
   padding-bottom: 25%;
 }
@@ -22,13 +12,6 @@ h2{
 }
 
 
-/* 
-.logo{
-	float:right;
-	width:30%;
-	height:30%;
-	
-} */
 
 .page1 {
 	background-image: url("../rs/icegif.gif");
@@ -81,14 +64,9 @@ h2{
 	transition: 0.3s;
 }
 
-/* .page1 h1{
-	text-indent : 5%;
-	color:white;
-} */
-
 
 .page2{
-	background-image: url("../rs/ice3.png");
+	/* background-image: url("../rs/ice3.png"); */
 	padding: 2%;
 	display: grid;
 	grid-template-columns: 1fr 1fr; 
@@ -107,12 +85,28 @@ h2{
 }
 
 
+.page3{
+	margin-left: 4%;
+}
+.page3 h1,.page3 h3{
+    text-shadow:0.5px 0.5px 1px rgba(0, 0, 0, 1);
+}
+.page3 ul{
+	list-style-type:none ;
+}
+
 .image{
   width: 20%;
   /* transform: scale(0.2); */
 }
 
 .faqcase{
+	margin-bottom:3%;
+	box-shadow: 1px 1px 1.2px 1.2px rgba(0, 0, 0, 0.7);
 	border:solid;
 	width:50%;
+	border-radius: 10px;
+
+	padding: 5px;
+	/* margin-left: 4%; */
 }

@@ -1,17 +1,9 @@
-<?php
-	session_start();
-?>
 
-<!DOCTYPE html>
-
-<html lang="fr">	
-<!--<link rel="stylesheet" href ="default.css"/> -->
-
+<?php require('include/head.php');?>
 <head>
 	<meta charset="utf-8"/>
 	<title>Formulaire</title>
 </head>
-	
 <body>
 
 <style>

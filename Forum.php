@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 
-<header>
-<?php require("nav.php");?>
-</header>
+<?php require("include/head.php");?>
+<body>
+    <?php require("include/nav.php");?>
+</body>

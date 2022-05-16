@@ -6,13 +6,13 @@ function myFunction(e){
     let el = e.querySelector('img');
     let txt = e.querySelector('.toggle-pannel');
 
-    if(el.src.includes('plus.jpg')){
+    if(el.src.includes('plus.png')){
         el.src = 'rs/moins.png';
         txt.style.display = 'block';
         txt.style.transform = 'scale(1)';
         txt.style.opacity = '1';
     } else if (el.src.includes('moins.png')){
-        el.src = 'rs/plus.jpg';
+        el.src = 'rs/plus.png';
         txt.style.display = 'none';
         txt.style.transform = 'scale(0)';
         txt.style.opacity = '0';

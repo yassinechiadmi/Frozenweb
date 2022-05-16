@@ -26,6 +26,7 @@ dd {
 ul[role='list'],
 ol[role='list'] {
   list-style: none;
+  list-style-type: none;
 }
 
 /* Set core root defaults */
@@ -38,6 +39,7 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  background-color: #1D7874;
 }
 
 /* A elements that don't have a class get default styles */

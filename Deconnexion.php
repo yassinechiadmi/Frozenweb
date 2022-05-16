@@ -1,9 +1,9 @@
 <?php 
 	session_start(); 
-	if(isset($_SESSION["identifiant"])){
+	if(isset($_SESSION["username"])){
 		session_unset();
 		session_destroy();
-		header("Location:p1.php");
+		header("Location:index.php");
 	}
 	else{
 		header("Location:Connexion.php");

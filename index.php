@@ -14,28 +14,10 @@
 
   <div class="page2">
 	
-		<div id="p2-text" class="case1">
-			<h1> Qui sommes nous ? </h1> 
-		</div>
-	
-		<div class="twit">
-			<!--Tl twitter-->
-			<a class="twitter-timeline" data-lang="en" data-width="550" data-height="600" href="https://twitter.com/Froz_glisse">Tweets by Froz'Glisse</a> 
-			<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-			<!-- ----- -->
-		</div>
-	</div>
-	
-  <style>
-
-    .page3 .faqcase{
-      margin-bottom:10%;
-    }
-
-  </style>
-
+		<div id="p2-text" class="case1--">
+			<h1> Qui sommes nous ? </h1>
 <div class="page3">
-    <h1> Qu'est-ce que c'est ? </h1> 
+    <!-- <h1> Qu'est-ce que c'est ? </h1>  -->
 	<ul class="faqnav">
 		<li>
 			<div class="faqcase">
@@ -78,6 +60,18 @@
 		</li>
 	</ul>
 </div>
+			
+		</div>
+	
+		<div class="twit">
+			<!--Tl twitter-->
+			<a class="twitter-timeline" data-width="550" data-height="600"  data-theme="dark" href="https://twitter.com/Froz_glisse?ref_src=twsrc%5Etfw">Tweets by Froz_glisse</a>
+			 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+			<!-- ----- -->
+		</div>
+	</div>
+
+
 <?php require("include/foot.php")?>
 </body>
 </html>
