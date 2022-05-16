@@ -82,8 +82,7 @@
 </li>
 
 </ul>
-  
-</div>
 <?php require("foot.php")?>
+</div>
 </body>
 </html>
