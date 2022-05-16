@@ -6,7 +6,7 @@
 
 <?php
     require("include/nav.php");
-	require('include/connect_db.php';)
+	require('include/connect_db.php');
     if(empty($_SESSION["pseudo"])){
 ?>
 
