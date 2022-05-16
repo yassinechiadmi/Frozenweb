@@ -4,6 +4,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  font-family: Montserrat, sans-serif;
 }
 
 /* Remove default margin */
@@ -18,6 +19,7 @@ blockquote,
 dl,
 dd {
   margin: 0;
+  
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */

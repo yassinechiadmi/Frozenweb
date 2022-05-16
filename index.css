@@ -27,21 +27,72 @@ h2{
 }
 
 
-
+/* 
 .logo{
 	float:right;
 	width:30%;
 	height:30%;
 	
+} */
+
+.page1 {
+	padding-left: 2%;
+	/* padding-bottom:; */
+	margin-bottom: 2%;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr; 
+	grid-template-rows: 1fr 1fr 1fr 1fr; 
+	gap: 10px 10px;
+	grid-template-areas:
+	"textc textc pepe pepe"
+	"textc textc pepe pepe"
+	"textc textc pepe pepe"
+	"play play pepe pepe"; 
 }
 
-.page1 h1{
+#p1-txt {
+	grid-area: textc;
+	color: white;
+	text-align: center;
+	margin-top: 5%;
+
+}
+
+#p1-txt p{
+	border-radius: 10px;
+	text-align: left;
+}
+
+
+#p1-pepe{
+	grid-area: pepe;
+	margin-left: 10%;
+}
+
+#p1-play{
+	grid-area: play;
+	background-color: #D64045;
+	color: white;
+	border-radius: 10px;
+	margin-bottom: 10%;
+	box-shadow: 0.5px 0.5px 1px 1px rgba(0, 0, 0, 0.7);
+	transform: scale(1);
+	transition: 0.3s;
+}
+#p1-play:hover{
+	background-color:rgba(214, 64, 69,0.9);
+	transform: scale(0.9);
+	transition: 0.3s;
+}
+
+/* .page1 h1{
 	text-indent : 5%;
 	color:white;
-}
+} */
 
 .image{
   width: 20%;
+  /* transform: scale(0.2); */
 }
 
 .faqcase{

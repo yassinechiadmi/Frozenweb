@@ -5,6 +5,7 @@ header{
     flex-direction: row;
     justify-content: space-between;
     padding:1rem;
+    background-color: rgba(41,43,47);
 }
 
 header > a {
@@ -18,23 +19,32 @@ nav {
     justify-content: space-between;
 }
 
-
-
+nav a {
+    height: fit-content;
+    background-color :#9ED8DB;
+    border-radius:10px ;
+    text-decoration: none;
+    color: #292B2F;
+    align-items: center;
+    /* padding: 5px; */
+    padding: 0.4rem ;
+    transform: scale(1);
+	transition: 0.3s;
+}
 /*Ici on change la mise en forme de la case quand le curseur passe dessus.*/
-nav li a:hover{
-	background-size:100%;
-    color: white;
+nav a:hover{
+    transform: scale(0.9);
+	transition: 0.3s;   
 }
 
 
+
+
 #connection {
-    color:White;
-    padding: 0.4rem ;
     font-size: 1.2rem;
-    text-decoration: none;
-    background-color:aquamarine;
+    /* background-color:aquamarine; */
     border-radius:40px;
-    text-align: center;
+    /* text-align: center; */
 }
 
 
