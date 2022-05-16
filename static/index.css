@@ -70,28 +70,37 @@
 	padding: 2%;
 	display: grid;
 	grid-template-columns: 1fr 1fr; 
-	grid-template-rows: 1fr 1fr; 
+	grid-template-rows: 0.2fr 1fr 1fr;
 	gap: 10px 10px;
 	grid-template-areas:
+	"title title"
 	"who twitter "
 	"who twitter ";
 }
 
+
+#p2-title {
+	grid-area: title;
+	margin-left: auto;
+	margin-right: auto;
+	width: fit-content;
+}
 #p2-text{
 	grid-area: who;
 }
+
 .twit {
 	grid-area: twitter;
 }
 
 
-.page3{
+.page2{
 	margin-left: 4%;
 }
-.page3 h1,.page3 h3{
+.page2 h1,.page2 h3{
     text-shadow:0.5px 0.5px 1px rgba(0, 0, 0, 1);
 }
-.page3 ul{
+.page2 ul{
 	list-style-type:none ;
 }
 

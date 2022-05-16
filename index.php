@@ -14,53 +14,50 @@
 
   <div class="page2">
 	
+	<h1 id="p2-title">Informations ?</h1>
 		<div id="p2-text" class="case1--">
-			<h1> Qui sommes nous ? </h1>
-<div class="page3">
-    <!-- <h1> Qu'est-ce que c'est ? </h1>  -->
-	<ul class="faqnav">
-		<li>
-			<div class="faqcase">
-			<h3> Quel est le but du jeu ? </h3>
-			<p class="faqtxt"> Le but du jeu est de parcourir la carte pour atteindre la sortie en utilisant le moins de déplacement possible, attention le sol glisse ! </p>
-			<!--INSERER UN GIF-->
-			</div>
-		</li>
+			<ul class="faqnav">
+				<li>
+					<h3> Qui somme nous ? </h3>
+					<div class="faqcase">
+					<p class="faqtxt"> Le but du jeu est de parcourir la carte pour atteindre la sortie en utilisant le moins de déplacement possible, attention le sol glisse ! </p>
+					<!--INSERER UN GIF-->
+					</div>
+				</li>
 
-		<li>
-			<div class="faqcase">
-			<h3> Quel est le but du jeu ? </h3>
-			<p class="faqtxt"> Le but du jeu est de parcourir la carte pour atteindre la sortie en utilisant le moins de déplacement possible, attention le sol glisse ! </p>
-			<!--INSERER UN GIF-->
-			</div>
-		</li>
+				<li>
+					<h3> Pourquoi ce site ? </h3>
+					<div class="faqcase">
+					<p class="faqtxt"> Le but du jeu est de parcourir la carte pour atteindre la sortie en utilisant le moins de déplacement possible, attention le sol glisse ! </p>
+					<!--INSERER UN GIF-->
+					</div>
+				</li>
 
-		<li>
-			<div class="faqcase">
-			<h3> Quel est le but du jeu ? </h3>
-			<p class="faqtxt"> Le but du jeu est de parcourir la carte pour atteindre la sortie en utilisant le moins de déplacement possible, attention le sol glisse ! </p>
-			<!--INSERER UN GIF-->
-			</div>
-		</li>
+				<li>
+					<h3> Quel est le but du jeu ? </h3>
+					<div class="faqcase">
+					<p class="faqtxt"> Le but du jeu est de parcourir la carte pour atteindre la sortie en utilisant le moins de déplacement possible, attention le sol glisse ! </p>
+					<!--INSERER UN GIF-->
+					</div>
+				</li>
 
-		<li>
-			<div class="faqcase">
-			<h3> Quel est le but du jeu ? </h3>
-			<p class="faqtxt"> Le but du jeu est de parcourir la carte pour atteindre la sortie en utilisant le moins de déplacement possible, attention le sol glisse ! </p>
-			<!--INSERER UN GIF-->
-			</div>
-		</li>
+				<li>
+					<h3> Quel est le but du jeu ? </h3>
+					<div class="faqcase">
+					<p class="faqtxt"> Le but du jeu est de parcourir la carte pour atteindre la sortie en utilisant le moins de déplacement possible, attention le sol glisse ! </p>
+					<!--INSERER UN GIF-->
+					</div>
+				</li>
 
-		<li>
-			<div class="faqcase">
-			<h3> Quel est le but du jeu ? </h3>
-			<p class="faqtxt"> Le but du jeu est de parcourir la carte pour atteindre la sortie en utilisant le moins de déplacement possible, attention le sol glisse ! </p>
-			<!--INSERER UN GIF-->
-			</div>
-		</li>
-	</ul>
-</div>
-			
+				<li>
+					<h3> Quel est le but du jeu ? </h3>
+					<div class="faqcase">
+					<p class="faqtxt"> Le but du jeu est de parcourir la carte pour atteindre la sortie en utilisant le moins de déplacement possible, attention le sol glisse ! </p>
+					<!--INSERER UN GIF-->
+					</div>
+				</li>
+			</ul>
+					
 		</div>
 	
 		<div class="twit">
