@@ -1,7 +1,7 @@
 <?php require("include/head.php") ?>
 <body>
 <?php require("include/nav.php");?>
-<script src="faq.js"> </script>
+<script src="static/faq.js"> </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/gsap.min.js"></script>
 
 <div class="container-faq">

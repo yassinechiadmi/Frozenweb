@@ -13,15 +13,17 @@
 
 
   <div class="page2">
-  
-  <div class="case1">
-    <h1> Qui sommes nous ? </h1> 
-  </div>
-  
-<div class="twit"><!--Tl twitter-->
-<a class="twitter-timeline" data-lang="en" data-width="550" data-height="600" href="https://twitter.com/Froz_glisse">Tweets by Froz'Glisse</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-<!-- ----- -->
-</div>
+	
+		<div id="p2-text" class="case1">
+			<h1> Qui sommes nous ? </h1> 
+		</div>
+	
+		<div class="twit">
+			<!--Tl twitter-->
+			<a class="twitter-timeline" data-lang="en" data-width="550" data-height="600" href="https://twitter.com/Froz_glisse">Tweets by Froz'Glisse</a> 
+			<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+			<!-- ----- -->
+		</div>
 	</div>
 	
   <style>

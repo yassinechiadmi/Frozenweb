@@ -1,14 +1,9 @@
-.page1{
-	background-image: url("../rs/icegif.gif");
-}
 
 h2{
 	color:black;
 }
 
-.page2{
-	background-image: url("../rs/ice3.png");
-}
+
 
 .page3{
 	background-image: url("../rs/ice4.png");
@@ -36,6 +31,7 @@ h2{
 } */
 
 .page1 {
+	background-image: url("../rs/icegif.gif");
 	padding-left: 2%;
 	/* padding-bottom:; */
 	margin-bottom: 2%;
@@ -89,6 +85,27 @@ h2{
 	text-indent : 5%;
 	color:white;
 } */
+
+
+.page2{
+	background-image: url("../rs/ice3.png");
+	padding: 2%;
+	display: grid;
+	grid-template-columns: 1fr 1fr; 
+	grid-template-rows: 1fr 1fr; 
+	gap: 10px 10px;
+	grid-template-areas:
+	"who twitter "
+	"who twitter ";
+}
+
+#p2-text{
+	grid-area: who;
+}
+.twit {
+	grid-area: twitter;
+}
+
 
 .image{
   width: 20%;
