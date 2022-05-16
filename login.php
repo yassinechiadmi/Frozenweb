@@ -12,9 +12,9 @@
 ?>
 
 <div id="case">
-	<form method="post" action="Connexion.php"> 
+	<form method="post" action="login.php"> 
 		
-		<h1> Connexion </h1>
+		<h1> Log in </h1>
 		<label> Username : </label> 
 		<input type="text" name="login" placeholder="Example19" maxlength="14" required>
 		<br><br> 
@@ -24,7 +24,7 @@
 <?php
 		}
 		else
-			echo"<br><a href=\"Deconnexion.php\">Déconnexion</a>";
+			echo"<br><a href=\"logout.php\">Logout</a>";
 		?>
 		
 		<?php 
@@ -46,12 +46,12 @@
 			echo "<h3 style='text-align: center; color : red;'> Identifiant ou mot de passe incorrect </h3>";
 			echo "Aucune des informations saisies ne correspondent à la base de données, souhaitez vous devenir membre ?";
 			?> 
-			<a href="formulaire.php" type="submit"> <input type="button" value="Sign up"> </a>
+			<a href="register.php" type="submit"> <input type="button" value="Sign up"> </a>
 			<?php
 		}
 	}	
 		?>
-		<input type="submit" name="Se connecter" value="Se connecter">
+		<input type="submit" name="login" value="Log in">
 		
 	</form>
 </div>

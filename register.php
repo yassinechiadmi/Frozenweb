@@ -1,6 +1,6 @@
 <?php require("include/head.php");?>
 <head>
-<link rel="stylesheet" href ="static/register.css"/>
+<link rel="stylesheet" href="static/register.css"/>
 </head>
 <body>
 
@@ -11,8 +11,7 @@
 ?>
 
     <div class="form-container">
-	<form method="post" action="inscription.php"> 
-		
+	<form method="post" action="register.php"> 
 		<h1> Register </h1>
 		<label> Username : </label> 
 		<input type="text" name="login" placeholder="Example19" maxlength="14" required>
@@ -23,19 +22,23 @@
 
 <?php
     }
-    else echo"<br><a href=\"Deconnexion.php\">Déconnexion</a>";
+    else echo"<br><a href=\"logout.php\">Logout</a>";
 
 	if(isset($_POST['login']) && isset($_POST['password'])){
 		$login= $_POST['login'];
-		$mdp = $_POST['password'];
+		$password = $_POST['password'];
 		$conf = $_POST['password-conf'];
         $requete = mysqli_query($connexion, "SELECT * FROM user WHERE username = '$login'");
 		if(mysqli_num_rows($requete) > 0){
-            echo "<h3 class='error'> Utilisateur déjà existant</h3>";
+            echo "<h3 class='error'>Username already exists !</h3>";
 		}
-		else{
-            $today = date("Y-m-d");
-            $requete = mysqli_query($connexion,"INSERT INTO user (id,username,password,pseudo,creation_date) VALUES (NULL,'$login','$mdp','$login','$today')");
+		elseif($password != $conf){
+            echo "<h3 class=\"error\">Passwords must match !</h3>";
+		}
+        else{
+			$today = date("Y-m-d");
+            $requete = mysqli_query($connexion,"INSERT INTO user (id,username,password,pseudo,creation_date) VALUES (NULL,'$login','$password','$login','$today')");
+			header('location:login.php');
 		}
 	}
 		?>
@@ -46,7 +49,7 @@
 <?php
 	
 	if (!$connexion) {
-		echo "Erreur de connexion".mysqli_connect_errno();
+		echo "Connection error ".mysqli_connect_errno();
 		die();
 	}
 	

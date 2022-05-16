@@ -159,7 +159,7 @@ if(isset($_POST['identifiant']) && isset($_POST['password']) &&  isset($_POST['A
 	
 
 		
-    $requete="INSERT INTO user VALUES (NULL, '$annee','$name','$ident','$password','$passwordconf','$nom','$prenom','$sexe')";"; 
+    $requete="INSERT INTO user VALUES (NULL, '$annee','$name','$ident','$password','$passwordconf','$nom','$prenom','$sexe')"; 
 	$variable = mysqli_query($db, "SELECT * FROM user WHERE username ='$ident'"); 
 		
 		if(($password!=$passwordconf)){
