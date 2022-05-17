@@ -37,6 +37,14 @@ i {
   width:100px;
 } */
 
+#fb, #insta, #tw {
+  transition: 0.35s;
+}
+
+#fb:hover, #insta:hover, #tw:hover {
+  transition: 0.35s;
+}
+
 #fb:hover {
   color:rgb(114, 100, 237);
 }

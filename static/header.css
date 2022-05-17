@@ -35,7 +35,7 @@ nav a {
 
 }
 /*Ici on change la mise en forme de la case quand le curseur passe dessus.*/
-nav a:hover{
+nav a:hover {
     transform: scale(0.9);
 	transition: 0.3s;   
 }
