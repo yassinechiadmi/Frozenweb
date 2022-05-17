@@ -1,14 +1,8 @@
 body{
 	background: url(../rs/ice1.gif) left top repeat;;
 }
-/* 
-#case{
-	width:400px;
-    margin: 35%;
-    margin-top:10%;
-} */
 
-form {
+.logform {
     width: 50%;
     margin-left: auto;
     margin-right: auto;
@@ -46,6 +40,7 @@ label {
 input[type=text], input[type=password]{
 	width: 100%;
     padding: 12px 20px;
+    color:white;
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #292B2F;
@@ -80,4 +75,40 @@ input[type=submit]:hover {
 .error{
     text-align: center;
 	color: #D64045;
+}
+
+.dropdown-form {
+    width: 100%;
+    text-align: left;
+    font-size: larger;
+    color: #D64045;
+}
+
+
+
+@keyframes fade_in_show {
+    0% {
+         opacity: 0;
+         transform: scale(0);
+    }
+
+    100% {
+         opacity: 1;
+         transform: scale(1);
+    }
+}
+
+
+.dropdown-form .dropdown-input{
+    width: 50%;
+    display: none;
+    animation: fade_in_show 0.2s;
+}
+
+#edit-username-form:hover .dropdown-input{
+    display: block;
+}
+
+#edit-password-form:hover .dropdown-input{
+    display: block;
 }

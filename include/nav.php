@@ -3,10 +3,10 @@
 	<a id="home" href="index.php"><img src="rs/icone.jpg" width=100px height=50px></img></a>
 	<nav> <!--Menu du site-->
 
-        <a href="Forum.php">Forum</a>
-        <a href="p3.php">Page 3</a>
+		<a href="p3.php">Game - building</a>
+		<a href="Forum.php">Forum</a>
         <a href="FAQ.php">FAQ</a>
-		<a href="p5.php">Page 5</a>
+		<a href="p5.php">Ranking - building</a>
 
 		<div id="nav-btn-container">
 		<?php
@@ -17,7 +17,7 @@
 		
 		}
 		else if(isset($_SESSION["username"])){
-			
+			echo "<a id=\"connection\" href='profile.php'><i class='nav-btn' aria-hidden='true'></i>".$_SESSION['username']."</a>";			
 			echo "<a id=\"connection\" href='logout.php'><i class='nav-btn' aria-hidden='true'></i>Logout</a>";
 		}
 		else{

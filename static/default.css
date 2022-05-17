@@ -78,3 +78,19 @@ select {
   }
 }
 
+.text-background {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2%;
+  display: flex;
+  flex-direction: column;
+  /* row-gap: 10px; */
+  color: white;
+  /* width:100%; */
+  padding: 30px;
+  margin-bottom: 3%;
+  border: 1px groove black;
+  background: #292B2F;
+  border-radius: 15px;
+}

@@ -11,9 +11,9 @@
 ?>
 
     <div class="form-container">
-	<form method="post" action="register.php"> 
+	<form method="post" action="register.php" class="logform"> 
 		<h1> Register </h1>
-		<label> Username : </label> 
+		<label> Username : </label>
 		<input type="text" name="login" placeholder="Example19" maxlength="14" required>
 		<label> Password : </label>
 		<input type="password" name="password" placeholder="Password123" maxlength="10" required> 
