@@ -12,13 +12,13 @@
 		<?php
 		if(isset($_SESSION["username"]) == NULL){
 			
-			echo "<a id=\"connection\" href='login.php'><i class='nav-btn' aria-hidden='true'></i>Login</a>";
+			echo "<a id=\"connexion\" href='login.php'><i class='nav-btn' aria-hidden='true'></i>Login</a>";
 			echo "<a id=\"inscription\" href='register.php'><i class='nav-btn' aria-hidden='true'></i>Register</a>";
 		
 		}
 		else if(isset($_SESSION["username"])){
-			echo "<a id=\"connection\" href='profile.php'><i class='nav-btn' aria-hidden='true'></i>".$_SESSION['username']."</a>";			
-			echo "<a id=\"connection\" href='logout.php'><i class='nav-btn' aria-hidden='true'></i>Logout</a>";
+			echo "<a id=\"connexion\" href='profile.php'><i class='nav-btn' aria-hidden='true'></i>".$_SESSION['username']."</a>";			
+			echo "<a id=\"deconnexion\" href='logout.php'><i class='nav-btn' aria-hidden='true'></i>Logout</a>";
 		}
 		else{
 			echo "Auth error.";
