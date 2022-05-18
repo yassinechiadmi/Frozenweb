@@ -36,7 +36,7 @@
     }
 	
 	if (!$connexion) {
-		echo "Erreur de connexion".mysqli_connect_errno();
+		echo "Error while logging in".mysqli_connect_errno();
 		die();
 	}
 	

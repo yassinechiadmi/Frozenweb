@@ -65,7 +65,7 @@
 		}
 		else
 		{
-			echo "<h3 style='text-align: center; color : red;'> Identifiant ou mot de passe incorrect </h3>";
+			echo "<h3 style='text-align: center; color : red;'> Incorrect login and/or password </h3>";
 			?>
 			<!-- <a href="register.php" type="submit"> <input type="button" value="Sign up"> </a> -->
 			<a href="register.php" type="submit"></a>
@@ -81,7 +81,7 @@
 <?php
 	
 	if (!$connexion) {
-		echo "Erreur de connexion".mysqli_connect_errno();
+		echo "Erreur error while logging in".mysqli_connect_errno();
 		die();
 	}
 	

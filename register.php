@@ -49,7 +49,7 @@
 <?php
 	
 	if (!$connexion) {
-		echo "Connection error ".mysqli_connect_errno();
+		echo "Error while registering".mysqli_connect_errno();
 		die();
 	}
 	
