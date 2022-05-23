@@ -9,10 +9,14 @@
 	require("include/nav.php");
 	require('include/connect_db.php');
 	if(empty($_SESSION["pseudo"])){
-	
-		$log = (isset($_COOKIE["login"]) && isset($_COOKIE['choice']) && $_COOKIE['choice'] == 'on')? $_COOKIE["login"] : "";
-    	$mdp = (isset($_COOKIE["mdp"]) && isset($_COOKIE['choice']) && $_COOKIE['choice'] == 'on') ? $_COOKIE["mdp"] : "";
-		$checkVal = (isset($_COOKIE['choice']) && $_COOKIE['choice'] == 'on') ? "value='on' checked" : "";
+			$checkVal = "";
+			$log = "";
+			$mdp = "";
+		if(isset($_COOKIE['choice']) && $_COOKIE['choice'] == "on"){
+			$checkVal = ($_COOKIE['choice'] == 'on') ? "value='on' checked" : "";
+			$log = isset($_COOKIE["login"]) ? $_COOKIE["login"] : "";
+			$mdp = isset($_COOKIE["mdp"]) ? $_COOKIE["mdp"] : "";
+		}
 ?>
 
 <div id="case">
