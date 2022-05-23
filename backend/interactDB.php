@@ -40,6 +40,9 @@ function edit_password(){
         $username = $_SESSION['username'];
         $pwd = $_POST["password"];
         $req = mysqli_query($connexion,"UPDATE user SET password = '$pwd' WHERE username = '$username'");
+        if (isset($_COOKIE["mdp"])){
+            setcookie('mdp', $pwd, time() + 182 * 24 * 3600, '/');
+        }
     }
 }
 
