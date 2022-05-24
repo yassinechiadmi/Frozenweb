@@ -4,7 +4,7 @@
 	<nav> <!--Menu du site-->
 		<a href="p3.php">Game - building</a>
 		<a href="Forum.php">Forum</a>
-        <a href="FAQ.php">FAQ</a>
+        <a href="FAQ.php">Q & A</a>
 		<a href="rank.php">Ranking - building</a>
 
 		<div id="nav-btn-container">
