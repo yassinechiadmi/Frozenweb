@@ -27,7 +27,7 @@
 						The goal of the game is to browse the map to
 						reach the exit using the least amount of moves possible.
 						Careful the ground is slippery !</p>
-					<!--INSERER UN GIF-->
+						<!-- INSERER UN GIF -->
 					</div>
 				</li>
 
@@ -42,7 +42,7 @@
 				</li>
 
 				<li>
-					<h3> Quel est le but du jeu ? </h3>
+					<h3> What is the goal of the game ? </h3>
 					<div class="faqcase">
 					<p class="faqtxt"> The goal of the game is to browse the map to
 						reach the exit using the least amount of moves possible.
@@ -52,7 +52,7 @@
 				</li>
 
 				<li>
-					<h3> Quel est le but du jeu ? </h3>
+					<h3> What is the goal of the game ?  </h3>
 					<div class="faqcase">
 					<p class="faqtxt"> The goal of the game is to browse the map to
 						reach the exit using the least amount of moves possible.
@@ -62,7 +62,7 @@
 				</li>
 
 				<li>
-					<h3> Quel est le but du jeu ? </h3>
+					<h3> What is the goal of the game ?  </h3>
 					<div class="faqcase">
 					<p class="faqtxt"> The goal of the game is to browse the map to
 						reach the exit using the least amount of moves possible.
