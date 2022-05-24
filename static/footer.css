@@ -49,9 +49,16 @@ i {
 
 #fb:hover, #insta:hover, #tw:hover {
   transition: 0.35s;
+  transform: scale(90%);
+  filter: brightness(120%);
 }
 
-#fb:hover {
+#fb:active, #insta:active, #tw:active {
+  transition: 0.35s;
+  filter: brightness(100%);
+}
+
+/* #fb:hover {
   color:rgb(114, 100, 237);
 }
 
@@ -61,7 +68,7 @@ i {
 
 #tw:hover {
   color:rgb(59, 193, 255);
-}
+} */
 
 footer div p{
   clear: both;
