@@ -4,47 +4,39 @@
 <?php require("include/nav.php");?>
 <div class="page1">
 	<div id="p1-txt">
-		<h1>Bienvenue dans NomduJeu </h1> 
-		<p>C'est un plaisir de vous accueillir sur notre site, si tu es ici c'est que notre jeu t'intéresse alors laisse moi te le présenter en quelques mots. <br>Tout d'abord si tu es fan des jeux de réflexion où ton cerveau est mis à l'épreuve  tu es le bienvenue parmi nous.<br> De plus si tu aimes les ambiances glaciales et rafraichissantes viens donc glisser sur la patinoire et trouve la voie de la liberté !</p>
+		<h1>Welcome to Froz'Glisse </h1> 
+		<p>It's a pleasure welcoming you on our website, if you're here that means you're interested
+			by our game, so let me present it to you in a few words.<br>
+			First of all if you're a fan of reflexion games where your brain is put to a test you're welcome among us.<br>
+			Furthermore if you like chilly and refreshing environments come along on the ice rink and find your way to liberty !</p>
 	</div>
 	<img id="p1-pepe" class ="logo" src="https://img-16.stickers.cloud/packs/f622f526-ac45-41f8-ac83-6b5ccdcee42c/webp/84539cb9-711d-4398-ad52-53248c3dbc8c.webp" alt="Logo de Discord"/>
-	<input type="button" id="p1-play" value="Jouer" onclick="window.location.href='#'"> <!--mettre le lien de la page-->
+	<input type="button" id="p1-play" value="Play !" onclick="window.location.href='#'"> <!--mettre le lien de la page-->
 </div>
 
 
   <div class="page2">
 	
-	<h1 id="p2-title">Informations ?</h1>
+	<h1 id="p2-title">Informations</h1>
 		<div id="p2-text" class="case1--">
 			<ul class="faqnav">
 				<li>
-					<h3> Qui somme nous ? </h3>
+					<h3> Who are we ? </h3>
 					<div class="faqcase">
-					<p class="faqtxt"> Le but du jeu est de parcourir la carte pour atteindre la sortie en utilisant le moins de déplacement possible, attention le sol glisse ! </p>
+					<p class="faqtxt"> 
+						The goal of the game is to browse the map to
+						reach the exit using the least amount of moves possible.
+						Careful the ground is slippery !</p>
 					<!--INSERER UN GIF-->
 					</div>
 				</li>
 
 				<li>
-					<h3> Pourquoi ce site ? </h3>
+					<h3> Why this website ? </h3>
 					<div class="faqcase">
-					<p class="faqtxt"> Le but du jeu est de parcourir la carte pour atteindre la sortie en utilisant le moins de déplacement possible, attention le sol glisse ! </p>
-					<!--INSERER UN GIF-->
-					</div>
-				</li>
-
-				<li>
-					<h3> Quel est le but du jeu ? </h3>
-					<div class="faqcase">
-					<p class="faqtxt"> Le but du jeu est de parcourir la carte pour atteindre la sortie en utilisant le moins de déplacement possible, attention le sol glisse ! </p>
-					<!--INSERER UN GIF-->
-					</div>
-				</li>
-
-				<li>
-					<h3> Quel est le but du jeu ? </h3>
-					<div class="faqcase">
-					<p class="faqtxt"> Le but du jeu est de parcourir la carte pour atteindre la sortie en utilisant le moins de déplacement possible, attention le sol glisse ! </p>
+					<p class="faqtxt"> The goal of the game is to browse the map to
+						reach the exit using the least amount of moves possible.
+						Careful the ground is slippery ! </p>
 					<!--INSERER UN GIF-->
 					</div>
 				</li>
@@ -52,7 +44,29 @@
 				<li>
 					<h3> Quel est le but du jeu ? </h3>
 					<div class="faqcase">
-					<p class="faqtxt"> Le but du jeu est de parcourir la carte pour atteindre la sortie en utilisant le moins de déplacement possible, attention le sol glisse ! </p>
+					<p class="faqtxt"> The goal of the game is to browse the map to
+						reach the exit using the least amount of moves possible.
+						Careful the ground is slippery ! </p>
+					<!--INSERER UN GIF-->
+					</div>
+				</li>
+
+				<li>
+					<h3> Quel est le but du jeu ? </h3>
+					<div class="faqcase">
+					<p class="faqtxt"> The goal of the game is to browse the map to
+						reach the exit using the least amount of moves possible.
+						Careful the ground is slippery ! </p>
+					<!--INSERER UN GIF-->
+					</div>
+				</li>
+
+				<li>
+					<h3> Quel est le but du jeu ? </h3>
+					<div class="faqcase">
+					<p class="faqtxt"> The goal of the game is to browse the map to
+						reach the exit using the least amount of moves possible.
+						Careful the ground is slippery ! </p>
 					<!--INSERER UN GIF-->
 					</div>
 				</li>

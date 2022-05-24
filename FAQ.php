@@ -5,7 +5,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/gsap.min.js"></script>
 
 <div class="container-faq">
-	<h1 class="faqh">Foire aux questions :</h1>
+	<h1 class="faqh">Q & A :</h1>
 
 	<button onclick="myFunction(this);">
 		<div class="question">
