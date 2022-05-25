@@ -35,13 +35,13 @@ nav li {
 
 nav a:hover {
     background-color: #2CB5AE;
-    transition: 0.25s ease;
+    transition: 0.25s;
 }
 
 nav li:hover {
     transform: scale(0.9);
     /* filter: brightness(0.85); */
-    transition: 0.25s ease;
+    transition: 0.25s;
 }
 
 /* nav a:hover {
