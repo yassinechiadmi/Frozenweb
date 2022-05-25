@@ -56,6 +56,7 @@ button{
 	/* background-color: #FFFF; */
 	background-color: #9ED8DB;
 	border-radius: 20px;
+	border: transparent;
 }
 
 .visible-pannel h2{
@@ -72,13 +73,11 @@ button{
 }
 
 .toggle-pannel{
-	
-	/* border-top-left-radius: 50px;
-	border-top-right-radius: 50px; */
-	border-radius: 20px;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
 	display: none;
 	/* opacity: 0; */
-	background-color: #7AC8CD;
+	background-color: white;
 	/* transform: scale(0); */
     transition-duration: 1s;
 	margin: 0;

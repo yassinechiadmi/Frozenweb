@@ -9,8 +9,7 @@
       <li><a href="https://www.instagram.com/froz_glisse/" target="_blank"><img id="insta" src="rs/Instagram_2.png" alt="instagram" style="height: 50px;"></a></li>
       <li><a href="https://twitter.com/Froz_glisse" target="_blank"><img id="tw" src="rs/Twitter.png" alt="tweeter" style="height: 50px;"></a></li>
     </ul>
-    <div class="text-center-p-3">
-      © 2022 Copyright :
-      <a class="text-dark" href="https://www.isen-lille.fr//">ISEN Lille</a>
-    </div>
+    <!-- <div class="text-center-p-3">
+      <a class="text-dark" href="https://www.isen-lille.fr//">© Junia ISEN 2022</a>
+    </div> -->
 </footer>

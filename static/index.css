@@ -92,7 +92,7 @@
 	margin-right: auto;
 	width: fit-content;
 	color: white;
-	text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+	text-shadow: 2px 2px 4px rgb(0 0 0);
 }
 #p2-text{
 	grid-area: who;
@@ -116,16 +116,18 @@
 
 .faqcase{
 	margin-bottom:3%;
-	box-shadow: 1px 1px 1.2px 1.2px rgba(0, 0, 0, 0.7);
+	/* text-shadow:0.5px 0.5px 1px rgba(0, 0, 0, 1); */
 	border:solid;
 	width:50%;
 	border-radius: 10px;
 	padding: 5px;
-	background-color: rgba(245, 245, 245, 0.9)
+	background-color: rgba(245, 245, 245, 0.9);
 	/* margin-left: 4%; */
+	box-shadow: 2px 2px 4px rgb(0 0 0);
 }
 
 .faqnav h3 {
 	color: white;
+	text-shadow: 2px 2px 4px rgb(0 0 0);
 	/* text-shadow: -1px -1px 0 rgba(255, 255, 255, 0.5), 1px -1px 0 rgba(255, 255, 255, 0.5), -1px 1px 0 rgba(255, 255, 255, 0.5), 1px 1px 0 rgba(255, 255, 255, 0.5); */
 }

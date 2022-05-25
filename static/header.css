@@ -1,24 +1,5 @@
 /*MENU DU SITE*/
 
-/* header{
-    display:flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding:1rem;
-    background-color: rgba(41,43,47);
-}
-
-header > a {
-    flex: 1;
-} */
-
-/* nav {
-    flex: 4;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-} */
-
 nav {
     padding: 10px 0;
     margin: 10px auto;

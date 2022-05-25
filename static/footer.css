@@ -1,6 +1,8 @@
 /*footer*/
 footer {
+  right: 0;
   bottom: 0;
+  left: 0;
 }
 
 footer div{
@@ -31,11 +33,13 @@ footer div ul li{
   /* width: 110px; */
   margin: 0 20px;
   /* height:50px; */
+  vertical-align: middle;
   display:inline-block;
 }
 
 .text-center-p-3 {
   margin: 0;
+  padding: 0;
 }
 
 .text-dark {
@@ -58,8 +62,8 @@ i {
 
 #fb:hover, #insta:hover, #tw:hover {
   transition: 0.35s;
-  transform: scale(90%);
-  filter: brightness(120%);
+  transform: scale(1.1);
+  filter: brightness(1.2);
 }
 
 #fb:active, #insta:active, #tw:active {
