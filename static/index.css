@@ -84,6 +84,8 @@
 	margin-left: auto;
 	margin-right: auto;
 	width: fit-content;
+	color: black;
+	text-shadow: 1px 1px rgba(245, 245, 245, 0.5);
 }
 #p2-text{
 	grid-area: who;
@@ -115,7 +117,12 @@
 	border:solid;
 	width:50%;
 	border-radius: 10px;
-
 	padding: 5px;
+	background-color: rgba(245, 245, 245, 0.9)
 	/* margin-left: 4%; */
+}
+
+.faqnav h3 {
+	/* text-shadow: 1px 1px rgba(245, 245, 245, 0.5); */
+	text-shadow: -1px -1px 0 rgba(255, 255, 255, 0.5), 1px -1px 0 rgba(255, 255, 255, 0.5), -1px 1px 0 rgba(255, 255, 255, 0.5), 1px 1px 0 rgba(255, 255, 255, 0.5);
 }

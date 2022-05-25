@@ -5,7 +5,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/gsap.min.js"></script>
 
 <div class="container-faq">
-	<h1 class="faqh">Foire aux questions :</h1>
+	<h1 class="faqh">Q & A :</h1>
 
 	<button onclick="myFunction(this);">
 		<div class="question">
@@ -15,8 +15,11 @@
 				<!-- <button><img src="plus.png" alt="ouais de ouf"></button> -->
 			</div>
 			<div class="toggle-pannel">
-				<h4>Titre</h4>
-				<p>Blablablababalbalbalabalbabalbalablablablaba</p>
+				<h4>Where did we get the idea for this game ?</h4>
+				<p>At the beginning, we wanted to make a maze but it made our 
+					game too "classic".
+					We were then inspired by the famous Pokémon ice arena, the concept
+					of sliding to a ratchet was perfect to meet the needs of this project.</p>
 				<i class="fa-solid fa-sun-haze"></i>
 			</div>
 		</div>

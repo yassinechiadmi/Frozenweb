@@ -59,10 +59,10 @@
 
 				if (isset($_POST['remember']) && $_POST['remember'] == 'on')
 				{
-					setcookie("login", $login, time() + 182 * 24 * 3600);
-					setcookie("mdp", $mdp, time() + 182 * 24 * 3600);
+					setcookie("login", $login, time() + 182 * 24 * 3600, '/');
+					setcookie("mdp", $mdp, time() + 182 * 24 * 3600, '/');
 				}
-				setcookie("choice", $_POST['remember'], time() + 182 * 24 * 3600);
+				setcookie("choice", $_POST['remember'], time() + 182 * 24 * 3600, '/');
 
 				header("Location:index.php"); 
 			}

@@ -6,10 +6,11 @@
 function check_user_exists($username){
     require('include/connect_db.php');
     $req = mysqli_query($connexion,"SELECT * FROM user WHERE username = '$username'");
-    if(mysqli_num_rows($req) > 0){
-        return True;
-    }
-    return False;
+    return (mysqli_num_rows($req) > 0);
+    // if(mysqli_num_rows($req) > 0){
+    //     return True;
+    // }
+    // return False;
 }
 
 function edit_username(){
@@ -23,6 +24,9 @@ function edit_username(){
         $new = $_POST["username"];
         $req = mysqli_query($connexion,"UPDATE user SET username = '$new' WHERE username = '$username'");
         $_SESSION['username'] = $new;
+        if (isset($_COOKIE["login"])){
+            setcookie('login', $new, time() + 182 * 24 * 3600, '/');
+        }
     }
 }
 
@@ -36,6 +40,9 @@ function edit_password(){
         $username = $_SESSION['username'];
         $pwd = $_POST["password"];
         $req = mysqli_query($connexion,"UPDATE user SET password = '$pwd' WHERE username = '$username'");
+        if (isset($_COOKIE["mdp"])){
+            setcookie('mdp', $pwd, time() + 182 * 24 * 3600, '/');
+        }
     }
 }
 
