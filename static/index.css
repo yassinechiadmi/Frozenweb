@@ -63,7 +63,7 @@
 	transition: 0.3s;
 }
 #p1-play:hover{
-	filter: brightness(.8);
+	filter: brightness(1.2);
 	transform: scale(0.9);
 	transition: 0.3s;
 }
