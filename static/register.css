@@ -1,5 +1,5 @@
-body{
-	background: url(../rs/ice1.gif) left top repeat;;
+body {
+    background: url(../rs/ice1.gif) left top repeat;
 }
 
 .logform {
@@ -19,10 +19,8 @@ body{
     border-radius: 15px;
 }
 
-
-
 label {
-	/* width: 38%; */
+    /* width: 38%; */
     text-align: left;
     /* margin: 0 auto; */
     font-family: Montserrat, sans-serif;
@@ -31,10 +29,11 @@ label {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
 }
 
-input[type=text], input[type=password]{
-	width: 100%;
+input[type=text],
+input[type=password] {
+    width: 100%;
     padding: 12px 20px;
-    color:white;
+    color: white;
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #292B2F;
@@ -43,8 +42,8 @@ input[type=text], input[type=password]{
     border-radius: 10px;
 }
 
-input[type=submit]{
-	background-color: #1D7874;
+input[type=submit] {
+    background-color: #1D7874;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -66,9 +65,9 @@ input[type=submit]:hover {
     /* border: 1px solid #53af57; */
 }
 
-.error{
+.error {
     text-align: center;
-	color: #D64045;
+    color: #D64045;
 }
 
 .dropdown-form {
@@ -82,27 +81,27 @@ input[type=submit]:hover {
 
 @keyframes fade_in_show {
     0% {
-         opacity: 0;
-         transform: scale(0);
+        opacity: 0;
+        transform: scale(0);
     }
 
     100% {
-         opacity: 1;
-         transform: scale(1);
+        opacity: 1;
+        transform: scale(1);
     }
 }
 
 
-.dropdown-form .dropdown-input{
+.dropdown-form .dropdown-input {
     width: 50%;
     display: none;
     animation: fade_in_show 0.2s;
 }
 
-#edit-username-form:hover .dropdown-input{
+#edit-username-form:hover .dropdown-input {
     display: block;
 }
 
-#edit-password-form:hover .dropdown-input{
+#edit-password-form:hover .dropdown-input {
     display: block;
 }
