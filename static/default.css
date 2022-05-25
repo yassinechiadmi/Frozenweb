@@ -8,6 +8,22 @@
   scroll-behavior: smooth;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+  background: grey;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 30px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #292B2F;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+
 /* Remove default margin */
 body,
 h1,

@@ -4,16 +4,18 @@ footer {
 }
 
 footer div{
+  padding: 10px;
   position: relative;
   /* position: fixed; */
   width: 100%;
+  margin: 10px auto 0 auto;
+  border-radius: 10px 10px 0 0;
   /* height: 50%; */
   height: fit-content;
   text-align: center;
-  margin-top: 10px;
   padding-bottom: 10px;
   image-rendering: pixelated;
-  background-color: antiquewhite;
+  background-color: rgba(41, 43, 47);
 }
 
 footer div h3 {
@@ -23,12 +25,11 @@ footer div h3 {
 
 .wut ul{
   display: block;
-  margin: 0;
 }
 
 footer div ul li{
-  width: 110px;
-  
+  /* width: 110px; */
+  margin: 0 20px;
   /* height:50px; */
   display:inline-block;
 }
@@ -57,18 +58,6 @@ i {
   transition: 0.35s;
   filter: brightness(100%);
 }
-
-/* #fb:hover {
-  color:rgb(114, 100, 237);
-}
-
-#insta:hover {
-  color:rgb(237, 0, 245);
-}
-
-#tw:hover {
-  color:rgb(59, 193, 255);
-} */
 
 footer div p{
   clear: both;
