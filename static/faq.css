@@ -84,6 +84,7 @@ button{
 	/* transform: scale(0); */
     transition-duration: 1s;
 	margin: 0;
+	padding: 15px;
 }
 
 .toggle-pannel h4{

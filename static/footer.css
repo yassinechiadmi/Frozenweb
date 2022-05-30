@@ -18,7 +18,7 @@ footer div {
   text-align: center;
   padding-bottom: 10px;
   image-rendering: pixelated;
-  background-color: rgba(41, 43, 47);
+  background-color: rgba(20, 20, 20, .8);
 }
 
 footer div h3 {
