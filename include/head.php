@@ -9,6 +9,5 @@
   <link rel="stylesheet" href ="static/header.css"/>
   <link rel="stylesheet" href ="static/faq.css"/>
   <link rel="stylesheet" href ="static/register.css"/>
-  <script src="https://kit.fontawesome.com/78909c4315.js" crossorigin="anonymous"></script>
   <link rel="shortcut icon" href="rs/internet-explorer-brands.svg" type="image/x-icon">
 </head>
