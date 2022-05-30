@@ -5,7 +5,7 @@
 			<li><a href="index.php">Home</a></li>
 			<li><a href="game.php">Game - building</a></li>
 			<li><a href="Forum.php">Forum</a></li>
-			<li><a href="FAQ.php">Q & A</a></li>
+			<li><a href="FAQ.php">F.A.Q</a></li>
 			<li><a href="rank.php">Ranking - building</a></li>
 			<!--Menu du site-->
 

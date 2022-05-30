@@ -66,10 +66,9 @@
 	text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
 	background-color: #1D7874;
 	/*white;*/
-	animation: breathing 5s ease-out infinite normal;
+	animation: breathing 5s infinite normal;
 	/* transition: 0.3s; */
-	transition-property: filter;
-	transition-duration: 0.25s;
+	transition: filter 0.25s;
 }
 
 #p1-play:hover {
@@ -79,26 +78,18 @@
 
 @keyframes breathing {
 	0% {
-	  -webkit-transform: scale(0.9);
-	  -ms-transform: scale(0.9);
 	  transform: scale(0.9);
 	}
   
 	25% {
-	  -webkit-transform: scale(1);
-	  -ms-transform: scale(1);
 	  transform: scale(1);
 	}
   
 	60% {
-	  -webkit-transform: scale(0.9);
-	  -ms-transform: scale(0.9);
 	  transform: scale(0.9);
 	}
   
 	100% {
-	  -webkit-transform: scale(0.9);
-	  -ms-transform: scale(0.9);
 	  transform: scale(0.9);
 	}
   }
@@ -164,6 +155,12 @@
 	background-color: rgba(245, 245, 245, 0.9);
 	/* margin-left: 4%; */
 	box-shadow: 2px 2px 4px rgb(0 0 0);
+	transition: 0.25s;
+}
+
+.faqcase:hover {
+	transform: scale(1.05);
+	transition: 0.25s;
 }
 
 .faqnav h3 {

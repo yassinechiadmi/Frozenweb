@@ -19,7 +19,7 @@ nav a {
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
     background-color: #1D7874; /*white;*/
-    transition: 0.25s ease;
+    transition: background-color 0.25s;
 }
 
 nav ul {
@@ -29,19 +29,17 @@ nav ul {
 
 nav li {
     display: inline-block;
-    transition: 0.25s;
+    transition: transform 0.25s;
     margin: 5px 10px;
 }
 
 nav a:hover {
     background-color: #2CB5AE;
-    transition: 0.25s;
 }
 
 nav li:hover {
     transform: scale(0.9);
     /* filter: brightness(0.85); */
-    transition: 0.25s;
 }
 
 /* nav a:hover {

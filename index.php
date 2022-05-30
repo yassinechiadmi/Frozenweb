@@ -6,7 +6,7 @@
 	<div id="p1-txt">
 		<h1>Welcome to Froz'Glisse </h1> 
 		<p>It's a pleasure welcoming you on our website, if you're here that means you're interested
-			by our game, so let me present it to you in a few words.<br>
+			in our game, so let me present it to you in a few words.<br>
 			First of all if you're a fan of reflexion games where your brain is put to a test you're welcome among us.<br>
 			Furthermore if you like chilly and refreshing environments come along on the ice rink and find your way to liberty !</p>
 	</div>
