@@ -16,7 +16,7 @@
         <br>
         <div class="tbl-header">
 
-            <h1>Community rank !</h1>
+            <h1>Community rank</h1>
             <!-- <h3>Check our best players !</h3> -->
             <table>
                     <tr><th>Rank</th><th>Username</th><th>Score</th><th>Date</th></tr>
