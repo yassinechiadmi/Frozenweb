@@ -54,22 +54,20 @@ footer div ul li {
 #fb,
 #insta,
 #tw {
-  transition: 0.25s;
+  transition: transform 0.25s;
 }
 
 #fb:hover,
 #insta:hover,
 #tw:hover {
-  transition: 0.25s;
-  /* animation: jiggle .5s; */
-  transform: rotate(360deg);
+  transform: rotate(360deg) scale(1.1);
 }
 
 @keyframes jiggle {
     0% {
         transform: rotate(-10deg);
     }
-    50% {
+    100% {
         transform: rotate(10deg);
     }
 }
