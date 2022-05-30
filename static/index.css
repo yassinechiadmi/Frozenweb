@@ -67,6 +67,7 @@
 
 #p1-play:hover {
 	filter: brightness(1.2);
+	cursor: pointer;
 }
 
 @keyframes breathing {
