@@ -35,11 +35,11 @@
                     if($res2['username'] == $s){
                         $log_score = $res2['H_score'];
                         $log_date = $res2['score_date'];
+                        echo "<tr id='log_user'><td>$iterator</td><td>".$_SESSION['username']."</td><td>$log_score</td><td>$log_date</td></tr>";
                         break;
                     }
                     $iterator +=1;
-                }                
-                echo "<tr id='log_user'><td>$iterator</td><td>".$_SESSION['username']."</td><td>$log_score</td><td>$log_date</td></tr>";
+                }
 
             }
 

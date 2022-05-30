@@ -156,6 +156,12 @@
 	background-color: rgba(245, 245, 245, 0.9);
 	/* margin-left: 4%; */
 	box-shadow: 2px 2px 4px rgb(0 0 0);
+	transition: 0.25s;
+}
+
+.faqcase:hover {
+	transform: scale(1.05);
+	transition: 0.25s;
 }
 
 .faqnav h3 {
