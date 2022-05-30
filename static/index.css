@@ -13,7 +13,10 @@
 
 
 .page1 {
-	background-image: url("../rs/icegif.gif");
+	/* background-image: url("../rs/icegif.gif"); */
+	background-image: url("../rs/px-montagne.webp");
+	background-repeat: no-repeat;
+    background-size: cover;
 	padding-left: 2%;
 	/* padding-bottom:; */
 	margin: 0 auto 2% auto;
@@ -32,7 +35,9 @@
 
 #p1-txt {
 	grid-area: textc;
-	color: white;
+	color: black;
+	font-weight: 600;
+	/* color: white; */
 	text-align: center;
 	margin-top: 5%;
 
@@ -104,7 +109,7 @@
 	width: 95vw;
 	border-radius: 10px;
 	background-color: rgba(20, 20, 20, .8);
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 0.8fr 1fr;
 	grid-template-rows: 0.2fr 1fr 1fr;
 	gap: 10px 10px;
 	grid-template-areas:
@@ -149,7 +154,7 @@
 	margin-bottom: 3%;
 	/* text-shadow:0.5px 0.5px 1px rgba(0, 0, 0, 1); */
 	border: solid;
-	width: 50%;
+	width: 90%;
 	border-radius: 10px;
 	padding: 5px;
 	background-color: rgba(245, 245, 245, 0.9);
@@ -161,4 +166,8 @@
 	color: white;
 	text-shadow: 2px 2px 4px rgb(0 0 0);
 	/* text-shadow: -1px -1px 0 rgba(255, 255, 255, 0.5), 1px -1px 0 rgba(255, 255, 255, 0.5), -1px 1px 0 rgba(255, 255, 255, 0.5), 1px 1px 0 rgba(255, 255, 255, 0.5); */
+}
+
+.faqtxt {
+	text-align: center;
 }
