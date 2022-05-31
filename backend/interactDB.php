@@ -61,6 +61,14 @@ function get_pfp() {
     return $pfp;
 }
 
+function get_username($uid)
+{
+    require('include/connect_db.php');
+    $res = mysqli_query($connexion, "SELECT `username` FROM `user` WHERE `id` = '$uid'");
+    $username = mysqli_fetch_assoc($res)["username"];
+    return $username;
+}
+
 function upload_map($map, $map_name)
 {
     require('include/connect_db.php');
