@@ -27,6 +27,7 @@ function edit_username(){
         if (isset($_COOKIE["login"])){
             setcookie('login', $new, time() + 182 * 24 * 3600, '/');
         }
+        header("Location:profile.php");
     }
 }
 
@@ -43,6 +44,7 @@ function edit_password(){
         if (isset($_COOKIE["mdp"])){
             setcookie('mdp', $pwd, time() + 182 * 24 * 3600, '/');
         }
+        header("Location:profile.php");
     }
 }
 

@@ -11,4 +11,5 @@
   <link rel="stylesheet" href="static/register.css" />
   <link rel="stylesheet" href="static/game.css">
   <link rel="shortcut icon" href="rs/icon2.png" type="image/png">
+  <i id="top"></i>
 </head>

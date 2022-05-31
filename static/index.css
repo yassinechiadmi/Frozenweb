@@ -13,8 +13,8 @@
 
 
 .page1 {
-	/* background-image: url("../rs/icegif.gif"); */
-	background-image: url("../rs/px-montagne.webp");
+	background-image: url("../rs/icegif.gif");
+	/* background-image: url("../rs/px-montagne.webp"); */
 	background-repeat: no-repeat;
     background-size: cover;
 	background-position: center;
@@ -36,7 +36,7 @@
 
 #p1-txt {
 	grid-area: textc;
-	color: black;
+	color: white;
 	font-weight: 600;
 	/* color: white; */
 	text-align: center;
