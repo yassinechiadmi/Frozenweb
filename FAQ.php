@@ -69,7 +69,9 @@
 						We will answer as soon as possible, it's a promise.</p>
 				</div>
 			</div>
-			<?php require("include/foot.php") ?>
+		</button>
+	</div>
+	<?php require("include/foot.php") ?>
 </body>
 
 </html>
