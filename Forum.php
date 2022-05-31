@@ -19,7 +19,7 @@
     </div>
 
     <div class="map-container">
-        <h4>Community maps</h4>
+        <h2 style="color: white; text-align: center; text-shadow: 2px 2px 4px rgb(0 0 0);">Community maps</h2>
         <?php
         require("include/connect_db.php");
         require("backend/interactDB.php");
