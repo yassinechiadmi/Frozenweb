@@ -19,6 +19,7 @@
     </div>
 
     <div class="map-container">
+        <h4>Community maps</h4>
         <?php
         require("include/connect_db.php");
         require("backend/interactDB.php");
@@ -28,7 +29,6 @@
             $map_name = $res['map_name'];
             echo
             "<div class='text-background' style='width: 90%;'>
-                    <h4>Community maps</h4>
                     <label>Username: $user</label>
                     <label for='map_name'>Map name: $map_name</label>
             </div>";
