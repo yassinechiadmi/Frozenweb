@@ -9,12 +9,18 @@ function myFunction(e){
     if(el.src.includes('plus.png')){
         el.src = 'rs/moins.png';
         el.style.transform = 'scale(.65)';
+        el.style.transition = '0.25s';
+        txt.style.visibility = 'visible';
         txt.style.display = 'block';
         txt.style.transform = 'scale(1)';
         txt.style.opacity = '1';
+        txt.style.transition = "0.25s";
     } else if (el.src.includes('moins.png')){
         el.src = 'rs/plus.png';
         el.style.transform = 'scale(1)';
+        el.style.transition = '0.25s';
+        txt.style.transition = '0.25s';
+        txt.style.visibility = 'hidden';//'none';
         txt.style.display = 'none';
         txt.style.transform = 'scale(0)';
         txt.style.opacity = '0';
