@@ -1,10 +1,56 @@
-<?php require("include/head.php") ?>
+<?php
+define('GAME_URL', 'http://localhost:5500/');
+require("include/head.php") ?>
 
 <body>
 
     <?php require("include/nav.php"); ?>
 
-    <div class="deck">
+
+    <div class="selector">
+        <button class="arrow left"><img src="rs/arrown.png" alt=""></button>
+        <ul class="level-list">
+            <li>
+                <a href="http://localhost:5500/" data-map='{"height":10,"width":7,"diff":2,"data":[0,0,0,-3,-3,0,0,0,-1,-1,-1,-1,-1,0,-1,-1,-1,-1,-1,-1,0,-1,-1,-1,0,-1,-1,0,-1,-1,-1,-1,-1,-1,0,-1,0,-1,0,-1,-1,-1,-1,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,0,-1,-1,0,-1,-1,-1,-1,-1,0,-3,-3,-3,-3,0,0,0],"start":{"x":1,"y":9},"end":{"x":4,"y":0}}' class="card">
+                    <img src="" class="card__image" alt="" />
+                    <div class="card__header">
+                        <h3 class="card__title">Jessica Parker</h3>
+                        <span class="card__status">EASY</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:5500/" data-map='{"data":[-2,2,2,-3,-3,-3,-3,-3,-3,-3,-3,-3,-3,-3,-1,-1,0,-1,-3,-3,-3,-3,-3,-3,0,0,-1,-3,-3,-3,-3,0,0,0,-3,-1,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-3,-1,-3,-1,-1,-1,-1,-1,-1,-1,-1,-3,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-3,-1,-3,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-3,-1,-1,-1,-1,-3,-1,0,-3,-1,-1,-1,-1,-1,-3,0,-3,-2,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-3,-1,-1,-1,-1,-1,-2,-3,-1,-1,-1,-1,-1,-1,-1,0,-3,-3,-1,-2,-1,-1,-1,-1,-1,-1,-1,-1,-3,-1,-1,-1,-1,-1,-3,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-3,-3,-3,-1,-3,-1,-1,-1,-1,-1,-3,-1,-1,-1,-1,-1,-1,-1,-1,-2,-1,-1,-1,-3,-1,-1,-1,-1,-1,-1,-1,-1,-1,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-2,-3,-3,-3,-1,-1,-1,-1,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,0,0,0,0,-1,-1,-1,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-3,-2,0,0,-1,-3,-1,-1,-2,-1,-1,-1,-1,-1,-1,-1,-1,-1,-3,0,0,0,0,0,0,-3,-3,-1,-2,-3,-1,-1,-1,-1,-1,-1,-1,-1,0,-1,-1,-1,-1,-1,-1,-1,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-3,-3,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],"width":20,"height":20,"start":{"x":1,"y":2},"end":{"x":9,"y":1}}' class="card">
+                    <img src="" class="card__image" alt="" />
+                    <div class="card__header">
+                        <h3 class="card__title">Jessica Parker</h3>
+                        <span class="card__status">EASY</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:5500/" data-map='{"height":10,"width":7,"diff":2,"data":[0,0,0,-3,-3,0,0,0,-1,-1,-1,-1,-1,0,-1,-1,-1,-1,-1,-1,0,-1,-1,-1,0,-1,-1,0,-1,-1,-1,-1,-1,-1,0,-1,0,-1,0,-1,-1,-1,-1,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,0,-1,-1,0,-1,-1,-1,-1,-1,0,-3,-3,-3,-3,0,0,0],"start":{"x":1,"y":9},"end":{"x":4,"y":0}}' class="card">
+                    <img src="" class="card__image" alt="" />
+                    <div class="card__header">
+                        <h3 class="card__title">Jessica Parker</h3>
+                        <span class="card__status">EASY</span>
+                    </div>
+                </a>
+            </li>
+            <li style="display: none;">
+                <a href="http://localhost:5500/" data-map='{"height":10,"width":7,"diff":2,"data":[0,0,0,-3,-3,0,0,0,-1,-1,-1,-1,-1,0,-1,-1,-1,-1,-1,-1,0,-1,-1,-1,0,-1,-1,0,-1,-1,-1,-1,-1,-1,0,-1,0,-1,0,-1,-1,-1,-1,0,-1,-1,-1,-1,-1,-1,-1,-1,-1,0,-1,-1,0,-1,-1,-1,-1,-1,0,-3,-3,-3,-3,0,0,0],"start":{"x":1,"y":9},"end":{"x":4,"y":0}}' class="card">
+                    <img src="" class="card__image" alt="" />
+                    <div class="card__header">
+                        <h3 class="card__title">Jessica Parker</h3>
+                        <span class="card__status">EASY</span>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <button class="arrow right"><img src="rs/arrown.png" alt=""></button>
+    </div>
+
+    <!-- <div class="deck">
         <ul class="cards">
             <li>
                 <a href="" class="card">
@@ -105,7 +151,7 @@
             <iframe id="game" src="https://bafbi.github.io/glagla/" frameborder="0"></iframe>
 
         </div>
-    </div>
+    </div> -->
 
     <?php require("include/foot.php") ?>
     <script src="static/preview.js"> </script>
