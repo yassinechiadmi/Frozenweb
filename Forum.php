@@ -29,14 +29,13 @@ if(isset($_SESSION["username"]))
         </form>
     </div>
 
-    <?php }?>
-
     <div class="map-container">
-        <h2 style="color: white; text-align: center; text-shadow: 2px 2px 4px rgb(0 0 0);">Community maps</h2>
+        <h2 style="color: white; text-align: center; text-shadow: 2px 2px 4px rgb(0 0 0);">Your maps</h2>
         <?php
         require("include/connect_db.php");
         require("backend/interactDB.php");
-        $req = mysqli_query($connexion, "SELECT `userID`, `map_name` from `user_map`");
+        $uid = get_uid();
+        $req = mysqli_query($connexion, "SELECT `userID`, `map_name` from `user_map` WHERE `userID` = $uid");
         if($req == true){
             while ($res = mysqli_fetch_assoc($req)) {
                 $user = get_username($res['userID']);
@@ -45,11 +44,12 @@ if(isset($_SESSION["username"]))
                 "<div class='text-background' style='width: 90%;'>
                         <label>Username: $user</label>
                         <label for='map_name'>Map name: $map_name</label>
-                </div>";
+                </div>";            
             }
         }
         ?>
     </div>
+    <?php }?>
 
     <?php require("include/foot.php") ?>
 </body>
