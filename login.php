@@ -6,6 +6,8 @@
 
 
 <?php
+	if(isset($_SESSION["username"]))
+		header('location:index.php');
 	require("include/nav.php");
 	require('include/connect_db.php');
 	if(empty($_SESSION["pseudo"])){
@@ -50,7 +52,7 @@
 		$login = $_POST['username'];
 		$mdp = $_POST['password'];
 		$str ="SELECT * FROM user WHERE username = '$login'";
-		echo $str;
+		// echo $str;
 		$requete = mysqli_query($connexion,$str);
 
 		if(mysqli_num_rows($requete) > 0)

@@ -22,7 +22,7 @@
 
 <?php
     }
-    else echo"<br><a href=\"logout.php\">Logout</a>";
+    else header("location:index.php");
 
 	if(isset($_POST['login']) && isset($_POST['password'])){
 		$login= $_POST['login'];
