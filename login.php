@@ -52,7 +52,6 @@
 		$login = $_POST['username'];
 		$mdp = $_POST['password'];
 		$str ="SELECT * FROM user WHERE username = '$login'";
-		// echo $str;
 		$requete = mysqli_query($connexion,$str);
 
 		if(mysqli_num_rows($requete) > 0)
