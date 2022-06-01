@@ -38,7 +38,7 @@
 		}
         else{
 			$today = date("Y-m-d");
-            $requete = mysqli_query($connexion,"INSERT INTO user (id,username,password,pseudo,creation_date,high_score_easy, high_score_medium, high_score_hard) VALUES (NULL,'$login','$password','$login','$today', 0, 0, 0)");
+            $requete = mysqli_query($connexion,"INSERT INTO user (id,username,password,pseudo,creation_date) VALUES (NULL,'$login','$password','$login','$today')");
 			header('location:login.php');
 		}
 	}

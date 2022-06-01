@@ -26,18 +26,17 @@
             <h4>Highest scores :</h4>
                 <ul role="list">
                     <?php 
-                        require("include/connect_db.php");
-                        $username = $_SESSION['username'];
-                        $req = mysqli_query($connexion, "SELECT `high_score_easy`, `high_score_medium`, `high_score_hard` FROM `user` WHERE `username` = '$username'");
-                        $res = mysqli_fetch_assoc($req);
-
-                        $easy = $res['high_score_easy'];
-                        $medium = $res['high_score_medium'];
-                        $hard = $res['high_score_hard'];
-                        echo 
-                            "<li>Easy : $easy</li>
-                             <li>Medium : $medium</li>
-                             <li>Hard : $hard</li>";
+                        require_once("include/connect_db.php");
+                        require_once("backend/interactDB.php");
+                        $uid = get_uid();
+                        $req = mysqli_query($connexion, "SELECT * FROM `user_stat` WHERE `userID` = '$uid'");
+                        $diff = ["", "Easy: ", "Medium: ", "Hard: "];
+                        while ($res = mysqli_fetch_assoc($req))
+                        {
+                            $score = $res['H_score'];
+                            $idx = $res['difficulty'];
+                            echo "<li>$diff[$idx] $score</li>";
+                        }
                     ?>
                 </ul>
             <br>
