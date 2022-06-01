@@ -61,6 +61,15 @@ footer div ul li {
   transform: rotate(360deg) scale(1.1);
 }
 
+#go-top {
+  image-rendering: auto;
+  transition: transform 0.25s;
+}
+
+#go-top:hover {
+  transform: scale(1.1);
+}
+
 @keyframes jiggle {
     0% {
         transform: rotate(-10deg);

@@ -51,7 +51,7 @@
                     $u_name = $row['username'];
                     $u_score = $row['H_score'];
                     $u_date = $row['score_date'];
-                    $id = ($u_name == $_SESSION['username']) ? 'log_user': "";
+                    $id = (isset($_SESSION['username']) && $u_name == $_SESSION['username']) ? 'log_user': "";
                     echo "<tr id='$id'><td>$r</td><td>$u_name</td><td>$u_score</td><td>$u_date</td></tr>";
                     $r+=1;
                 }

@@ -6,7 +6,7 @@
 			<li><a href="game.php">Game - building</a></li>
 			<li><a href="Forum.php">Forum</a></li>
 			<li><a href="FAQ.php">F.A.Q</a></li>
-			<li><a href="rank.php">Ranking - building</a></li>
+			<li><a href="rank.php">Ranking</a></li>
 			<!--Menu du site-->
 
 			<!-- <div id="nav-btn-container"></div> -->
