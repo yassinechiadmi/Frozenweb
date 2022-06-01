@@ -59,7 +59,7 @@
 		<button onclick="myFunction(this);">
 			<div class="question">
 				<div class="visible-pannel">
-					<h2>I have more questions,
+					<h2>I have a questions,
 						or a comment to make. How can I do it?</h2>
 					<img src="rs/plus.png" alt="ouais de ouf">
 				</div>
