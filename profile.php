@@ -14,14 +14,32 @@
     ?>
 
         <div class="text-background">
-            <div>
+            <!-- <div class="profile-container">
                 <h4>Highest scores :</h4>
                 <ul role="list">
                     <li>Easy : </li>
                     <li>Medium : </li>
                     <li>Hard : </li>
                 </ul>
-            </div>
+                <img src="rs/logo.gif" alt="pfp">
+            </div> -->
+            <h4>Highest scores :</h4>
+                <ul role="list">
+                    <?php 
+                        require("include/connect_db.php");
+                        $username = $_SESSION['username'];
+                        $req = mysqli_query($connexion, "SELECT `high_score_easy`, `high_score_medium`, `high_score_hard` FROM `user` WHERE `username` = '$username'");
+                        $res = mysqli_fetch_assoc($req);
+
+                        $easy = $res['high_score_easy'];
+                        $medium = $res['high_score_medium'];
+                        $hard = $res['high_score_hard'];
+                        echo 
+                            "<li>Easy : $easy</li>
+                             <li>Medium : $medium</li>
+                             <li>Hard : $hard</li>";
+                    ?>
+                </ul>
             <br>
             <form method="post" id="edit-username-form" class="dropdown-form" action="<?php edit_username(); ?>">
 

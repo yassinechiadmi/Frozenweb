@@ -1,19 +1,20 @@
 /*footer*/
 footer {
+  bottom: 0;
   margin-top: 50px;
+  /* position: absolute; */
+  /* padding: 0; */
 }
 
 footer div {
   padding: 10px;
-  position: relative;
-  /* position: fixed; */
+  /* position: relative; */
   width: 95vw;
   margin: 10px auto 0 auto;
   border-radius: 10px 10px 0 0;
-  /* height: 50%; */
-  height: fit-content;
+  height: max-content;
   text-align: center;
-  padding-bottom: 10px;
+  /* padding-bottom: 10px; */
   image-rendering: pixelated;
   background-color: rgba(20, 20, 20, .8);
 }

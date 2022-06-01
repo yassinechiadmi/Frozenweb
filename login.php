@@ -32,8 +32,9 @@
 		<span>
 			
 		</span>
-		<label for="check"> Remember me : </label>
-		<input type="checkbox" name="remember" id="check" <?php if (!empty($checkVal)) echo "$checkVal";?>>
+		<label for="check"> Remember me : 
+			<input type="checkbox" name="remember" id="check" <?php if (!empty($checkVal)) echo "$checkVal";?>>
+		</label>
 		<br><br>
 <?php
 		}

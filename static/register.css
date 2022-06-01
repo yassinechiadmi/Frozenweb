@@ -65,6 +65,7 @@ input[type=submit]:hover {
     /* border: 1px solid #53af57; */
 }
 
+
 .error {
     text-align: center;
     color: #D64045;
@@ -105,3 +106,19 @@ input[type=submit]:hover {
 #edit-password-form:hover .dropdown-input {
     display: block;
 }
+
+/* .profile-container {
+    width: 100%;
+}
+
+.profile-container ul {
+    display: inline-block;
+}
+
+.profile-container img {
+    display: inline-block;
+    max-width: 100px;
+    height: auto;
+    margin-left: 20px;
+    border-radius: 50%;
+} */
