@@ -5,7 +5,11 @@
 
 <body>
     <link rel="stylesheet" href="static/forum.css">
-    <?php require("include/nav.php"); ?>
+    <?php 
+        require("include/nav.php"); 
+        if (isset($_SESSION["username"]))
+        {
+    ?>
 
     <div id="case">
         <form method="post" action="" class="logform">
@@ -17,6 +21,8 @@
 
         </form>
     </div>
+
+    <?php }?>
 
     <div class="map-container">
         <h2 style="color: white; text-align: center; text-shadow: 2px 2px 4px rgb(0 0 0);">Community maps</h2>

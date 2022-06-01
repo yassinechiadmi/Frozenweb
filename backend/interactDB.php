@@ -76,7 +76,7 @@ function upload_map($map, $map_name)
     require('include/connect_db.php');
     $uid = get_uid();
     $_map = mysqli_real_escape_string($connexion, $map);
-    $text = "INSERT INTO `user_map` (`userID`, `map`, `map_name`, `map_id`) VALUES ('$uid', '$_map', '$map_name', NULL)";
+    $text = "INSERT INTO `user_map` VALUES ('$uid', '$_map', '$map_name', NULL, '0')";
     $req = mysqli_query($connexion, $text);
     return $req;
 }
