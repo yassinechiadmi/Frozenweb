@@ -25,6 +25,8 @@ nav a {
 nav ul {
     text-align: center;
     list-style: none;
+    /* display: flex;
+    justify-content: space-between; */
 }
 
 nav li {
