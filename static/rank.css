@@ -51,9 +51,10 @@ tr {
 }
 
 tr:hover {
-    transform: scale(1.2);
-    background: -webkit-linear-gradient(left, #5F0A87, #A4508B);
-    background: linear-gradient(to right, #5F0A87, #A4508B);
+    transform: scale(1.05);
+    background: transparent;
+    /* background: -webkit-linear-gradient(left, #5F0A87, #A4508B);
+    background: linear-gradient(to right, #5F0A87, #A4508B); */
     transition: 0.25s;
 }
 
