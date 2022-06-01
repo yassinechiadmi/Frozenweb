@@ -22,9 +22,12 @@ table {
     /* height:300px; */
     background: -webkit-linear-gradient(left, #5F0A87, #A4508B);
     background: linear-gradient(to right, #5F0A87, #A4508B);
-    overflow-x:auto;
+    overflow-x: auto;
+    overflow-y: scroll;
+    max-height: 20vh;
     margin-top: 0px;
     border: 1px solid rgba(255,255,255,0.6);
+
 }
 
 th, td {
