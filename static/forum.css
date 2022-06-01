@@ -1,0 +1,10 @@
+.map-container {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    max-height: 80vh; 
+    background-color: rgba(20, 20, 20, 0.8); 
+    padding: 20px; 
+    width: 95vw;
+    margin: 20px auto;
+    border-radius: 20px;
+}

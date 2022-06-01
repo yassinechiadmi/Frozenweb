@@ -1,14 +1,16 @@
-*, ::before, ::after{
+*,
+::before,
+::after {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
 }
 
-body{
+body {
 	font-family: Raleway, sans-serif;
 }
 
-.faqh{
+.faqh {
 	text-align: center;
 	padding: 35px 0;
 	font-size: 40px;
@@ -18,19 +20,19 @@ h1.faqh {
 	color: white;
 }
 
-.container-faq{
+.container-faq {
 	width: 70%;
-	border-radius:20px;
-	max-width:900px;
-	min-width:700px;
+	border-radius: 20px;
+	max-width: 900px;
+	min-width: 700px;
 	/* background-color: #FFFF; */
 	height: auto;
 	margin: 10px auto 0;
-	display:flex;
+	display: flex;
 	flex-direction: column;
-	row-gap:20px;
-	justify-content:center;
-	
+	row-gap: 20px;
+	justify-content: center;
+
 	/* align-items : flex-start; */
 }
 
@@ -40,8 +42,8 @@ h1.faqh {
 	/* margin: 5px; */
 }
 
-.visible-pannel{
-	display:flex;
+.visible-pannel {
+	display: flex;
 	column-gap: 10px;
 	/* justify-content: space-between; */
 	align-items: center;
@@ -50,51 +52,57 @@ h1.faqh {
 	position: relative;
 	z-index: 100;
 	/* background-color: #9ED8DB; */
-    background-color: #1D7874; /*white;*/
+	background-color: #1D7874;
+	/*white;*/
 }
 
-button{
+.visible-pannel h2 {
+	margin-left: 10px;
+	padding: 15px 5px;
+	font-size: 25px;
+	color: white;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+}
+
+.visible-pannel img {
+	background: none;
+	margin-right: 100px;
+	width: 25px;
+	cursor: pointer;
+}
+
+.visible-pannel:hover {
+	cursor: pointer;
+}
+
+
+button {
 	/* background-color: #9ED8DB; */
 	background-color: #1D7874;
 	border-radius: 20px;
 	border: transparent;
 }
 
-.visible-pannel h2{
-	margin-left: 10px;
-	padding:15px 5px;
-	font-size: 25px;
-	color: white;
-	text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
-}
-
-.visible-pannel img{
-	background: none;
-	margin-right: 100px;
-	width:25px;
-	cursor: pointer;
-}
-
-.toggle-pannel{
+.toggle-pannel {
 	border-bottom-left-radius: 20px;
 	border-bottom-right-radius: 20px;
 	display: none;
 	/* opacity: 0; */
 	background-color: rgba(41, 43, 47);
 	/* transform: scale(0); */
-    transition-duration: 1s;
+	transition-duration: 1s;
 	margin: 0;
 	padding: 15px;
 }
 
-.toggle-pannel h4{
-	font-size:18px;
-	padding-bottom:10px;
+.toggle-pannel h4 {
+	font-size: 18px;
+	padding-bottom: 10px;
 	color: white;
 	text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
 }
 
-.toggle-pannel p{
+.toggle-pannel p {
 	line-height: 1.5;
 	color: white;
 }

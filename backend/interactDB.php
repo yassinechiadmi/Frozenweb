@@ -27,6 +27,7 @@ function edit_username(){
         if (isset($_COOKIE["login"])){
             setcookie('login', $new, time() + 182 * 24 * 3600, '/');
         }
+        header("Location:profile.php");
     }
 }
 
@@ -43,7 +44,41 @@ function edit_password(){
         if (isset($_COOKIE["mdp"])){
             setcookie('mdp', $pwd, time() + 182 * 24 * 3600, '/');
         }
+        header("Location:profile.php");
     }
+}
+
+function get_uid() {
+    require('include/connect_db.php');
+    $username = $_SESSION['username'];
+    $res = mysqli_query($connexion, "SELECT `id` FROM `user` WHERE `username` = '$username'");
+    $uid = mysqli_fetch_assoc($res)["id"];
+    return $uid;
+}
+
+function get_pfp() {
+    require('include/connect_db.php');
+    $uid = get_uid();
+    $pfp = mysqli_query($connexion, "SELECT pfp FROM user_pfp WHERE userID = '$uid'");
+    return $pfp;
+}
+
+function get_username($uid)
+{
+    require('include/connect_db.php');
+    $res = mysqli_query($connexion, "SELECT `username` FROM `user` WHERE `id` = '$uid'");
+    $username = mysqli_fetch_assoc($res)["username"];
+    return $username;
+}
+
+function upload_map($map, $map_name)
+{
+    require('include/connect_db.php');
+    $uid = get_uid();
+    $_map = mysqli_real_escape_string($connexion, $map);
+    $text = "INSERT INTO `user_map` (`userID`, `map`, `map_name`, `map_id`) VALUES ('$uid', '$_map', '$map_name', NULL)";
+    $req = mysqli_query($connexion, $text);
+    return $req;
 }
 
 ?>
