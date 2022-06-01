@@ -8,8 +8,12 @@
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
-  width: 100%;
+  margin: 0 auto;
+  border-radius: 10px;
+  width: 95vw;
   height: 20rem;
+  overflow-y: hidden;
+  overflow-x: scroll;
   background-color: rgba(20, 20, 20, .8);
 }
 
@@ -51,6 +55,7 @@
   height: 15rem;
   width: 15rem;
   overflow: hidden;
+  margin: 0 20px;
   text-decoration: none;
 }
 
