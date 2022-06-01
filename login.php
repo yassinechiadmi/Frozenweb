@@ -6,6 +6,8 @@
 
 
 <?php
+	if(isset($_SESSION["username"]))
+		header('location:index.php');
 	require("include/nav.php");
 	require('include/connect_db.php');
 	if(empty($_SESSION["pseudo"])){
@@ -24,13 +26,13 @@
 		
 		<h1> Log in </h1>
 		<label> Username : </label> 
-		<input type="text" name="username" placeholder="Example19" maxlength="14" required <?php if (!empty($log)) echo "value = '$log'";?>>
-		<br><br> 
+		<input type="text" name="username" placeholder="Example19" maxlength="100" required <?php if (!empty($log)) echo "value = '$log'";?>>
+		<br><br>
 		<label> Password : </label>
 		<input type="password" name="password" placeholder="Password123" maxlength="10" required <?php if (!empty($mdp)) echo "value = '$mdp'";?>> 
 		<br><br>
 		<span>
-			
+
 		</span>
 		<label for="check"> Remember me : 
 			<input type="checkbox" name="remember" id="check" <?php if (!empty($checkVal)) echo "$checkVal";?>>
@@ -49,7 +51,9 @@
 	{
 		$login = $_POST['username'];
 		$mdp = $_POST['password'];
-		$requete = mysqli_query($connexion,"SELECT * FROM user WHERE username = '$login'");
+		$str ="SELECT * FROM user WHERE username = '$login'";
+		// echo $str;
+		$requete = mysqli_query($connexion,$str);
 
 		if(mysqli_num_rows($requete) > 0)
 		{

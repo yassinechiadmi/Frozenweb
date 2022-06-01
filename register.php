@@ -14,7 +14,7 @@
 	<form method="post" action="register.php" class="logform"> 
 		<h1> Register </h1>
 		<label> Username : </label>
-		<input type="text" name="login" placeholder="Example19" maxlength="14" required>
+		<input type="text" name="login" placeholder="Example19" maxlength="100" required>
 		<label> Password : </label>
 		<input type="password" name="password" placeholder="Password123" maxlength="10" required> 
         <label> Confirmation : </label>
@@ -22,7 +22,7 @@
 
 <?php
     }
-    else echo"<br><a href=\"logout.php\">Logout</a>";
+    else header("location:index.php");
 
 	if(isset($_POST['login']) && isset($_POST['password'])){
 		$login= $_POST['login'];
