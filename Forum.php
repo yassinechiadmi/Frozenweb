@@ -37,14 +37,16 @@ if(isset($_SESSION["username"]))
         require("include/connect_db.php");
         require("backend/interactDB.php");
         $req = mysqli_query($connexion, "SELECT `userID`, `map_name` from `user_map`");
-        while ($res = mysqli_fetch_assoc($req)) {
-            $user = get_username($res['userID']);
-            $map_name = $res['map_name'];
-            echo
-            "<div class='text-background' style='width: 90%;'>
-                    <label>Username: $user</label>
-                    <label for='map_name'>Map name: $map_name</label>
-            </div>";
+        if($req == true){
+            while ($res = mysqli_fetch_assoc($req)) {
+                $user = get_username($res['userID']);
+                $map_name = $res['map_name'];
+                echo
+                "<div class='text-background' style='width: 90%;'>
+                        <label>Username: $user</label>
+                        <label for='map_name'>Map name: $map_name</label>
+                </div>";
+            }
         }
         ?>
     </div>
