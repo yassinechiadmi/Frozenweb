@@ -27,6 +27,7 @@
 	if(isset($_POST['login']) && isset($_POST['password'])){
 		$login= $_POST['login'];
 		$password = $_POST['password'];
+		$password = mysqli_real_escape_string($connexion, $password);
 		$conf = $_POST['password-conf'];
         $requete = mysqli_query($connexion, "SELECT * FROM user WHERE username = '$login'");
 		if(mysqli_num_rows($requete) > 0){

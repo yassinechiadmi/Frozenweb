@@ -1,12 +1,11 @@
-
-.case1{
-  padding-bottom: 25%;
+.case1 {
+	padding-bottom: 25%;
 }
 
-.case1 p{
-	float:left;
+.case1 p {
+	float: left;
 	border: solid;
-	color:white;
+	color: white;
 	font-size: 15px;
 	line-height: 4;
 }
@@ -15,67 +14,102 @@
 
 .page1 {
 	background-image: url("../rs/icegif.gif");
+	/* background-image: url("../rs/px-montagne.webp"); */
+	background-repeat: no-repeat;
+    background-size: cover;
+	background-position: center;
 	padding-left: 2%;
 	/* padding-bottom:; */
-	margin-bottom: 2%;
+	margin: 0 auto 2% auto;
+	border-radius: 10px;
+	width: 95vw;
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr; 
-	grid-template-rows: 1fr 1fr 1fr 1fr; 
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr 1fr;
 	gap: 10px 10px;
 	grid-template-areas:
-	"textc textc pepe pepe"
-	"textc textc pepe pepe"
-	"textc textc pepe pepe"
-	"play play pepe pepe"; 
+		"textc textc pepe pepe"
+		"textc textc pepe pepe"
+		"textc textc pepe pepe"
+		"play play pepe pepe";
 }
 
 #p1-txt {
 	grid-area: textc;
 	color: white;
+	font-weight: 600;
+	/* color: white; */
 	text-align: center;
 	margin-top: 5%;
 
 }
 
-#p1-txt p{
+#p1-txt p {
 	border-radius: 10px;
 	text-align: left;
+	text-align: center;
 }
 
 
-#p1-pepe{
+#p1-pepe {
 	grid-area: pepe;
 	margin-left: 10%;
 }
 
-#p1-play{
-	grid-area: play;
-	background-color: #D64045;
+#p1-play {
 	color: white;
-	border-radius: 10px;
+	grid-area: play;
+	/* color: white; */
+	font-size: x-large;
+	border-radius: 30px;
 	margin-bottom: 10%;
-	box-shadow: 0.5px 0.5px 1px 1px rgba(0, 0, 0, 0.7);
-	transform: scale(1);
-	transition: 0.3s;
-}
-#p1-play:hover{
-	background-color:rgba(214, 64, 69,0.9);
-	transform: scale(0.9);
-	transition: 0.3s;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+	background-color: #1D7874;
+	/*white;*/
+	animation: breathing 5s infinite normal;
+	/* transition: 0.3s; */
+	transition: filter 0.25s;
 }
 
+#p1-play:hover {
+	filter: brightness(1.2);
+	cursor: pointer;
+}
 
-.page2{
+@keyframes breathing {
+	0% {
+	  transform: scale(0.9);
+	}
+  
+	25% {
+	  transform: scale(1);
+	}
+  
+	60% {
+	  transform: scale(0.9);
+	}
+  
+	100% {
+	  transform: scale(0.9);
+	}
+  }
+
+
+.page2 {
 	/* background-image: url("../rs/ice3.png"); */
 	padding: 2%;
 	display: grid;
-	grid-template-columns: 1fr 1fr; 
+	margin: 0 auto;
+	width: 95vw;
+	border-radius: 10px;
+	background-color: rgba(20, 20, 20, .8);
+	grid-template-columns: 0.8fr 1fr;
 	grid-template-rows: 0.2fr 1fr 1fr;
 	gap: 10px 10px;
 	grid-template-areas:
-	"title title"
-	"who twitter "
-	"who twitter ";
+		"title title"
+		"who twitter "
+		"who twitter ";
 }
 
 
@@ -84,8 +118,11 @@
 	margin-left: auto;
 	margin-right: auto;
 	width: fit-content;
+	color: white;
+	text-shadow: 2px 2px 4px rgb(0 0 0);
 }
-#p2-text{
+
+#p2-text {
 	grid-area: who;
 }
 
@@ -93,29 +130,45 @@
 	grid-area: twitter;
 }
 
-
-.page2{
-	margin-left: 4%;
-}
-.page2 h1,.page2 h3{
-    text-shadow:0.5px 0.5px 1px rgba(0, 0, 0, 1);
-}
-.page2 ul{
-	list-style-type:none ;
+.page2 h1,
+.page2 h3 {
+	text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 1);
 }
 
-.image{
-  width: 20%;
-  /* transform: scale(0.2); */
+.page2 ul {
+	list-style-type: none;
 }
 
-.faqcase{
-	margin-bottom:3%;
-	box-shadow: 1px 1px 1.2px 1.2px rgba(0, 0, 0, 0.7);
-	border:solid;
-	width:50%;
+.image {
+	width: 20%;
+	/* transform: scale(0.2); */
+}
+
+.faqcase {
+	margin-bottom: 3%;
+	/* text-shadow:0.5px 0.5px 1px rgba(0, 0, 0, 1); */
+	border: solid;
+	width: 90%;
+	min-height: 5rem;
 	border-radius: 10px;
-
 	padding: 5px;
+	background-color: rgba(245, 245, 245, 0.9);
 	/* margin-left: 4%; */
+	box-shadow: 2px 2px 4px rgb(0 0 0);
+	transition: 0.25s;
+}
+
+.faqcase:hover {
+	transform: scale(1.05);
+	transition: 0.25s;
+}
+
+.faqnav h3 {
+	color: white;
+	text-shadow: 2px 2px 4px rgb(0 0 0);
+	/* text-shadow: -1px -1px 0 rgba(255, 255, 255, 0.5), 1px -1px 0 rgba(255, 255, 255, 0.5), -1px 1px 0 rgba(255, 255, 255, 0.5), 1px 1px 0 rgba(255, 255, 255, 0.5); */
+}
+
+.faqtxt {
+	text-align: center;
 }

@@ -1,7 +1,8 @@
 .center-div {
     margin-left: auto;
     margin-right: auto;
-    width: 30%;
+    /* width: 30%; */
+    padding: 0 30%;
 }
 
 table {
@@ -21,27 +22,43 @@ table {
     /* height:300px; */
     background: -webkit-linear-gradient(left, #5F0A87, #A4508B);
     background: linear-gradient(to right, #5F0A87, #A4508B);
-    overflow-x:auto;
+    overflow-x: auto;
+    overflow-y: scroll;
+    max-height: 20vh;
     margin-top: 0px;
     border: 1px solid rgba(255,255,255,0.6);
+
+}
+
+th, td {
+    text-align: left;
+    font-size: 13px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
 }
 
 th{
   padding: 20px 15px;
-  text-align: left;
   font-weight: 500;
-  font-size: 12px;
-  color: #fff;
   text-transform: uppercase;
 }
 td{
   padding: 15px;
-  text-align: left;
   vertical-align:middle;
   font-weight: 300;
-  font-size: 12px;
-  color: #fff;
   border-bottom: solid 1px rgba(255,255,255,0.1);
+}
+
+tr {
+    transition: 0.25s;
+}
+
+tr:hover {
+    transform: scale(1.05);
+    background: transparent;
+    /* background: -webkit-linear-gradient(left, #5F0A87, #A4508B);
+    background: linear-gradient(to right, #5F0A87, #A4508B); */
+    transition: 0.25s;
 }
 
 

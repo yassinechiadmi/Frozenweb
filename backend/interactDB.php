@@ -6,10 +6,11 @@
 function check_user_exists($username){
     require('include/connect_db.php');
     $req = mysqli_query($connexion,"SELECT * FROM user WHERE username = '$username'");
-    if(mysqli_num_rows($req) > 0){
-        return True;
-    }
-    return False;
+    return (mysqli_num_rows($req) > 0);
+    // if(mysqli_num_rows($req) > 0){
+    //     return True;
+    // }
+    // return False;
 }
 
 function edit_username(){
@@ -23,6 +24,10 @@ function edit_username(){
         $new = $_POST["username"];
         $req = mysqli_query($connexion,"UPDATE user SET username = '$new' WHERE username = '$username'");
         $_SESSION['username'] = $new;
+        if (isset($_COOKIE["login"])){
+            setcookie('login', $new, time() + 182 * 24 * 3600, '/');
+        }
+        header("Location:profile.php");
     }
 }
 
@@ -36,7 +41,44 @@ function edit_password(){
         $username = $_SESSION['username'];
         $pwd = $_POST["password"];
         $req = mysqli_query($connexion,"UPDATE user SET password = '$pwd' WHERE username = '$username'");
+        if (isset($_COOKIE["mdp"])){
+            setcookie('mdp', $pwd, time() + 182 * 24 * 3600, '/');
+        }
+        header("Location:profile.php");
     }
+}
+
+function get_uid() {
+    require('include/connect_db.php');
+    $username = $_SESSION['username'];
+    $res = mysqli_query($connexion, "SELECT `id` FROM `user` WHERE `username` = '$username'");
+    $uid = mysqli_fetch_assoc($res)["id"];
+    return $uid;
+}
+
+function get_pfp() {
+    require('include/connect_db.php');
+    $uid = get_uid();
+    $pfp = mysqli_query($connexion, "SELECT pfp FROM user_pfp WHERE userID = '$uid'");
+    return $pfp;
+}
+
+function get_username($uid)
+{
+    require('include/connect_db.php');
+    $res = mysqli_query($connexion, "SELECT `username` FROM `user` WHERE `id` = '$uid'");
+    $username = mysqli_fetch_assoc($res)["username"];
+    return $username;
+}
+
+function upload_map($map, $map_name)
+{
+    require('include/connect_db.php');
+    $uid = get_uid();
+    $_map = mysqli_real_escape_string($connexion, $map);
+    $text = "INSERT INTO `user_map` VALUES ('$uid', '$_map', '$map_name', NULL, '0')";
+    $req = mysqli_query($connexion, $text);
+    return $req;
 }
 
 ?>
