@@ -27,6 +27,7 @@
 	if(isset($_POST['login']) && isset($_POST['password'])){
 		$login= $_POST['login'];
 		$password = $_POST['password'];
+		$password = mysqli_real_escape_string($connexion, $password);
 		$conf = $_POST['password-conf'];
         $requete = mysqli_query($connexion, "SELECT * FROM user WHERE username = '$login'");
 		if(mysqli_num_rows($requete) > 0){
@@ -37,7 +38,7 @@
 		}
         else{
 			$today = date("Y-m-d");
-            $requete = mysqli_query($connexion,"INSERT INTO user (id,username,password,pseudo,creation_date) VALUES (NULL,'$login','$password','$login','$today')");
+            $requete = mysqli_query($connexion,"INSERT INTO user (id,username,password,pseudo,creation_date,high_score_easy, high_score_medium, high_score_hard) VALUES (NULL,'$login','$password','$login','$today', 0, 0, 0)");
 			header('location:login.php');
 		}
 	}
