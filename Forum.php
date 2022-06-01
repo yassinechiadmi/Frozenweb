@@ -15,7 +15,11 @@
         <form method="post" action="" class="logform">
 
             <h1> Upload a map </h1>
-            <input type="text" name="map" placeholder="Map data">
+            <!-- <input type="file" name="map" value="Upload a map"> -->
+            <?php
+                $data = isset($_GET['map-data']) ? $_GET['map-data'] : "";
+                echo "<input type='text' name='map' placeholder='Map data' value='$data'>";
+            ?>
             <input type="text" name="map_name" placeholder="Map name">
             <input type="submit" name="upload" value="Upload map">
 
@@ -48,6 +52,7 @@
 </html>
 
 <?php
+
 if (isset($_POST["upload"])) {
     // require("backend/interactDB.php");
     $map = $_POST["map"];
