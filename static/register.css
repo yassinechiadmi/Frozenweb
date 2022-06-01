@@ -1,5 +1,9 @@
 body {
-    background: url(../rs/ice1.gif) left top repeat;
+    background-image: url(../rs/repeat-bg.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: repeat-y;
+    image-rendering: pixelated;
 }
 
 .logform {
@@ -15,7 +19,7 @@ body {
     padding: 30px;
     margin-bottom: 3%;
     border: 1px groove black;
-    background: #292B2F;
+    background: #292b2f;
     border-radius: 15px;
 }
 
@@ -29,21 +33,21 @@ label {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
 }
 
-input[type=text],
-input[type=password] {
+input[type="text"],
+input[type="password"] {
     width: 100%;
     padding: 12px 20px;
     color: white;
     margin: 8px 0;
     display: inline-block;
-    border: 1px solid #292B2F;
-    background-color: #1C1E21;
+    border: 1px solid #292b2f;
+    background-color: #1c1e21;
     box-sizing: border-box;
     border-radius: 10px;
 }
 
-input[type=submit] {
-    background-color: #1D7874;
+input[type="submit"] {
+    background-color: #1d7874;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -54,31 +58,27 @@ input[type=submit] {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
     transform: scale(1);
     transition-duration: 0.3s;
-
 }
 
-input[type=submit]:hover {
-    background-color: #2CB5AE;
+input[type="submit"]:hover {
+    background-color: #2cb5ae;
     color: white;
     transform: scale(0.9);
     transition-duration: 0.3s;
     /* border: 1px solid #53af57; */
 }
 
-
 .error {
     text-align: center;
-    color: #D64045;
+    color: #d64045;
 }
 
 .dropdown-form {
     width: 100%;
     text-align: left;
     font-size: larger;
-    color: #D64045;
+    color: #d64045;
 }
-
-
 
 @keyframes fade_in_show {
     0% {
@@ -91,7 +91,6 @@ input[type=submit]:hover {
         transform: scale(1);
     }
 }
-
 
 .dropdown-form .dropdown-input {
     width: 50%;
