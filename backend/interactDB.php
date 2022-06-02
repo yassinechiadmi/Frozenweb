@@ -72,9 +72,18 @@ function upload_map($map, $map_name)
     require('include/connect_db.php');
     $uid = get_uid();
     $_map = mysqli_real_escape_string($connexion, $map);
-    $text = "INSERT INTO `user_map` VALUES ('$uid', '$_map', '$map_name', NULL, '0')";
+    $text = "INSERT INTO `user_map` (`userID`, `map`, `map_name`, `map_id`, `is_official`) VALUES ('$uid', '$map', '$map_name', NULL, '0');";
     $req = mysqli_query($connexion, $text);
     return $req;
 }
 
+function delete_map($map_id)
+{
+    require('include/connect_db.php');
+    $uid = get_uid();
+    $text = "DELETE FROM `user_map` WHERE `userID` = '$uid' AND `map_id` = '$map_id'";
+    $req = mysqli_query($connexion, $text);
+    return $req;
+    header("Location:upload.php");
+}
 ?>
