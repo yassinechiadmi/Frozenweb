@@ -75,7 +75,9 @@
     padding: 1em;
     gap: 1rem;
     font-size: 0.9rem;
-    border-radius: calc(var(--curve) * 1px) 0 0 0;
+    /* border-radius: calc(var(--curve) * 1px) 0 0 0; */
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
     background-color: var(--surface-color);
     transform: translateY(-100%);
     transition: 0.2s ease-in-out;
