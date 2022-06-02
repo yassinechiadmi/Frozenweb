@@ -68,6 +68,6 @@ if (isset($_POST["upload"])) {
     $ret = upload_map($map, $map_name);
     $uid = get_uid();
     if (!$ret) echo "$ret, $uid";
-    // header("Location:upload.php");
+    header("Location:upload.php");
 }
 ?>

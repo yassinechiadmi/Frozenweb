@@ -63,9 +63,9 @@ body {
     line-height: 1.5;
     background-color: var(--green);
     background-image: url(../rs/repeat-bg.png);
-    background-size: contain;
+    background-size: cover;
     background-position: center;
-    background-repeat: repeat;
+    background-repeat: repeat-y;
     image-rendering: pixelated;
 }
 
