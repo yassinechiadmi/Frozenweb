@@ -11,20 +11,17 @@
     margin: 0 auto;
     border-radius: 10px;
     width: 95vw;
-    height: 20rem;
-    overflow-y: hidden;
+    height: 20em;
     background-color: rgba(20, 20, 20, 0.8);
 }
 
 .level-list {
     flex: 1;
-    height: 80%;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
-    justify-content: space-evenly;
-    gap: 2rem;
+    gap: 4em;
     list-style: none;
     overflow-x: scroll;
     scrollbar-width: none;
@@ -36,7 +33,6 @@
 }
 
 .arrow {
-    background: none;
     margin: 1rem;
     height: 3rem;
     width: 3rem;
@@ -61,23 +57,23 @@
 }
 
 .card {
-    position: relative;
     display: block;
     height: 15rem;
     width: 15rem;
-    overflow: hidden;
-    margin: 0 20px;
     text-decoration: none;
+    overflow: hidden;
+    transition: all 0.4s ease-in-out;
 }
 
 .card__image {
     image-rendering: pixelated;
     height: 100%;
+    width: auto;
 }
 
 .card__header {
     position: relative;
-    bottom: 0;
+    bottom: 22%;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -85,12 +81,15 @@
     padding: 1em;
     gap: 1rem;
     font-size: 0.9rem;
-    /* border-radius: calc(var(--curve) * 1px) 0 0 0; */
     border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
-    background-color: var(--surface-color);
-    transform: translateY(-100%);
-    transition: 0.2s ease-in-out;
+    background-color: rgb(158, 234, 255);
+    box-shadow: 0px -4px 4px 2px rgba(2, 122, 143, 0.2);
+    transform: translateY(0%);
+}
+
+.card:hover .card__header {
+    transition: all 0.4s ease-in-out;
+    transform: translateY(120%);
 }
 
 .card__title {
