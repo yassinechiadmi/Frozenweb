@@ -11,7 +11,6 @@
 			<!-- <div id="nav-btn-container"></div> -->
 			<?php
 			if (isset($_SESSION["username"]) == NULL) {
-
 				echo "<li><a id=\"login\" href='login.php'><i class='nav-btn' aria-hidden='true'></i>Login</a></li>";
 				echo "<li><a id=\"register\" href='register.php'><i class='nav-btn' aria-hidden='true'></i>Register</a></li>";
 			} else if (isset($_SESSION["username"])) {
