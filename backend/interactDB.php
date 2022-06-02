@@ -7,10 +7,6 @@ function check_user_exists($username){
     require('include/connect_db.php');
     $req = mysqli_query($connexion,"SELECT * FROM user WHERE username = '$username'");
     return (mysqli_num_rows($req) > 0);
-    // if(mysqli_num_rows($req) > 0){
-    //     return True;
-    // }
-    // return False;
 }
 
 function edit_username(){

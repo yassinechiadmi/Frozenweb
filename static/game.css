@@ -42,6 +42,10 @@
     width: 3rem;
 }
 
+.arrow:hover {
+    cursor: pointer;
+}
+
 .arrow img {
     height: 100%;
     width: auto;

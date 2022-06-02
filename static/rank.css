@@ -70,3 +70,13 @@ tr:hover {
     background: -webkit-linear-gradient(left, #c2f261, #61f2c2);
     background: linear-gradient(to right, #c2f261, #61f2c2);
 }
+
+select, option {
+    background: linear-gradient(to left, #0fb3d3d2, #3e97a8e0);
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 80%;
+    border-radius: 10px;
+}
