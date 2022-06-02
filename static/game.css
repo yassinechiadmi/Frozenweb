@@ -13,7 +13,6 @@
     width: 95vw;
     height: 20rem;
     overflow-y: hidden;
-    overflow-x: scroll;
     background-color: rgba(20, 20, 20, 0.8);
 }
 
@@ -27,6 +26,13 @@
     justify-content: space-evenly;
     gap: 2rem;
     list-style: none;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+}
+
+.level-list::-webkit-scrollbar {
+    display: none;
 }
 
 .arrow {

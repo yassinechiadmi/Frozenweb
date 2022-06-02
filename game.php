@@ -8,8 +8,8 @@ require("include/head.php") ?>
 
 
     <div class="selector">
-        <button class="arrow left"><img src="rs/arrown.png" alt=""></button>
-        <ul class="level-list">
+        <div id="left_arrow" class="arrow left" style="opacity: 0;"><img src="rs/arrown.png" alt=""></div>
+        <ul id="level_list" class="level-list">
 
             <?php
             require_once("include/connect_db.php");
@@ -31,7 +31,9 @@ require("include/head.php") ?>
                 }
             }
             ?>
-            <button class="arrow right"><img src="rs/arrown.png" alt=""></button>
+        </ul>
+        <div id="right_arrow" class="arrow right"><img src="rs/arrown.png" alt=""></div>
+
     </div>
     <?php require("include/foot.php") ?>
     <script src="static/preview.js"> </script>
