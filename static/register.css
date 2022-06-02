@@ -1,11 +1,3 @@
-body {
-    background-image: url(../rs/repeat-bg.png);
-    background-size: contain;
-    background-position: center;
-    background-repeat: repeat-y;
-    image-rendering: pixelated;
-}
-
 .logform {
     width: 50%;
     margin-left: auto;

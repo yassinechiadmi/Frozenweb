@@ -1,9 +1,9 @@
 /*Mise en page par défaut (code de Nathan interne)*/
 /* Box sizing rules */
 
-:root{
-  --green:#1D7874;
-  --div-shadow:2px 2px 4px rgba(0, 0, 0, 1);
+:root {
+  --green: #1D7874;
+  --div-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
 }
 
 *,
@@ -42,7 +42,7 @@ blockquote,
 dl,
 dd {
   margin: 0;
-  
+
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
@@ -63,6 +63,11 @@ body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   background-color: var(--green);
+  background-image: url(../rs/repeat-bg.png);
+  background-size: contain;
+  /* background-position: left top;*/
+  background-repeat: repeat;
+  image-rendering: pixelated;
 }
 
 /* A elements that don't have a class get default styles */
@@ -88,9 +93,9 @@ select {
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
-   scroll-behavior: auto;
+    scroll-behavior: auto;
   }
-  
+
   *,
   *::before,
   *::after {
@@ -118,7 +123,7 @@ select {
   border-radius: 15px;
 }
 
-h1{
+h1 {
   /* width: 38%; */
   margin: 0 auto;
   padding-bottom: 10px;
