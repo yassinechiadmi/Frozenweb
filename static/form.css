@@ -50,12 +50,21 @@ input[type=submit]{
     width: 100%;
 }
 
+input[type=file] {
+    background-color: #53af57;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
 input[type=submit]:hover {
     background-color: white;
     color: #53af57;
     border: 1px solid #53af57;
 }
-
 .erreur{
 	color: red;
 }

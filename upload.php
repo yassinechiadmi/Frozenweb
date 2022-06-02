@@ -15,14 +15,16 @@ if(isset($_SESSION["username"]))
     ?>
 
     <div id="case">
-        <form method="post" action="" class="logform">
+        <form method="post" action="" enctype="multipart/form-data" class="logform">
 
             <h1> Upload a map </h1>
-            <!-- <input type="file" name="map" value="Upload a map"> -->
-            <?php
+            <label>Map file: 
+                <input type="file" name="map" value="Upload a map">
+            </label>
+            <!-- <?php
                 $data = isset($_GET['map-data']) ? $_GET['map-data'] : "";
                 echo "<input type='text' name='map' placeholder='Map data' value='$data'>";
-            ?>
+            ?> -->
             <input type="text" name="map_name" placeholder="Map name">
             <input type="submit" name="upload" value="Upload map">
 
@@ -59,8 +61,9 @@ if(isset($_SESSION["username"]))
 <?php
 
 if (isset($_POST["upload"])) {
-    // require("backend/interactDB.php");
-    $map = $_POST["map"];
+    $_file = $_FILES["map"]["tmp_name"]; // On choppe le nom du fichier
+    $map = file_get_contents($_file); // On lit le texte
+    unlink($_file); // On supprime le fichier temp
     $map_name = $_POST["map_name"];
     $ret = upload_map($map, $map_name);
     $uid = get_uid();
