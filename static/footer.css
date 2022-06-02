@@ -1,48 +1,49 @@
 /*footer*/
 footer {
-  bottom: 0;
-  margin-top: 50px;
-  /* position: absolute; */
-  /* padding: 0; */
+    bottom: 0;
+    margin-top: 50px;
+    position: relative;
+    width: 100%;
+    z-index: 1000;
 }
 
 footer div {
-  padding: 10px;
-  /* position: relative; */
-  width: 95vw;
-  margin: 10px auto 0 auto;
-  border-radius: 10px 10px 0 0;
-  height: max-content;
-  text-align: center;
-  /* padding-bottom: 10px; */
-  image-rendering: pixelated;
-  background-color: rgba(20, 20, 20, .8);
+    padding: 10px;
+    /* position: relative; */
+    width: 95vw;
+    margin: 10px auto 0 auto;
+    border-radius: 10px 10px 0 0;
+    height: max-content;
+    text-align: center;
+    /* padding-bottom: 10px; */
+    image-rendering: pixelated;
+    background-color: rgba(20, 20, 20, 0.8);
 }
 
 footer div h3 {
-  padding-top: 10px;
-  color: rgb(72, 69, 126);
+    padding-top: 10px;
+    color: rgb(72, 69, 126);
 }
 
 .wut ul {
-  display: block;
+    display: block;
 }
 
 footer div ul li {
-  /* width: 110px; */
-  margin: 0 20px;
-  /* height:50px; */
-  vertical-align: middle;
-  display: inline-block;
+    /* width: 110px; */
+    margin: 0 20px;
+    /* height:50px; */
+    vertical-align: middle;
+    display: inline-block;
 }
 
 .text-center-p-3 {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 .text-dark {
-  color: black;
+    color: black;
 }
 
 /* #fb{
@@ -52,22 +53,22 @@ footer div ul li {
 #fb,
 #insta,
 #tw {
-  transition: transform 0.25s;
+    transition: transform 0.25s;
 }
 
 #fb:hover,
 #insta:hover,
 #tw:hover {
-  transform: rotate(360deg) scale(1.1);
+    transform: rotate(360deg) scale(1.1);
 }
 
 #go-top {
-  image-rendering: auto;
-  transition: transform 0.25s;
+    image-rendering: auto;
+    transition: transform 0.25s;
 }
 
 #go-top:hover {
-  transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 @keyframes jiggle {
@@ -80,12 +81,12 @@ footer div ul li {
 }
 
 footer div p {
-  clear: both;
-  color: #FFFFFF;
+    clear: both;
+    color: #ffffff;
 }
 
 footer div a {
-  color: #FFFFFF;
+    color: #ffffff;
 }
 
 /*Fin du footer*/

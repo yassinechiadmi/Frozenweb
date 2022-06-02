@@ -1,33 +1,33 @@
 /*Mise en page par défaut (code de Nathan interne)*/
 /* Box sizing rules */
 
-:root{
-  --green:#1D7874;
-  --div-shadow:2px 2px 4px rgba(0, 0, 0, 1);
+:root {
+    --green: #1d7874;
+    --div-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
 }
 
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
-  font-family: Montserrat, sans-serif;
-  scroll-behavior: smooth;
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {
-  width: 8px;
-  background: grey;
+    width: 8px;
+    background: grey;
 }
 
 ::-webkit-scrollbar-track {
-  border-radius: 30px;
+    border-radius: 30px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #292B2F;
-  border-radius: 10px;
-  border: 1px solid black;
+    background: #292b2f;
+    border-radius: 10px;
+    border: 1px solid black;
 }
 
 /* Remove default margin */
@@ -41,40 +41,44 @@ figure,
 blockquote,
 dl,
 dd {
-  margin: 0;
-  
+    margin: 0;
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
-  list-style: none;
-  list-style-type: none;
+ul[role="list"],
+ol[role="list"] {
+    list-style: none;
+    list-style-type: none;
 }
 
 /* Set core root defaults */
 html:focus-within {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 /* Set core body defaults */
 body {
-  min-height: 100vh;
-  text-rendering: optimizeSpeed;
-  line-height: 1.5;
-  background-color: var(--green);
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    background-color: var(--green);
+    background-image: url(../rs/repeat-bg.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: repeat;
+    image-rendering: pixelated;
 }
 
 /* A elements that don't have a class get default styles */
 a:not([class]) {
-  text-decoration-skip-ink: auto;
+    text-decoration-skip-ink: auto;
 }
 
 /* Make images easier to work with */
 img,
 picture {
-  max-width: 100%;
-  display: block;
+    max-width: 100%;
+    display: block;
 }
 
 /* Inherit fonts for inputs and buttons */
@@ -82,46 +86,50 @@ input,
 button,
 textarea,
 select {
-  font: inherit;
+    font: inherit;
 }
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
-  html:focus-within {
-   scroll-behavior: auto;
-  }
-  
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
 }
 
 .text-background {
-  width: 50%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 2%;
-  display: flex;
-  flex-direction: column;
-  /* row-gap: 10px; */
-  color: white;
-  /* width:100%; */
-  padding: 30px;
-  margin-bottom: 3%;
-  border: 1px groove black;
-  background: #292B2F;
-  border-radius: 15px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+    /* row-gap: 10px; */
+    color: white;
+    /* width:100%; */
+    padding: 30px;
+    margin-bottom: 3%;
+    border: 1px groove black;
+    background: #292b2f;
+    border-radius: 15px;
 }
 
-h1{
-  /* width: 38%; */
-  margin: 0 auto;
-  padding-bottom: 10px;
-  text-shadow: var(--div-shadow);
-  color: white;
+h1 {
+    /* width: 38%; */
+    margin: 0 auto;
+    padding-bottom: 10px;
+    text-shadow: var(--div-shadow);
+    color: white;
+}
+
+body {
+    height: 100vh;
 }

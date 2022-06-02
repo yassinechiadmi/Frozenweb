@@ -1,174 +1,169 @@
 .case1 {
-	padding-bottom: 25%;
+    padding-bottom: 25%;
 }
 
 .case1 p {
-	float: left;
-	border: solid;
-	color: white;
-	font-size: 15px;
-	line-height: 4;
+    float: left;
+    border: solid;
+    color: white;
+    font-size: 15px;
+    line-height: 4;
 }
 
-
-
 .page1 {
-	background-image: url("../rs/icegif.gif");
-	/* background-image: url("../rs/px-montagne.webp"); */
-	background-repeat: no-repeat;
+    /* background-image: url("../rs/icegif.gif"); */
+    /* background-image: url("../rs/px-montagne.webp"); */
+    /* background-repeat: no-repeat;
     background-size: cover;
-	background-position: center;
-	padding-left: 2%;
-	/* padding-bottom:; */
-	margin: 0 auto 2% auto;
-	border-radius: 10px;
-	width: 95vw;
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
-	grid-template-rows: 1fr 1fr 1fr 1fr;
-	gap: 10px 10px;
-	grid-template-areas:
-		"textc textc pepe pepe"
-		"textc textc pepe pepe"
-		"textc textc pepe pepe"
-		"play play pepe pepe";
+    background-position: center; */
+    background-color: rgba(20, 20, 20, 0.8);
+    padding-left: 2%;
+    /* padding-bottom:; */
+    margin: 0 auto 2% auto;
+    border-radius: 10px;
+    width: 95vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 10px 10px;
+    grid-template-areas:
+        "textc textc pepe pepe"
+        "textc textc pepe pepe"
+        "textc textc pepe pepe"
+        "play play pepe pepe";
 }
 
 #p1-txt {
-	grid-area: textc;
-	color: white;
-	font-weight: 600;
-	/* color: white; */
-	text-align: center;
-	margin-top: 5%;
-
+    grid-area: textc;
+    color: white;
+    font-weight: 600;
+    /* color: white; */
+    text-align: center;
+    margin-top: 5%;
 }
 
 #p1-txt p {
-	border-radius: 10px;
-	text-align: left;
-	text-align: center;
+    border-radius: 10px;
+    text-align: left;
+    text-align: center;
 }
 
-
 #p1-pepe {
-	grid-area: pepe;
-	margin-left: 10%;
+    grid-area: pepe;
+    margin-left: 10%;
 }
 
 #p1-play {
-	color: white;
-	grid-area: play;
-	/* color: white; */
-	font-size: x-large;
-	border-radius: 30px;
-	margin-bottom: 10%;
-	text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
-	background-color: #1D7874;
-	/*white;*/
-	animation: breathing 5s infinite normal;
-	/* transition: 0.3s; */
-	transition: filter 0.25s;
+    color: white;
+    grid-area: play;
+    /* color: white; */
+    font-size: x-large;
+    border-radius: 30px;
+    margin-bottom: 10%;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+    background-color: #1d7874;
+    /*white;*/
+    animation: breathing 5s infinite normal;
+    /* transition: 0.3s; */
+    transition: filter 0.25s;
 }
 
 #p1-play:hover {
-	filter: brightness(1.2);
-	cursor: pointer;
+    filter: brightness(1.2);
+    cursor: pointer;
 }
 
 @keyframes breathing {
-	0% {
-	  transform: scale(0.9);
-	}
-  
-	25% {
-	  transform: scale(1);
-	}
-  
-	60% {
-	  transform: scale(0.9);
-	}
-  
-	100% {
-	  transform: scale(0.9);
-	}
-  }
+    0% {
+        transform: scale(0.9);
+    }
 
+    25% {
+        transform: scale(1);
+    }
 
-.page2 {
-	/* background-image: url("../rs/ice3.png"); */
-	padding: 2%;
-	display: grid;
-	margin: 0 auto;
-	width: 95vw;
-	border-radius: 10px;
-	background-color: rgba(20, 20, 20, .8);
-	grid-template-columns: 0.8fr 1fr;
-	grid-template-rows: 0.2fr 1fr 1fr;
-	gap: 10px 10px;
-	grid-template-areas:
-		"title title"
-		"who twitter "
-		"who twitter ";
+    60% {
+        transform: scale(0.9);
+    }
+
+    100% {
+        transform: scale(0.9);
+    }
 }
 
+.page2 {
+    /* background-image: url("../rs/ice3.png"); */
+    padding: 2%;
+    display: grid;
+    margin: 0 auto;
+    width: 95vw;
+    border-radius: 10px;
+    background-color: rgba(20, 20, 20, 0.8);
+    grid-template-columns: 0.8fr 1fr;
+    grid-template-rows: 0.2fr 1fr 1fr;
+    gap: 10px 10px;
+    grid-template-areas:
+        "title title"
+        "who twitter "
+        "who twitter ";
+}
 
 #p2-title {
-	grid-area: title;
-	margin-left: auto;
-	margin-right: auto;
-	width: fit-content;
-	color: white;
-	text-shadow: 2px 2px 4px rgb(0 0 0);
+    grid-area: title;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    color: white;
+    text-shadow: 2px 2px 4px rgb(0 0 0);
 }
 
 #p2-text {
-	grid-area: who;
+    grid-area: who;
 }
 
 .twit {
-	grid-area: twitter;
+    grid-area: twitter;
 }
 
 .page2 h1,
 .page2 h3 {
-	text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 1);
+    text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 1);
 }
 
 .page2 ul {
-	list-style-type: none;
+    list-style-type: none;
 }
 
 .image {
-	width: 20%;
-	/* transform: scale(0.2); */
+    width: 20%;
+    /* transform: scale(0.2); */
 }
 
 .faqcase {
-	margin-bottom: 3%;
-	/* text-shadow:0.5px 0.5px 1px rgba(0, 0, 0, 1); */
-	border: solid;
-	width: 90%;
-	min-height: 5rem;
-	border-radius: 10px;
-	padding: 5px;
-	background-color: rgba(245, 245, 245, 0.9);
-	/* margin-left: 4%; */
-	box-shadow: 2px 2px 4px rgb(0 0 0);
-	transition: 0.25s;
+    margin-bottom: 3%;
+    /* text-shadow:0.5px 0.5px 1px rgba(0, 0, 0, 1); */
+    border: solid;
+    width: 90%;
+    min-height: 5rem;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: rgba(245, 245, 245, 0.9);
+    /* margin-left: 4%; */
+    box-shadow: 2px 2px 4px rgb(0 0 0);
+    transition: 0.25s;
 }
 
 .faqcase:hover {
-	transform: scale(1.05);
-	transition: 0.25s;
+    transform: scale(1.05);
+    transition: 0.25s;
 }
 
 .faqnav h3 {
-	color: white;
-	text-shadow: 2px 2px 4px rgb(0 0 0);
-	/* text-shadow: -1px -1px 0 rgba(255, 255, 255, 0.5), 1px -1px 0 rgba(255, 255, 255, 0.5), -1px 1px 0 rgba(255, 255, 255, 0.5), 1px 1px 0 rgba(255, 255, 255, 0.5); */
+    color: white;
+    text-shadow: 2px 2px 4px rgb(0 0 0);
+    /* text-shadow: -1px -1px 0 rgba(255, 255, 255, 0.5), 1px -1px 0 rgba(255, 255, 255, 0.5), -1px 1px 0 rgba(255, 255, 255, 0.5), 1px 1px 0 rgba(255, 255, 255, 0.5); */
 }
 
 .faqtxt {
-	text-align: center;
+    text-align: center;
 }
