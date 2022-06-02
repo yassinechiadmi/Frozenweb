@@ -140,3 +140,34 @@ tileSheet.onload = () => {
         level.children[0].src = ctx.canvas.toDataURL();
     });
 };
+
+const right = document.getElementById("right_arrow");
+const left = document.getElementById("left_arrow");
+const level_list = document.getElementById("level_list");
+
+level_list.addEventListener("scroll", (e) => {
+    if (e.target.scrollLeft > 0) {
+        left.style.opacity = 1;
+    } else {
+        left.style.opacity = 0;
+    }
+    if (e.target.scrollLeft < e.target.scrollWidth - e.target.clientWidth) {
+        right.style.opacity = 1;
+    } else {
+        right.style.opacity = 0;
+    }
+});
+
+right.addEventListener("click", () => {
+    level_list.scrollTo({
+        left: level_list.scrollLeft + level_list.clientWidth,
+        behavior: "smooth",
+    });
+});
+
+left.addEventListener("click", () => {
+    level_list.scrollTo({
+        left: level_list.scrollLeft - level_list.clientWidth,
+        behavior: "smooth",
+    });
+});
