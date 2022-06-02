@@ -15,7 +15,7 @@ if(isset($_SESSION["username"]))
     ?>
 
     <div id="case">
-        <form method="post" action="" enctype="multipart/form-data">
+        <form method="post" action="" enctype="multipart/form-data" class="logform">
 
             <h1> Upload a map </h1>
             <label>Map file: 
