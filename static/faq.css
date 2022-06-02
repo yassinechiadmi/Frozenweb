@@ -19,8 +19,8 @@ body {
 h1.faqh {
 	color: white;
 	background-color: var(--green);
-	box-shadow:var(--div-shadow);
-	border-radius:10px;
+	box-shadow: var(--div-shadow);
+	border-radius: 10px;
 	padding: 4px 2px;
 }
 

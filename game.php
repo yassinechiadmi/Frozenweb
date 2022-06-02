@@ -1,5 +1,6 @@
 <?php
-define('GAME_URL', 'http://localhost:5500/');
+// define('GAME_URL', 'http://localhost:5500/');
+define('GAME_URL', 'https://bafbi.github.io/glagla/');
 require("include/head.php") ?>
 
 <body>
@@ -19,12 +20,13 @@ require("include/head.php") ?>
                 while ($res = mysqli_fetch_assoc($req)) {
                     $data = $res["map"];
                     $map_name = $res["map_name"];
+                    $u_name = get_username($res["userID"]);
                     echo "<li>
                             <a href='" . GAME_URL . "' data-map='$data' class='card'>
                                 <img src='' class='card__image' alt='' />
                                 <div class='card__header'>
                                     <h3 class='card__title'>$map_name</h3>
-                                    <span class='card__status'>EASY</span>
+                                    <span class='card__status'>$u_name</span>
                                 </div>
                             </a>
                         </li>";
