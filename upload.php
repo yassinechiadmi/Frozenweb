@@ -83,8 +83,8 @@ here:
                         <label>Username: $user</label>
                         <label for='map_name'>Map name: $map_name</label>
                         <span>
-                            <a href='del_map.php?map_id=$map_id'>Delete</a>
-                            <a href='https://bafbi.github.io/2d-tilemap-editor/?map-data=$map'>Edit</a>
+                            <a id='del' href='del_map.php?map_id=$map_id'>Delete</a>
+                            <a id='edit' href='https://bafbi.github.io/2d-tilemap-editor/?map-data=$map'>Edit</a>
                         </span>
                 </div>";
                 }
