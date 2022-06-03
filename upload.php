@@ -49,8 +49,8 @@ if(isset($_SESSION["username"]))
                         <label>Username: $user</label>
                         <label for='map_name'>Map name: $map_name</label>
                         <span>
-                            <a href='del_map.php?map_id=$map_id'>Delete</a>
-                            <a href='https://bafbi.github.io/2d-tilemap-editor/?map-data=$map'>Edit</a>
+                            <a id='del' href='del_map.php?map_id=$map_id'>Delete</a>
+                            <a id='edit' href='https://bafbi.github.io/2d-tilemap-editor/?map-data=$map'>Edit</a>
                         </span>
                 </div>";            
             }
@@ -68,6 +68,7 @@ if(isset($_SESSION["username"]))
 if (isset($_POST["upload"])) {
     $_file = $_FILES["map"]["tmp_name"]; // On choppe le nom du fichier
     $map = file_get_contents($_file); // On lit le texte
+    if ($map == "") header("Location:upload.php");
     unlink($_file); // On supprime le fichier temp
     $map_name = $_POST["map_name"];
     $ret = upload_map($map, $map_name);

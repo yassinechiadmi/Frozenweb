@@ -8,3 +8,23 @@
     margin: 20px auto;
     border-radius: 20px;
 }
+
+a {
+    color: white;
+    text-decoration-color: transparent;
+    transition: 0.25s;
+}
+
+#del:hover, #edit:hover {
+    transition: 0.25s;
+}
+
+#del:hover {
+    text-decoration-color: red;
+    color: red;
+}
+
+#edit:hover {
+    text-decoration-color:#0db6d8d2;
+    color: #0db6d8d2;
+}
