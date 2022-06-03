@@ -72,12 +72,29 @@ function get_username($uid)
     return $username;
 }
 
+function get_map_name(string $id)
+{
+    require('include/connect_db.php');
+    $res = mysqli_query($connexion, "SELECT `map_name` FROM `user_map` WHERE `map_id` = '$id'");
+    $name = mysqli_fetch_assoc($res)["map_name"];
+    return $name;
+}
+
 function upload_map($map, $map_name)
 {
     require('include/connect_db.php');
     $uid = get_uid();
     $_map = mysqli_real_escape_string($connexion, $map);
     $text = "INSERT INTO `user_map` (`userID`, `map`, `map_name`, `map_id`, `is_official`) VALUES ('$uid', '$map', '$map_name', NULL, '0');";
+    $req = mysqli_query($connexion, $text);
+    return $req;
+}
+
+function update_map($map, $map_name, $id)
+{
+    require('include/connect_db.php');
+    $uid = get_uid();
+    $text = "UPDATE `user_map` SET `map` = '$map', `map_name` = '$map_name' WHERE `userID` = '$uid' AND `map_id` = '$id';";
     $req = mysqli_query($connexion, $text);
     return $req;
 }

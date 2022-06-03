@@ -13,6 +13,13 @@ session_start();
 if (isset($_POST["upload"])) {
     if (isset($_POST["map_json"])) {
         $map = $_POST["map_json"];
+        if (isset($_POST["map_id"])) {
+            $map_id = $_POST["map_id"];
+            $map_name = $_POST["map_name"];
+            $ret = update_map($map, $map_name, $map_id);
+            header("Location:upload.php");
+            die();
+        }
     } else {
         $_file = $_FILES["map_file"]["tmp_name"]; // On choppe le nom du fichier
         try {
@@ -30,6 +37,7 @@ if (isset($_POST["upload"])) {
 
     $uid = get_uid();
     if (!$ret) echo "$ret, $uid";
+    header("Location:upload.php");
 }
 
 here:
@@ -46,20 +54,29 @@ here:
         <div id="case">
             <form method="post" action="" enctype="multipart/form-data" class="logform">
 
-                <h1> Upload a map </h1>
 
                 <?php
+                $preName = "";
                 if (isset($_GET['map-data'])) {
                     $data = $_GET['map-data'];
+                    if (isset($_GET['map-id'])) {
+                        echo  "<h1> Edit the map </h1>";
+                        $preName = get_map_name($_GET['map-id']);
+                        echo "<input type='hidden' name='map_id' value='" . $_GET['map-id'] . "'>";
+                    } else {
+                        echo  "<h1> Publish the map </h1>";
+                    }
+
                     echo "<input type='text' name='map_json' placeholder='Map data' value='$data'>";
                 } else {
+                    echo  "<h1> Upload a map </h1>";
                     echo '<label>Map file : <input type="file" name="map_file" value="Upload a map"></label>';
                     if ($emptyFile)
                         echo "<span class='error'>FICHIER VIDE</span>";
                 }
 
                 ?>
-                <input type="text" name="map_name" placeholder="Map name">
+                <input type="text" name="map_name" placeholder="Map name" value="<?php echo $preName ?>">
                 <input type="submit" name="upload" value="Upload map">
 
             </form>
@@ -84,10 +101,10 @@ here:
                         <label for='map_name'>Map name: $map_name</label>
                         <span>
                             <a id='del' href='del_map.php?map_id=$map_id'>Delete</a>
-                            <a id='edit' href='https://bafbi.github.io/2d-tilemap-editor/?map-data=$map'>Edit</a>
-                        </span>
+                            <a id='edit' href='https://bafbi.github.io/2d-tilemap-editor/?map-id=$map_id&map-data=$map'>Edit</a>
+                        </span> 
                 </div>";
-                }
+                } // https://bafbi.github.io/2d-tilemap-editor/
             }
             ?>
         </div>
