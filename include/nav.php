@@ -1,5 +1,9 @@
 <header>
-	<?php session_start(); ?>
+	<?php
+	if (session_status() != PHP_SESSION_ACTIVE) {
+		session_start();
+	}
+	?>
 	<nav>
 		<ul>
 			<li><a href="index.php">Home</a></li>

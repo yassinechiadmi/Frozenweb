@@ -26,10 +26,10 @@
 	<div id="particles-js"></div>
 		<h1> Log in </h1>
 		<label> Username : </label> 
-		<input type="text" name="username" placeholder="Example19" maxlength="100" required <?php if (!empty($log)) echo "value = '$log'";?>>
+		<input type="text" name="username" placeholder="Example19" maxlength="100" required <?php echo "value = '$log'";?>>
 		<br><br>
 		<label> Password : </label>
-		<input type="password" name="password" placeholder="Password123" maxlength="10" required <?php if (!empty($mdp)) echo "value = '$mdp'";?>> 
+		<input type="password" name="password" placeholder="Password123" maxlength="10" required <?php echo "value = '$mdp'";?>> 
 		<br><br>
 		<span>
 
