@@ -1,38 +1,42 @@
 
+.particles{
+    /* z-index: 2; */
+    /* position: relative; */
+    /* height: 60%; */
+    /* padding: 2%; */
+}
 
 #particles-js{
     position: absolute;
     z-index: 1;
-    width: inherit;
-    padding:inherit ;
-    height: inherit;
-}
-
-.particles{
-    /* z-index: 2; */
-    /* position: relative; */
-
+    width: 95%;
+    height: 95%;
+    /* margin-left: 0; */
+    /* padding: inherit; */
+    /* margin: 2%; */
+    /* padding: 2% 2% 0 2%; */
+    /* height: 100%; */
 }
 
 .logform {
+    position: relative;
     width: 50%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 2%;
+
     display: flex;
     flex-direction: column;
-    /* row-gap: 10px; */
+    row-gap: 10px;
     color: white;
-    /* width:100%; */
-    padding: 30px;
-    margin-bottom: 3%;
     border: 1px groove black;
     background: #292b2f;
     border-radius: 15px;
+    /* height: auto; */
+    padding: 2%;
+    margin-bottom: 2%;
 }
 .logform * {
     z-index: 3;
-
 }
 
 label {

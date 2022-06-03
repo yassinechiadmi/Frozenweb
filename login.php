@@ -23,7 +23,7 @@
 
 <div id="case" class="particles">
 	<form method="post" action="login.php" class="logform"> 
-	<div id="particles-js"></div>
+		<div id="particles-js"></div>
 		<h1> Log in </h1>
 		<label> Username : </label> 
 		<input type="text" name="username" placeholder="Example19" maxlength="100" required <?php echo "value = '$log'";?>>
