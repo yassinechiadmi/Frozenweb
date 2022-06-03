@@ -2,8 +2,38 @@
 <html lang="en">
 
 <?php require("include/head.php");
-if (isset($_SESSION["username"]))
-    header('location:index.php');
+
+$emptyFile = false;
+
+require("include/connect_db.php");
+require("backend/interactDB.php");
+
+session_start();
+
+if (isset($_POST["upload"])) {
+    if (isset($_POST["map_json"])) {
+        $map = $_POST["map_json"];
+    } else {
+        $_file = $_FILES["map_file"]["tmp_name"]; // On choppe le nom du fichier
+        try {
+            $map = file_get_contents($_file); // On lit le texte
+
+        } catch (\Throwable $th) {
+            $emptyFile = true;  // On indique que le fichier est vide
+            goto here;
+        }
+        unlink($_file); // On supprime le fichier temp
+    }
+
+    $map_name = $_POST["map_name"];
+    $ret = upload_map($map, $map_name);
+
+    $uid = get_uid();
+    if (!$ret) echo "$ret, $uid";
+}
+
+here:
+
 ?>
 
 <body>
@@ -23,7 +53,9 @@ if (isset($_SESSION["username"]))
                     $data = $_GET['map-data'];
                     echo "<input type='text' name='map_json' placeholder='Map data' value='$data'>";
                 } else {
-                    echo '<label>Map file:<input type="file" name="map_file" value="Upload a map"></label>';
+                    echo '<label>Map file : <input type="file" name="map_file" value="Upload a map"></label>';
+                    if ($emptyFile)
+                        echo "<span class='error'>FICHIER VIDE</span>";
                 }
 
                 ?>
@@ -38,8 +70,6 @@ if (isset($_SESSION["username"]))
         <div class="map-container">
             <h2 style="color: white; text-align: center; text-shadow: 2px 2px 4px rgb(0 0 0);">Your maps</h2>
             <?php
-            require("include/connect_db.php");
-            require("backend/interactDB.php");
             $uid = get_uid();
             $req = mysqli_query($connexion, "SELECT * from `user_map` WHERE `userID` = $uid");
             if ($req == true) {
@@ -66,22 +96,3 @@ if (isset($_SESSION["username"]))
 </body>
 
 </html>
-
-<?php
-
-if (isset($_POST["upload"])) {
-    if (isset($_POST["map_json"])) {
-        $map = $_POST["map_json"];
-    } else {
-        $_file = $_FILES["map_file"]["tmp_name"]; // On choppe le nom du fichier
-        $map = file_get_contents($_file); // On lit le texte
-        unlink($_file); // On supprime le fichier temp
-    }
-
-    $map_name = $_POST["map_name"];
-    $ret = upload_map($map, $map_name);
-    $uid = get_uid();
-    if (!$ret) echo "$ret, $uid";
-    header("Location:upload.php");
-}
-?>

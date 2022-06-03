@@ -3,48 +3,52 @@
 // session_start();
 
 
-function check_user_exists($username){
+function check_user_exists($username)
+{
     require('include/connect_db.php');
-    $req = mysqli_query($connexion,"SELECT * FROM user WHERE username = '$username'");
+    $req = mysqli_query($connexion, "SELECT * FROM user WHERE username = '$username'");
     return (mysqli_num_rows($req) > 0);
 }
 
-function edit_username(){
+function edit_username()
+{
     require('include/connect_db.php');
-    if(isset($_POST['username'])){
-        if(empty($_POST['username']) or check_user_exists($_POST['username'])){
+    if (isset($_POST['username'])) {
+        if (empty($_POST['username']) or check_user_exists($_POST['username'])) {
             header('location:profile.php');
             die();
         }
         $username = $_SESSION['username'];
         $new = $_POST["username"];
-        $req = mysqli_query($connexion,"UPDATE user SET username = '$new' WHERE username = '$username'");
+        $req = mysqli_query($connexion, "UPDATE user SET username = '$new' WHERE username = '$username'");
         $_SESSION['username'] = $new;
-        if (isset($_COOKIE["login"])){
+        if (isset($_COOKIE["login"])) {
             setcookie('login', $new, time() + 182 * 24 * 3600, '/');
         }
         header("Location:profile.php");
     }
 }
 
-function edit_password(){
+function edit_password()
+{
     require('include/connect_db.php');
-    if(isset($_POST['password'])){
-        if(empty($_POST['password'])){
+    if (isset($_POST['password'])) {
+        if (empty($_POST['password'])) {
             header('location:profile.php');
             die();
         }
         $username = $_SESSION['username'];
         $pwd = $_POST["password"];
-        $req = mysqli_query($connexion,"UPDATE user SET password = '$pwd' WHERE username = '$username'");
-        if (isset($_COOKIE["mdp"])){
+        $req = mysqli_query($connexion, "UPDATE user SET password = '$pwd' WHERE username = '$username'");
+        if (isset($_COOKIE["mdp"])) {
             setcookie('mdp', $pwd, time() + 182 * 24 * 3600, '/');
         }
         header("Location:profile.php");
     }
 }
 
-function get_uid() {
+function get_uid()
+{
     require('include/connect_db.php');
     $username = $_SESSION['username'];
     $res = mysqli_query($connexion, "SELECT `id` FROM `user` WHERE `username` = '$username'");
@@ -52,7 +56,8 @@ function get_uid() {
     return $uid;
 }
 
-function get_pfp() {
+function get_pfp()
+{
     require('include/connect_db.php');
     $uid = get_uid();
     $pfp = mysqli_query($connexion, "SELECT pfp FROM user_pfp WHERE userID = '$uid'");
