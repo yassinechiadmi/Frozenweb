@@ -131,7 +131,8 @@ function drawWall(mapWidth, mapHeight) {
 tileSheet.onload = () => {
     [].forEach.call(levelList, (level) => {
         const mapstr = level.getAttribute("data-map");
-        level.href += `?map-data=${mapstr}`;
+        const mapID = level.getAttribute("data-id");
+        level.href += `?map-data=${mapstr}&map-id=${mapID}`;
         const map = JSON.parse(mapstr);
         ctx.canvas.width = (map.width + 2) * tileSize;
         ctx.canvas.height = (map.height + 2) * tileSize;
