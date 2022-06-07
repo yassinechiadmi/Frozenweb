@@ -21,7 +21,7 @@ h1.faqh {
 	background-color: var(--green);
 	box-shadow: var(--div-shadow);
 	border-radius: 10px;
-	padding: 4px 2px;
+	padding: 8px 4px;
 }
 
 .container-faq {

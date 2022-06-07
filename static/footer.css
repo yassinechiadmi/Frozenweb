@@ -63,11 +63,11 @@ footer div ul li {
 }
 
 #go-top {
-    position: fixed; /* Fixed/sticky position */
-    bottom: 5px; /* Place the button at the bottom of the page */
-    right: 45px; /* Place the button 30px from the right */
-    z-index: 99; /* Make sure it does not overlap */
-    cursor: pointer; /* Add a mouse pointer on hover */
+    position: fixed;
+    bottom: 5px;
+    right: 45px;
+    z-index: 99;
+    cursor: pointer;
     margin: 15px;
     opacity: 60%;
     image-rendering: auto;
