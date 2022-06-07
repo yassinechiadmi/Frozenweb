@@ -17,8 +17,7 @@
 
 .selector label {
     position: absolute;
-    transform: translate(32rem, -8.4rem);
-
+    transform: translate(45vw, -8.4rem);
     color: #d7bdca;
 }
 

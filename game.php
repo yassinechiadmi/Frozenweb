@@ -9,8 +9,8 @@ require("include/head.php") ?>
 
     <div class="selector">
         <label>Official maps</label>
-        <div id="left_arrow" class="arrow left" style="opacity: 0;"><img src="rs/arrown.png" alt=""></div>
-        <ul id="level_list" class="level-list">
+        <div id="left_arrow_offi" class="arrow left" style="opacity: 0;"><img src="rs/arrown.png" alt=""></div>
+        <ul id="level_list_offi" class="level-list">
 
             <?php
             require_once("include/connect_db.php");
@@ -35,7 +35,7 @@ require("include/head.php") ?>
             }
             ?>
         </ul>
-        <div id="right_arrow" class="arrow right"><img src="rs/arrown.png" alt=""></div>
+        <div id="right_arrow_offi" class="arrow right"><img src="rs/arrown.png" alt=""></div>
 
     </div>
 

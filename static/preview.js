@@ -142,9 +142,9 @@ tileSheet.onload = () => {
     });
 };
 
-const right = document.getElementById("right_arrow");
-const left = document.getElementById("left_arrow");
-const level_list = document.getElementById("level_list");
+const right = document.getElementById("right_arrow_offi");
+const left = document.getElementById("left_arrow_offi");
+const level_list = document.getElementById("level_list_offi");
 
 level_list.addEventListener("scroll", (e) => {
     if (e.target.scrollLeft > 0) {
@@ -152,7 +152,7 @@ level_list.addEventListener("scroll", (e) => {
     } else {
         left.style.opacity = 0;
     }
-    if (e.target.scrollLeft < e.target.scrollWidth - e.target.clientWidth) {
+    if (e.target.scrollLeft < e.target.scrollWidth - e.target.clientWidth - 1) {
         right.style.opacity = 1;
     } else {
         right.style.opacity = 0;
@@ -169,6 +169,37 @@ right.addEventListener("click", () => {
 left.addEventListener("click", () => {
     level_list.scrollTo({
         left: level_list.scrollLeft - level_list.clientWidth,
+        behavior: "smooth",
+    });
+});
+
+const right2 = document.getElementById("right_arrow");
+const left2 = document.getElementById("left_arrow");
+const level_list2 = document.getElementById("level_list");
+
+level_list2.addEventListener("scroll", (e) => {
+    if (e.target.scrollLeft > 0) {
+        left2.style.opacity = 1;
+    } else {
+        left2.style.opacity = 0;
+    }
+    if (e.target.scrollLeft < e.target.scrollWidth - e.target.clientWidth - 1) {
+        right2.style.opacity = 1;
+    } else {
+        right2.style.opacity = 0;
+    }
+});
+
+right2.addEventListener("click", () => {
+    level_list2.scrollTo({
+        left: level_list2.scrollLeft + level_list2.clientWidth,
+        behavior: "smooth",
+    });
+});
+
+left2.addEventListener("click", () => {
+    level_list.scrollTo({
+        left: level_list2.scrollLeft - level_list2.clientWidth,
         behavior: "smooth",
     });
 });
