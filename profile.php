@@ -50,6 +50,10 @@
             </form>
         </div>
 
+        <div class="skins-container">
+            
+        </div>
+
     <?php
     }
 

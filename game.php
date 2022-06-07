@@ -8,7 +8,7 @@ require("include/head.php") ?>
     <?php require("include/nav.php"); ?>
 
     <div class="selector">
-        <label>Official Maps</label>
+        <label>Official maps</label>
         <div id="left_arrow" class="arrow left" style="opacity: 0;"><img src="rs/arrown.png" alt=""></div>
         <ul id="level_list" class="level-list">
 
@@ -39,7 +39,7 @@ require("include/head.php") ?>
     </div>
 
     <div class="selector">
-        <label>Community Maps</label>
+        <label>Community maps</label>
         <div id="left_arrow" class="arrow left" style="opacity: 0;"><img src="rs/arrown.png" alt=""></div>
         <ul id="level_list" class="level-list">
 
