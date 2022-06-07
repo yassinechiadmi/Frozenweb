@@ -4,7 +4,7 @@ footer {
     margin-top: 50px;
     position: relative;
     width: 100%;
-    z-index: 1000;
+    z-index: 98;
 }
 
 footer div {
@@ -63,18 +63,28 @@ footer div ul li {
 }
 
 #go-top {
+    position: fixed;
+    bottom: 5px;
+    right: 45px;
+    z-index: 99;
+    cursor: pointer;
+    margin: 15px;
+    opacity: 60%;
     image-rendering: auto;
-    transition: transform 0.25s;
+    transition: 0.25s;
 }
 
 #go-top:hover {
+    opacity: 100%;
     transform: scale(1.1);
+    transition: 0.25s;
 }
 
 @keyframes jiggle {
     0% {
         transform: rotate(-10deg);
     }
+
     100% {
         transform: rotate(10deg);
     }

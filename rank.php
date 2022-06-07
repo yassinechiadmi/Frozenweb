@@ -15,9 +15,9 @@
                 <label style="color:white;">Select difficulty:
                     <select name="diff" method="get">
                         <option value="">...</option>
-                        <option value="1" <?php if(isset($_GET["diff"]) && $_GET["diff"] == 1) echo "selected='selected'"; ?>>Easy</option>
-                        <option value="2" <?php if( isset($_GET["diff"]) && $_GET["diff"] == 2) echo "selected='selected'"; ?>>Medium</option>
-                        <option value="3" <?php if( isset($_GET["diff"]) && $_GET["diff"] == 3) echo "selected='selected'"; ?>>Hard</option>
+                        <option value="1" <?php if (isset($_GET["diff"]) && $_GET["diff"] == 1) echo "selected='selected'"; ?>>Easy</option>
+                        <option value="2" <?php if (isset($_GET["diff"]) && $_GET["diff"] == 2) echo "selected='selected'"; ?>>Medium</option>
+                        <option value="3" <?php if (isset($_GET["diff"]) && $_GET["diff"] == 3) echo "selected='selected'"; ?>>Hard</option>
                     </select>
                 </label>
                 <input type="submit" value="Select" style="width: fit-content; height: fit-content;">
@@ -34,10 +34,10 @@
         <div class='tbl-content'>
             <table>
                 <?php
-                    require("include/connect_db.php");
-                    $diff = isset($_GET["diff"]) ? $_GET["diff"] : 1;
-                    $str = "SELECT id,username,H_score,score_date FROM user INNER JOIN user_stat ON user.id = user_stat.userID WHERE user_stat.difficulty = '$diff' ORDER BY user_stat.H_score DESC";
-                    $req = mysqli_query($connexion, $str);
+                require("include/connect_db.php");
+                $diff = isset($_GET["diff"]) ? $_GET["diff"] : 1;
+                $str = "SELECT id,username,H_score,score_date FROM user INNER JOIN user_stat ON user.id = user_stat.userID WHERE user_stat.difficulty = '$diff' ORDER BY user_stat.H_score DESC";
+                $req = mysqli_query($connexion, $str);
                 // if(isset($_SESSION['username'])){
                 //     $s = $_SESSION['username'];
                 //     $str = "SELECT id,username,H_score,score_date FROM user INNER JOIN user_stat ON user.id = user_stat.userID WHERE user_stat.difficulty = '$diff' ORDER BY user_stat.H_score DESC";
