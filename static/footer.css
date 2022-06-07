@@ -84,6 +84,7 @@ footer div ul li {
     0% {
         transform: rotate(-10deg);
     }
+
     100% {
         transform: rotate(10deg);
     }

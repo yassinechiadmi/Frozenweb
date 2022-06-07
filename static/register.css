@@ -1,12 +1,11 @@
-
-.particles{
+.particles {
     /* z-index: 2; */
     /* position: relative; */
     /* height: 60%; */
     /* padding: 2%; */
 }
 
-#particles-js{
+#particles-js {
     position: absolute;
     z-index: 1;
     width: 95%;
@@ -35,6 +34,7 @@
     padding: 2%;
     margin-bottom: 2%;
 }
+
 .logform * {
     z-index: 3;
 }
