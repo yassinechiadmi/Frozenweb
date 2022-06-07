@@ -69,14 +69,7 @@ here:
                     $preName = get_map_name($_GET['map-id']);
                     echo "<input type='hidden' name='map_id' value='" . $_GET['map-id'] . "'>";
                 } else {
-<<<<<<< HEAD
                     echo  "<h1> Publish the map </h1>";
-=======
-                    echo  "<h1> Upload a map </h1>";
-                    echo '<label id="upload_label">Select file <input type="file" name="map_file" value="Upload a map" hidden></label>';
-                    if ($emptyFile)
-                        echo "<span class='error'>FICHIER VIDE</span>";
->>>>>>> a1bb1e0958227b00572826e0144c1497ba723666
                 }
 
                 echo "<input type='text' name='map_json' placeholder='Map data' value='$data'>";
