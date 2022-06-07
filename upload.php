@@ -70,7 +70,7 @@ here:
                     echo "<input type='text' name='map_json' placeholder='Map data' value='$data'>";
                 } else {
                     echo  "<h1> Upload a map </h1>";
-                    echo '<label>Map file : <input type="file" name="map_file" value="Upload a map"></label>';
+                    echo '<label id="upload_label">Select file <input type="file" name="map_file" value="Upload a map" hidden></label>';
                     if ($emptyFile)
                         echo "<span class='error'>FICHIER VIDE</span>";
                 }

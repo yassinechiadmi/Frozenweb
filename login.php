@@ -40,58 +40,58 @@
 					<input type="checkbox" name="remember" id="check" <?php if (!empty($checkVal)) echo "$checkVal"; ?>>
 				</label>
 				<br><br>
-			<?php
-		} else
-			echo "<br><a href=\"logout.php\">Logout</a>";
-			?>
+	<?php
+	} else
+		echo "<br><a href=\"logout.php\">Logout</a>";
+	?>
 
-			<?php
+	<?php
 
 
-			if (isset($_POST['username']) && isset($_POST['password'])) {
-				$login = $_POST['username'];
-				$mdp = $_POST['password'];
-				$str = "SELECT * FROM user WHERE username = '$login'";
-				$requete = mysqli_query($connexion, $str);
+	if (isset($_POST['username']) && isset($_POST['password'])) {
+		$login = $_POST['username'];
+		$mdp = $_POST['password'];
+		$str = "SELECT * FROM user WHERE username = '$login'";
+		$requete = mysqli_query($connexion, $str);
 
-				if (mysqli_num_rows($requete) > 0) {
-					$row = mysqli_fetch_assoc($requete);
-					if ($mdp == $row['password']) {
-						$_SESSION["username"] = $login;
+		if (mysqli_num_rows($requete) > 0) {
+			$row = mysqli_fetch_assoc($requete);
+			if ($mdp == $row['password']) {
+				$_SESSION["username"] = $login;
 
-						if (isset($_POST['remember']) && $_POST['remember'] == 'on') {
-							setcookie("login", $login, time() + 182 * 24 * 3600, '/');
-							setcookie("mdp", $mdp, time() + 182 * 24 * 3600, '/');
-						}
-						setcookie("choice", $_POST['remember'], time() + 182 * 24 * 3600, '/');
-
-						header("Location:index.php");
-					}
-				} else {
-					echo "<h3 style='text-align: center; color : red;'> Incorrect login and/or password </h3>";
-			?>
-					<!-- <a href="register.php" type="submit"> <input type="button" value="Sign up"> </a> -->
-					<a href="register.php" type="submit"></a>
-			<?php
+				if (isset($_POST['remember']) && $_POST['remember'] == 'on') {
+					setcookie("login", $login, time() + 182 * 24 * 3600, '/');
+					setcookie("mdp", $mdp, time() + 182 * 24 * 3600, '/');
 				}
+				setcookie("choice", $_POST['remember'], time() + 182 * 24 * 3600, '/');
+
+				header("Location:index.php");
 			}
-			?>
-			<input type="submit" name="login" value="Log in">
-
-			</form>
-		</div>
-
-		<?php
-
-		if (!$connexion) {
-			echo "Erreur error while logging in" . mysqli_connect_errno();
-			die();
+		} else {
+			echo "<h3 style='text-align: center; color : red;'> Incorrect login and/or password </h3>";
+	?>
+			<!-- <a href="register.php" type="submit"> <input type="button" value="Sign up"> </a> -->
+			<a href="register.php" type="submit"></a>
+	<?php
 		}
+	}
+	?>
+	<input type="submit" name="login" value="Log in">
 
-		?>
+	</form>
+	</div>
+
+	<?php
+
+	if (!$connexion) {
+		echo "Erreur error while logging in" . mysqli_connect_errno();
+		die();
+	}
+
+	?>
 
 
-		<script src="static/particles.js"></script>
+	<script src="static/particles.js"></script>
 </body>
 
 </html>

@@ -51,7 +51,7 @@ input[type=submit] {
     width: 100%;
 }
 
-input[type=file] {
+/* input[type=file] {
     background-color: #53af57;
     color: white;
     padding: 14px 20px;
@@ -59,7 +59,7 @@ input[type=file] {
     border: none;
     cursor: pointer;
     width: 100%;
-}
+} */
 
 input[type=submit]:hover {
     background-color: white;
