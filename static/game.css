@@ -16,7 +16,7 @@
 }
 
 .selector label {
-    position: relative;
+    position: absolute;
     transform: translate(32rem, -8.4rem);
 
     color: #d7bdca;

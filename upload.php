@@ -10,6 +10,11 @@ require("backend/interactDB.php");
 
 session_start();
 
+if (!isset($_SESSION["username"])) {
+    header("Location:login.php");
+    die();
+}
+
 if (isset($_POST["upload"])) {
     if (isset($_POST["map_json"])) {
         $map = $_POST["map_json"];
@@ -48,55 +53,55 @@ here:
     <link rel="stylesheet" href="static/forum.css">
     <?php
     require("include/nav.php");
-    if (isset($_SESSION["username"])) {
+
     ?>
 
-        <div id="case">
-            <form method="post" action="" enctype="multipart/form-data" class="logform">
+    <div id="case">
+        <form method="post" action="" enctype="multipart/form-data" class="logform">
 
 
-                <?php
-                $preName = "";
-                if (isset($_GET['map-data'])) {
-                    $data = $_GET['map-data'];
-                    if (isset($_GET['map-id'])) {
-                        echo  "<h1> Edit the map </h1>";
-                        $preName = get_map_name($_GET['map-id']);
-                        echo "<input type='hidden' name='map_id' value='" . $_GET['map-id'] . "'>";
-                    } else {
-                        echo  "<h1> Publish the map </h1>";
-                    }
-
-                    echo "<input type='text' name='map_json' placeholder='Map data' value='$data'>";
+            <?php
+            $preName = "";
+            if (isset($_GET['map-data'])) {
+                $data = $_GET['map-data'];
+                if (isset($_GET['map-id'])) {
+                    echo  "<h1> Edit the map </h1>";
+                    $preName = get_map_name($_GET['map-id']);
+                    echo "<input type='hidden' name='map_id' value='" . $_GET['map-id'] . "'>";
                 } else {
-                    echo  "<h1> Upload a map </h1>";
-                    echo '<label id="upload_label">Select file <input type="file" name="map_file" value="Upload a map" hidden></label>';
-                    if ($emptyFile)
-                        echo "<span class='error'>FICHIER VIDE</span>";
+                    echo  "<h1> Publish the map </h1>";
                 }
 
-                ?>
-                <input type="text" name="map_name" placeholder="Map name" value="<?php echo $preName ?>">
-                <input type="submit" name="upload" value="Upload map">
+                echo "<input type='text' name='map_json' placeholder='Map data' value='$data'>";
+            } else {
+                echo  "<h1> Upload a map </h1>";
+                echo '<label>Map file : <input type="file" name="map_file" value="Upload a map"></label>';
+                if ($emptyFile)
+                    echo "<span class='error'>FICHIER VIDE</span>";
+            }
 
-            </form>
-        </div>
+            ?>
+            <input type="text" name="map_name" placeholder="Map name" value="<?php echo $preName ?>">
+            <input type="submit" name="upload" value="Upload map">
+
+        </form>
+    </div>
 
 
 
-        <div class="map-container">
-            <h2 style="color: white; text-align: center; text-shadow: 2px 2px 4px rgb(0 0 0);">Your maps</h2>
-            <?php
-            $uid = get_uid();
-            $req = mysqli_query($connexion, "SELECT * from `user_map` WHERE `userID` = $uid");
-            if ($req == true) {
-                while ($res = mysqli_fetch_assoc($req)) {
-                    $user = get_username($res['userID']);
-                    $map_name = $res['map_name'];
-                    $map_id = $res["map_id"];
-                    $map = $res["map"];
-                    echo
-                    "<div class='text-background' style='width: 90%;'>
+    <div class="map-container">
+        <h2 style="color: white; text-align: center; text-shadow: 2px 2px 4px rgb(0 0 0);">Your maps</h2>
+        <?php
+        $uid = get_uid();
+        $req = mysqli_query($connexion, "SELECT * from `user_map` WHERE `userID` = $uid");
+        if ($req == true) {
+            while ($res = mysqli_fetch_assoc($req)) {
+                $user = get_username($res['userID']);
+                $map_name = $res['map_name'];
+                $map_id = $res["map_id"];
+                $map = $res["map"];
+                echo
+                "<div class='text-background' style='width: 90%;'>
                         <label>Username: $user</label>
                         <label for='map_name'>Map name: $map_name</label>
                         <span>
@@ -104,11 +109,10 @@ here:
                             <a id='edit' href='https://bafbi.github.io/2d-tilemap-editor/?map-id=$map_id&map-data=$map'>Edit</a>
                         </span> 
                 </div>";
-                } // https://bafbi.github.io/2d-tilemap-editor/
-            }
-            ?>
-        </div>
-    <?php } ?>
+            } // https://bafbi.github.io/2d-tilemap-editor/
+        }
+        ?>
+    </div>
     <?php require("include/foot.php") ?>
 </body>
 
