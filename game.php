@@ -1,12 +1,45 @@
 <?php
-define('GAME_URL', 'http://localhost:5500/');
-// define('GAME_URL', 'https://bafbi.github.io/glagla/');
+// define('GAME_URL', 'http://localhost:5500/');
+define('GAME_URL', 'https://bafbi.github.io/glagla/');
 require("include/head.php") ?>
 
 <body>
 
     <?php require("include/nav.php"); ?>
 
+    <?php
+    require_once("include/connect_db.php");
+    if(isset($_POST['rng'])){
+        $req = mysqli_query($connexion, "SELECT * from user_map");
+        $map = array();
+        if ($req == true) {
+            while ($res = mysqli_fetch_assoc($req)) {
+                $data = $res["map"];
+                array_push($map,$data);
+            }
+            // $mapper = array_rand($map);
+            // foreach($map as $key => $val){
+                // echo $key,$val;
+            // }
+            $rand_number = rand(0,count($map));
+            // echo $map[$rand_number];
+            $endpoint = $map[$rand_number];
+            $newloc = GAME_URL.'?map-data='.$endpoint;
+            $newloc =str_replace(array('\n','\r',' '),'',$newloc);
+            print_r($newloc);
+            // echo $newloc;
+        
+            echo "<meta http-equiv='refresh' content='0;url=$newloc'>";
+            // header('location:'.$newloc);
+        }
+
+
+    }
+
+    ?>
+    <form action="game.php" method="post">
+        <button name="rng">Random Level</button>
+    </form>
     <div class="selector">
         <label>Official maps</label>
         <div id="left_arrow_offi" class="arrow left" style="opacity: 0;"><img src="rs/arrown.png" alt=""></div>
