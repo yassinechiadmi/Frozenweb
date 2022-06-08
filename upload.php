@@ -15,10 +15,10 @@ if (!isset($_SESSION["username"])) {
     die();
 }
 
-if (isset($_POST["upload"])) {
-    if (isset($_POST["map_json"])) {
+if (isset($_POST["upload"])) {  // if the user has submitted the form
+    if (isset($_POST["map_json"])) {  // if the user as use the publish button
         $map = $_POST["map_json"];
-        if (isset($_POST["map_id"])) {
+        if (isset($_POST["map_id"])) { // if the user is on edit mode
             $map_id = $_POST["map_id"];
             $map_name = $_POST["map_name"];
             $ret = update_map($map, $map_name, $map_id);
@@ -39,7 +39,6 @@ if (isset($_POST["upload"])) {
 
     $map_name = $_POST["map_name"];
     $ret = upload_map($map, $map_name);
-
     $uid = get_uid();
     if (!$ret) echo "$ret, $uid";
     header("Location:upload.php");
