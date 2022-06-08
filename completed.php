@@ -24,7 +24,7 @@ if ($map_id != "null") {
     $res = mysqli_query($connexion, "SELECT move from score WHERE map_id = $map_id AND user_id = $user_id");
 
     if (mysqli_num_rows($res) == 0) {
-        echo "No score found";
+        // echo "No score found";
         $res = mysqli_query($connexion, "INSERT INTO `score` (`id`, `user_id`, `map_id`, `move`) VALUES (NULL, '$user_id', '$map_id', '$move')");
         // if ($res) {
         //     echo "Score inserted";
