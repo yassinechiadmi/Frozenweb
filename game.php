@@ -87,7 +87,7 @@ require("include/head.php") ?>
                     $map_name = $res["map_name"];
                     $u_name = get_username($res["userID"]);
                     echo "<li>
-                            <a href='" . GAME_URL . "' data-map='$data' class='card'>
+                            <a href='" . GAME_URL . "' data-map='$data' data-id='$id' class='card'>
                                 <img src='' class='card__image' alt='' />
                                 <div class='card__header'>
                                     <h3 class='card__title'>$map_name</h3>
