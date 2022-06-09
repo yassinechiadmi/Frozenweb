@@ -14,11 +14,26 @@
     height: 20em;
     background-color: rgba(20, 20, 20, 0.8);
 }
+.map_generator {
+    /* background-color: rgba(20, 20, 20, 0.85); */
+    background: #292b2f;
+    padding: 2% 5%;
+    border-radius: 10px;
 
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    /* height: 100%; */
+    width: 50%;
+    margin: 0 auto;
+}
+
+label {
+    color: #d7bdca;
+}
 .selector label {
     position: absolute;
     transform: translate(45vw, -8.4rem);
-    color: #d7bdca;
 }
 
 .level-list {

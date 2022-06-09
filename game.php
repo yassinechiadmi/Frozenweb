@@ -7,39 +7,7 @@ require("include/head.php") ?>
 
     <?php require("include/nav.php"); ?>
 
-    <?php
-        if(isset($_POST['generator']))
-        {
-            $size = $_POST['size'];
-            $diff = $_POST['diff'];
-            $path = getcwd();
-            $map_name = "map.json";
-            $cmd = "$path\\backend\\path.exe gen $size $size $diff $map_name";
-            // echo $cmd;
-            exec("$path\\backend\\path.exe gen $size $size $diff $map_name");
-            exec("$path\\backend\\path.exe solve $size $size $diff $map_name");
-            // $newloc = GAME_URL.'?map-data=';
-            $raw_data = file_get_contents("exported/map.json");
-
-            $solved_info = json_decode(file_get_contents("solved/map.json"));
-            $move_count = count($solved_info->path);
-            echo $move_count;
-            // $json_data = json_decode($raw_data);
-            // echo $raw_data;
-            $game_location = GAME_URL.'?map-data='.$raw_data.'&scount='.$move_count;
-            // echo $game_location;
-            
-            echo "<meta http-equiv='refresh' content='0;url=$game_location'>";
-        }
-
-    ?>
-
-
-    <form action="game.php" method="post">
-        <input type="number" name="size" value=10>
-        <input type="number" min=1 max=3 name="diff" value=1>
-        <input type="submit" name="generator" value="Gen new map">
-    </form>
+    
 
     <?php
     require_once("include/connect_db.php");
@@ -47,7 +15,7 @@ require("include/head.php") ?>
         $req_umap = mysqli_query($connexion, "SELECT * from user_map");
         $map_array = array();
         if ($req_umap == true) {
-            while ($res_map = mysqli_fetch_assoc($req)) {
+            while ($res_map = mysqli_fetch_assoc($req_umap)) {
                 $data_map = $res_map["map"];
                 array_push($map_array,$data_map);
             }

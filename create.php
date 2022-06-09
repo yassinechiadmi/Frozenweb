@@ -2,6 +2,7 @@
 <html lang="en">
 
 <?php require("include/head.php");
+define('GAME_URL', 'https://bafbi.github.io/glagla/');
 
 $emptyFile = false;
 
@@ -22,7 +23,7 @@ if (isset($_POST["upload"])) {  // if the user has submitted the form
             $map_id = $_POST["map_id"];
             $map_name = $_POST["map_name"];
             $ret = update_map($map, $map_name, $map_id);
-            header("Location:upload.php");
+            header("Location:create.php");
             die();
         }
     } else {
@@ -41,7 +42,7 @@ if (isset($_POST["upload"])) {  // if the user has submitted the form
     $ret = upload_map($map, $map_name);
     $uid = get_uid();
     if (!$ret) echo "$ret, $uid";
-    header("Location:upload.php");
+    header("Location:create.php");
 }
 
 here:
@@ -54,8 +55,39 @@ here:
     require("include/nav.php");
 
     ?>
+<?php
+        if(isset($_POST['generator']))
+        {
+            $size = $_POST['size'];
+            $diff = $_POST['diff'];
+            $path = getcwd();
+            $map_name = "map.json";
+            $prog_name = "PathGenerator.exe";
+            $cmd = "$path\\backend\\$prog_name gen $size $size $diff $map_name";
+            exec("$path\\backend\\$prog_name gen $size $size $diff $map_name");
+            exec("$path\\backend\\$prog_name solve $size $size $diff $map_name");
+            $raw_data = file_get_contents("exported/map.json");
+            $solved_info = json_decode(file_get_contents("solved/map.json"));
+            $move_count = count($solved_info->path);
+            echo $move_count;
+            $game_location = GAME_URL.'?map-data='.$raw_data.'&scount='.$move_count;            
+            echo "<meta http-equiv='refresh' content='0;url=$game_location'>";
+        }
 
-    <div id="case">
+    ?>
+
+
+   
+
+    <div id="case" class="row-container">
+        <form action="create.php" method="post" class="map_generator">
+            <label>Map size :</label>
+            <input type="number" name="size" value=10>
+            <label>Difficulty :</label>
+            <input type="number" min=1 max=3 name="diff" value=1>
+            <input type="submit" name="generator" value="Gen new map">
+        </form>
+
         <form method="post" action="" enctype="multipart/form-data" class="logform">
 
 
