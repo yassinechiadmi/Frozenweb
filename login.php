@@ -8,7 +8,9 @@
 
 
 	<?php
+	// session_set_cookie_params(["SameSite" => "none"]);
 	require("include/nav.php");
+	header('SameSite=None; Secure');
 	if (isset($_SESSION["username"]))
 		header('Location:index.php');
 	require('include/connect_db.php');

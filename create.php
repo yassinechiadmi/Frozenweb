@@ -6,7 +6,6 @@ define('GAME_URL', 'https://bafbi.github.io/glagla/');
 // define('GAME_URL', 'http://localhost:5500/');
 
 $emptyFile = false;
-
 if (session_status() != PHP_SESSION_ACTIVE) {
     session_start();
 }
@@ -33,7 +32,7 @@ if (isset($_POST['generator'])) {
     $solved_info = json_decode(file_get_contents("solved/map.json"));
     $move_count = count($solved_info->path);
     echo $move_count;
-    $game_location = GAME_URL . '?map-data=' . $raw_data . '&path=' . json_encode($solved_info->path);
+    $game_location = GAME_URL . '?map-data=' . $raw_data;//.'&path=' . json_encode($solved_info->path);
     $game_location = str_replace(array("\n", "\r"), '', $game_location);
     header("Location:$game_location");
 }
@@ -73,12 +72,9 @@ here:
 
 <body>
     <link rel="stylesheet" href="static/forum.css">
-    <?php
-    require("include/nav.php");
-
-
-
-    ?>
+     <?php
+    //require("include/nav.php");
+    ?> 
 
 
 

@@ -6,17 +6,17 @@ require("include/head.php");
 // session_start();
 
 
-require("include/connect_db.php");
-require("backend/interactDB.php");
+require_once("include/connect_db.php");
+require_once("backend/interactDB.php");
 
 
 
 if (!isset($_POST['id'])) {
-    header("Location:index.php");
+    // header("Location:index.php");
     // die();
 } elseif (!isset($_SESSION["username"])) {
     echo "pas de username<br>";
-    var_dump($_SESSION);
+    // var_dump($_SESSION);
     // header("Location:login.php");
     // die();
 }
