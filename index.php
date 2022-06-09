@@ -10,8 +10,6 @@
 				First of all if you're a fan of reflexion games where your brain is put to a test you're welcome among us.<br>
 				Furthermore if you like chilly and refreshing environments come along on the ice rink and find your way to liberty !</p>
 		</div>
-		<!-- <img id="p1-pepe" class ="logo" src="https://img-16.stickers.cloud/packs/f622f526-ac45-41f8-ac83-6b5ccdcee42c/webp/84539cb9-711d-4398-ad52-53248c3dbc8c.webp" alt="Logo de Discord"/> -->
-		<!-- <img id="p1-pepe" class="logo" src="https://media.ouest-france.fr/v1/pictures/a53b7de8e20c11e12d9efdadea1e25bb-180264.jpg?width=1000&client_id=eds&sign=6e31992a4355e6fcda72f93418a6b6f76d8d0637496f13c97abecbadb445eab9" alt="le s"> -->
 		<input type="button" id="p1-play" value="Play !" onclick="window.location.href='https://bafbi.github.io/glagla/'">
 		<!--mettre le lien de la page-->
 	</div>

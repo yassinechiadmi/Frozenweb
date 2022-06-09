@@ -10,27 +10,18 @@ require("include/head.php") ?>
     <?php
     require_once("include/connect_db.php");
     if(isset($_POST['rng'])){
-        $req = mysqli_query($connexion, "SELECT * from user_map");
-        $map = array();
-        if ($req == true) {
-            while ($res = mysqli_fetch_assoc($req)) {
-                $data = $res["map"];
-                array_push($map,$data);
+        $req_umap = mysqli_query($connexion, "SELECT * from user_map");
+        $map_array = array();
+        if ($req_umap == true) {
+            while ($res_map = mysqli_fetch_assoc($req)) {
+                $data_map = $res_map["map"];
+                array_push($map_array,$data_map);
             }
-            // $mapper = array_rand($map);
-            // foreach($map as $key => $val){
-                // echo $key,$val;
-            // }
-            $rand_number = rand(0,count($map));
-            // echo $map[$rand_number];
-            $endpoint = $map[$rand_number];
+            $rand_number = rand(0,count($map_array));
+            $endpoint = $map_array[$rand_number];
             $newloc = GAME_URL.'?map-data='.$endpoint;
-            $newloc =str_replace(array('\n','\r',' '),'',$newloc);
-            print_r($newloc);
-            // echo $newloc;
-        
+            $newloc =str_replace(array('\n','\r',' '),'',$newloc);        
             echo "<meta http-equiv='refresh' content='0;url=$newloc'>";
-            // header('location:'.$newloc);
         }
 
 
@@ -38,7 +29,7 @@ require("include/head.php") ?>
 
     ?>
     <form action="game.php" method="post">
-        <button name="rng">Random Level</button>
+        <input type="submit" name="rng" value="Random Map">
     </form>
     <div class="selector">
         <label>Official maps</label>
@@ -84,6 +75,7 @@ require("include/head.php") ?>
             if ($req == true) {
                 while ($res = mysqli_fetch_assoc($req)) {
                     $data = $res["map"];
+                    $id = $res["map_id"];
                     $map_name = $res["map_name"];
                     $u_name = get_username($res["userID"]);
                     echo "<li>
