@@ -20,14 +20,16 @@ if (!isset($_SESSION["username"])) {
 }
 
 if (isset($_POST['generator'])) {
-    $size = $_POST['size'];
+    $height = $_POST['height'];
+    $width = $_POST['width'];
+
     $diff = $_POST['diff'];
     $path = getcwd();
     $map_name = "map.json";
     $prog_name = "PathGenerator.exe";
-    $cmd = "$path\\backend\\$prog_name gen $size $size $diff $map_name";
-    exec("$path\\backend\\$prog_name gen $size $size $diff $map_name");
-    exec("$path\\backend\\$prog_name solve $size $size $diff $map_name");
+    $cmd = "$path\\backend\\$prog_name gen $height $width $diff $map_name";
+    exec("$path\\backend\\$prog_name gen $height $width $diff $map_name");
+    exec("$path\\backend\\$prog_name solve $height $width $diff $map_name");
     $raw_data = file_get_contents("exported/map.json");
     $solved_info = json_decode(file_get_contents("solved/map.json"));
     $move_count = count($solved_info->path);
@@ -90,8 +92,17 @@ here:
 
     <div id="case" class="row-container">
         <form action="create.php" method="post" class="map_generator">
-            <label>Map size :</label>
-            <input type="number" name="size" min=5 max=100 value=10>
+            <a href="editor" class="editor">Edit a blank map</a>
+            <div class="row-container">
+                <div class="w">
+                    <label>Height :</label>
+                    <input type="number" name="width" min=5 max=100 value=10>
+                </div>
+                <div class="h">
+                    <label>Width :</label>
+                    <input type="number" name="height" min=5 max=100 value=10>
+                </div>
+            </div>
             <label>Difficulty :</label>
             <select name="diff">
                 <option value="1">Easy</option>
@@ -101,7 +112,7 @@ here:
             <!-- <input type="number" min=1 max=3 name="diff" value=1> -->
             <input type="submit" name="generator" value="Gen new map">
         </form>
-
+        
         <form method="post" action="" enctype="multipart/form-data" class="logform">
 
 
@@ -131,7 +142,6 @@ here:
 
         </form>
     </div>
-
 
 
     <div class="map-container">

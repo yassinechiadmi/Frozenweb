@@ -138,7 +138,7 @@ else {
 testElem.addEventListener('click', (e) => {
     e.preventDefault();
     e.stopPropagation();
-    document.location.href = 'https://bafbi.github.io/glagla/?map-data=' + encodeURIComponent(JSON.stringify(map).replaceAll("null", "-1"));
+    document.location.href = 'http://localhost/glagla/?map-data=' + encodeURIComponent(JSON.stringify(map).replaceAll("null", "-1"));
 });
 editor.camera.posC.set(map.width * tileSheet.tileSize, map.height * tileSheet.tileSize);
 editor.resizeBuffer(map.width, map.height, tileSheet.tileSize);
