@@ -20,10 +20,15 @@ require("include/head.php") ?>
             exec("$path\\backend\\path.exe solve $size $size $diff $map_name");
             // $newloc = GAME_URL.'?map-data=';
             $raw_data = file_get_contents("exported/map.json");
+
+            $solved_info = json_decode(file_get_contents("solved/map.json"));
+            $move_count = count($solved_info->path);
+            echo $move_count;
             // $json_data = json_decode($raw_data);
             // echo $raw_data;
-            $game_location = GAME_URL.'?map-data='.$raw_data;
+            $game_location = GAME_URL.'?map-data='.$raw_data.'&scount='.$move_count;
             // echo $game_location;
+            
             echo "<meta http-equiv='refresh' content='0;url=$game_location'>";
         }
 
