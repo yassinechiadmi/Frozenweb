@@ -52,22 +52,16 @@
 				</li>
 
 				<li>
-					<h3> What is the goal of the game ? </h3>
+					<h3> Are there specials objects ?  </h3>
 					<div class="faqcase">
-						<p class="faqtxt"> The goal of the game is to browse the map to
-							reach the exit using the least amount of moves possible.
-							Careful the ground is slippery ! </p>
-						<!--INSERER UN GIF-->
+						<p class="faqtxt">Yes, we have a few objects and each have their own property. First, there is the arrow which pushes you in a direction, the pillar, similar to a wall, and finally the hole that blocks you if you fall inside ! </p>
 					</div>
 				</li>
 
 				<li>
-					<h3> What is the goal of the game ? </h3>
+					<h3> How can I finish a level ? </h3>
 					<div class="faqcase">
-						<p class="faqtxt"> The goal of the game is to browse the map to
-							reach the exit using the least amount of moves possible.
-							Careful the ground is slippery ! </p>
-						<!--INSERER UN GIF-->
+						<p class="faqtxt"> The level ends when you reach the stairs at the bottom of the map. Then, you will be able to acces to another level or leave the game. </p>
 					</div>
 				</li>
 			</ul>
