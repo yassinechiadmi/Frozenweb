@@ -41,7 +41,7 @@ if (isset($_POST["upload"])) {  // if the user has submitted the form
 
     $map_name = $_POST["map_name"];
     $ret = upload_map($map, $map_name);
-    $uid = get_uid();
+    $uid = get_uid($_SESSION['username']);
     if (!$ret) echo "$ret, $uid";
     header("Location:create.php");
 }
@@ -128,7 +128,7 @@ here:
     <div class="map-container">
         <h2 style="color: white; text-align: center; text-shadow: 2px 2px 4px rgb(0 0 0);">Your maps</h2>
         <?php
-        $uid = get_uid();
+        $uid = get_uid($_SESSION['username']);
         $req = mysqli_query($connexion, "SELECT * from `user_map` WHERE `userID` = $uid");
         if ($req == true) {
             while ($res = mysqli_fetch_assoc($req)) {

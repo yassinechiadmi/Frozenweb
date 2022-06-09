@@ -22,15 +22,15 @@ require("include/head.php") ?>
             $rand_number = rand(0,count($map_array));
             $endpoint = $map_array[$rand_number];
             $newloc = GAME_URL.'?map-data='.$endpoint;
-            $newloc =str_replace(array('\n','\r',' '),'',$newloc);        
+            $newloc = str_replace(array('\n','\r',' '),'',$newloc);        
             echo "<meta http-equiv='refresh' content='0;url=$newloc'>";
         }
 
 
     }
     ?>
-    <form action="game.php" method="post">
-        <input type="submit" name="rng" value="Random Map">
+    <form action="game.php" method="post" style="margin-inline: auto; width: max-content;">
+        <input type="submit" name="rng" value="Random map" style="width: 50vw;">
     </form>
     <div class="selector">
         <label>Official maps</label>
