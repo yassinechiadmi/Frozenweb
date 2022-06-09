@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
 <?php
 if (session_status() != PHP_SESSION_ACTIVE) {
     session_start();
@@ -47,7 +45,8 @@ if ($map_id != "null") {
         if ($res = mysqli_fetch_assoc($res)['move'] > $move) {
             mysqli_query($connexion, "UPDATE `score` SET `move`=$move WHERE `map_id` = $map_id AND `user_id` = $user_id");
         }
-        $map_name = $res["map_name"];
+        // $map_name = mysqli_fetch_assoc($res)['map_name'];
+        // echo $map_name;
     }
 }
 
