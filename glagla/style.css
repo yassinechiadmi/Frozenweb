@@ -1,0 +1,259 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("./assets/ice2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    transition: all cubic-bezier(0, 0, 0.32, 0.91) 2s;
+    image-rendering: pixelated;
+}
+
+#drop-area {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+#menu {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    transform: scale(100%);
+    opacity: 1;
+    background-image: url("./assets/pix-montagne-bg.gif"),
+        linear-gradient(to left, rgb(0, 5, 35), rgb(8, 138, 194), rgb(0, 5, 35));
+    background-position: center;
+    background-repeat: no-repeat;
+    /* background-size: cover; */
+    transition: all cubic-bezier(0, 0, 0.32, 0.91) 1.5s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#menu.disable {
+    opacity: 0;
+    transform: scale(1000%);
+    transition: all cubic-bezier(0, 0, 0.32, 0.91) 2s;
+}
+
+#gameWindow {
+    transition: all cubic-bezier(0, 0, 0.32, 0.91) 1.5s;
+    opacity: 1;
+}
+
+#gameWindow.disable {
+    opacity: 0;
+    transform: scale(0%);
+    transition: all cubic-bezier(0, 0, 0.32, 0.91) 1.1s;
+}
+
+/*Début css yass*/
+
+/* #game{
+    height: 100vh;
+    width: 100vw;
+    background-image: url("rs/bckmenu.gif");
+    display:flex;
+    background-position:center;
+    background-repeat: no-repeat;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+} */
+
+.gamebutton {
+    width: 15%;
+    height: 7%;
+    border-radius: 20px;
+    margin-right: 35%;
+    margin-bottom: 20px;
+    transition: all linear 0.2s;
+    background-color: #d8fdfd;
+    z-index: -1;
+}
+
+.gamebutton:hover {
+    transform: scale(110%);
+    z-index: -1;
+    background-color: #63c3fd;
+}
+
+#exitt {
+    position: absolute;
+    top: 7%;
+    right: 21%;
+}
+
+#exitt:hover {
+    content: url("assets/exit2.png");
+}
+/*Fin*/
+
+.modal-btn {
+    padding: 10px 14px;
+    font-size: 18px;
+    /* margin: 100px auto; */
+    display: block;
+    min-width: 150px;
+    cursor: pointer;
+}
+
+.modal-container {
+    /* display: none; */
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    transition: visibility 0.4s;
+}
+
+.modal-container.active {
+    /* display: block; */
+    visibility: visible;
+}
+
+.overlay {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #333333d3;
+    transition: opacity 0.4s 0.2s ease-out;
+}
+
+.modal-container.active .overlay {
+    opacity: 1;
+    transition: opacity 0.4s ease-out;
+}
+
+.modal {
+    opacity: 0;
+    width: 95%;
+    max-width: 500px;
+    min-width: 300px;
+    z-index: 40;
+    padding: 30px;
+    background: #ceccd1;
+    border: 15px ridge rgba(211, 220, 50, 0.6);
+    border-radius: 5px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, calc(-50% - 50px));
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+}
+
+.modal-container.active .modal {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.4s 0.2s ease-out, transform 0.4s 0.2s ease-out;
+}
+
+.close-modal {
+    padding: 8px 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    background: #ff365e;
+    color: #fff;
+}
+.modal h1 {
+    margin-bottom: 10px;
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+}
+.modal p {
+    line-height: 1.4;
+    margin-bottom: 5px;
+}
+
+.volume {
+    height: 30px;
+    width: 400px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 0 90px 0 10px;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    position: relative;
+    transform: translateX(2rem);
+}
+.slider .value {
+    position: absolute;
+    font-size: 18px;
+    color: #664aff;
+    font-weight: 600;
+}
+.slider .value.left {
+    left: -28px;
+}
+.slider .value.right {
+    right: -49px;
+}
+
+.slider input {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.play {
+    background: url(assets/high.svg) no-repeat;
+    width: 2rem;
+    height: 2rem;
+    float: left;
+    margin: none;
+    transform: scale(0.8);
+}
+.mute {
+    background: url(assets/mute.svg) no-repeat;
+}
+
+.move-counter {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    font-family: "Press Start 2P", cursive;
+    color: black;
+    /* background-color: #63c3fd; */
+    padding: 0.8rem 0.6rem 0.6rem 5.5rem;
+    background-image: url(assets/move_counter.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
