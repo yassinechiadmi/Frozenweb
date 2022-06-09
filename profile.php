@@ -23,7 +23,6 @@
                 </ul>
                 <img src="rs/logo.gif" alt="pfp">
             </div> -->
-            <h4>Highest scores :</h4>
             <ul role="list">
                 <?php
                 require_once("include/connect_db.php");
