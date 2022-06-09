@@ -12,13 +12,11 @@ require_once("backend/interactDB.php");
 
 
 if (!isset($_POST['id'])) {
-    // header("Location:index.php");
-    // die();
+    header("Location:index.php");
+    die();
 } elseif (!isset($_SESSION["username"])) {
-    echo "pas de username<br>";
-    // var_dump($_SESSION);
-    // header("Location:login.php");
-    // die();
+    header("Location:login.php");
+    die();
 }
 
 
