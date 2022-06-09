@@ -12,13 +12,11 @@ require_once("backend/interactDB.php");
 
 
 if (!isset($_POST['id'])) {
-    // header("Location:index.php");
-    // die();
+    header("Location:index.php");
+    die();
 } elseif (!isset($_SESSION["username"])) {
-    echo "pas de username<br>";
-    // var_dump($_SESSION);
-    // header("Location:login.php");
-    // die();
+    header("Location:login.php");
+    die();
 }
 
 
@@ -34,20 +32,11 @@ if ($map_id != "null") {
     $res = mysqli_query($connexion, "SELECT move from score WHERE map_id = $map_id AND user_id = $user_id");
     
     if (!$res or mysqli_num_rows($res) == 0) {
-        // echo "No score found";
         $res = mysqli_query($connexion, "INSERT INTO `score` (`id`, `user_id`, `map_id`, `move`) VALUES (NULL, '$user_id', '$map_id', '$move')");
-        // if ($res) {
-        //     echo "Score inserted";
-        // } else {
-        //     echo "Score not inserted";
-        //     echo mysqli_error($connexion);
-        // }
     } else {
         if ($res = mysqli_fetch_assoc($res)['move'] > $move) {
             mysqli_query($connexion, "UPDATE `score` SET `move`=$move WHERE `map_id` = $map_id AND `user_id` = $user_id");
         }
-        // $map_name = mysqli_fetch_assoc($res)['map_name'];
-        // echo $map_name;
     }
 }
 
@@ -67,7 +56,7 @@ if ($map_id != "null") {
             <?php
             echo "<h3>You completed the map in <strong>$move</strong> moves</h3>"
             ?>
-            <a class="retry-button" href="http://localhost/game.php"></a>
+            <a class="retry-button" href="glagla/"></a>
         </div>
 
     </div>
