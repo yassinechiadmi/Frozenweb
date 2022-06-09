@@ -7,8 +7,6 @@ require("include/head.php") ?>
 
     <?php require("include/nav.php"); ?>
 
-    
-
     <?php
     require_once("include/connect_db.php");
     if(isset($_POST['rng'])){
@@ -22,8 +20,9 @@ require("include/head.php") ?>
             $rand_number = rand(0,count($map_array));
             $endpoint = $map_array[$rand_number];
             $newloc = GAME_URL.'?map-data='.$endpoint;
-            $newloc = str_replace(array('\n','\r',' '),'',$newloc);        
-            echo "<meta http-equiv='refresh' content='0;url=$newloc'>";
+            $newloc = str_replace(array("\n","\r"," "),'',$newloc);  
+            header("Location:$newloc");      
+            // echo "<meta http-equiv='refresh' content='0;url=$newloc'>";
         }
 
 
