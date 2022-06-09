@@ -133,6 +133,7 @@ tileSheet.onload = () => {
     const mapstr = level.getAttribute("data-map");
     const mapID = level.getAttribute("data-id");
     const mapPath = level.getAttribute("data-path");
+    console.log(mapPath);
     level.href += `?map-data=${mapstr}&map-id=${mapID}&path=${mapPath}`;
     const map = JSON.parse(mapstr);
     ctx.canvas.width = (map.width + 2) * tileSize;
