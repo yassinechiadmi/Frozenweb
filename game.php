@@ -44,11 +44,12 @@ require("include/head.php") ?>
             if ($req == true) {
                 while ($res = mysqli_fetch_assoc($req)) {
                     $data = $res["map"];
+                    $path = $res["solution"];
                     $id = $res["map_id"];
                     $map_name = $res["map_name"];
                     $u_name = get_username($res["userID"]);
                     echo "<li>
-                            <a href='" . GAME_URL . "' data-map='$data' data-id='$id' class='card'>
+                            <a href='" . GAME_URL . "' data-map='$data' data-id='$id' data-path='$path' class='card'>
                                 <img src='' class='card__image' alt='' />
                                 <div class='card__header'>
                                     <h3 class='card__title'>$map_name</h3>
@@ -76,11 +77,12 @@ require("include/head.php") ?>
             if ($req == true) {
                 while ($res = mysqli_fetch_assoc($req)) {
                     $data = $res["map"];
-                    $id = $res["map_id"];
+                    $path = json_encode(json_decode($res["solution"])->path);
+                    $id =  $res["map_id"];
                     $map_name = $res["map_name"];
                     $u_name = get_username($res["userID"]);
                     echo "<li>
-                            <a href='" . GAME_URL . "' data-map='$data' data-id='$id' class='card'>
+                            <a href='" . GAME_URL . "' data-map='$data' data-id='$id' data-path='$path' class='card'>
                                 <img src='' class='card__image' alt='' />
                                 <div class='card__header'>
                                     <h3 class='card__title'>$map_name</h3>
