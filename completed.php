@@ -32,20 +32,11 @@ if ($map_id != "null") {
     $res = mysqli_query($connexion, "SELECT move from score WHERE map_id = $map_id AND user_id = $user_id");
     
     if (!$res or mysqli_num_rows($res) == 0) {
-        // echo "No score found";
         $res = mysqli_query($connexion, "INSERT INTO `score` (`id`, `user_id`, `map_id`, `move`) VALUES (NULL, '$user_id', '$map_id', '$move')");
-        // if ($res) {
-        //     echo "Score inserted";
-        // } else {
-        //     echo "Score not inserted";
-        //     echo mysqli_error($connexion);
-        // }
     } else {
         if ($res = mysqli_fetch_assoc($res)['move'] > $move) {
             mysqli_query($connexion, "UPDATE `score` SET `move`=$move WHERE `map_id` = $map_id AND `user_id` = $user_id");
         }
-        // $map_name = mysqli_fetch_assoc($res)['map_name'];
-        // echo $map_name;
     }
 }
 
