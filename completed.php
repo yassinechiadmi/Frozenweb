@@ -1,8 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
 <?php
 require("include/head.php");
-// session_start();
+
 session_start();
 
 require("include/connect_db.php");
