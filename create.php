@@ -83,7 +83,7 @@ here:
 <body>
     <link rel="stylesheet" href="static/forum.css">
      <?php
-    //require("include/nav.php");
+    require("include/nav.php");
     ?> 
 
 

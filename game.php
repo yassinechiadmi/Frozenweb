@@ -1,6 +1,6 @@
 <?php
-// define('GAME_URL', 'http://localhost:5500/');
-define('GAME_URL', 'https://bafbi.github.io/glagla/');
+define('GAME_URL', 'http://localhost/glagla/');
+// define('GAME_URL', 'https://bafbi.github.io/glagla/');
 require("include/head.php") ?>
 
 <body>
