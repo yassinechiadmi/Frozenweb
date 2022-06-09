@@ -2,8 +2,8 @@
 <html lang="en">
 
 <?php require("include/head.php");
-define('GAME_URL', 'https://bafbi.github.io/glagla/');
-// define('GAME_URL', 'http://localhost:5500/');
+// define('GAME_URL', 'https://bafbi.github.io/glagla/');
+define('GAME_URL', 'http://localhost/glagla/');
 
 $emptyFile = false;
 if (session_status() != PHP_SESSION_ACTIVE) {
