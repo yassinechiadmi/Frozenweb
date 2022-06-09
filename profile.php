@@ -29,13 +29,13 @@
                 require_once("include/connect_db.php");
                 require_once("backend/interactDB.php");
                 $uid = get_uid();
-                $req = mysqli_query($connexion, "SELECT * FROM `user_stat` WHERE `userID` = '$uid'");
-                $diff = ["", "Easy: ", "Medium: ", "Hard: "];
-                while ($res = mysqli_fetch_assoc($req)) {
-                    $score = $res['H_score'];
-                    $idx = $res['difficulty'];
-                    echo "<li>$diff[$idx] $score</li>";
-                }
+                // $req = mysqli_query($connexion, "SELECT * FROM `user_stat` WHERE `userID` = '$uid'");
+                // $diff = ["", "Easy: ", "Medium: ", "Hard: "];
+                // while ($res = mysqli_fetch_assoc($req)) {
+                //     $score = $res['H_score'];
+                //     $idx = $res['difficulty'];
+                //     echo "<li>$diff[$idx] $score</li>";
+                // }
                 ?>
             </ul>
             <br>

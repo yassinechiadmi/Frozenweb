@@ -67,7 +67,7 @@ if ($map_id != "null") {
             <?php
             echo "<h3>You completed the map in <strong>$move</strong> moves</h3>"
             ?>
-            <a class="retry-button" href="http://localhost/game.php"></a>
+            <a class="retry-button" href="glagla/"></a>
         </div>
 
     </div>
