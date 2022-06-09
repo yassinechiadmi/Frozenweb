@@ -80,12 +80,12 @@ function get_map_name(string $id)
     return $name;
 }
 
-function upload_map($map, $map_name)
+function upload_map($map, $map_name, $solution)
 {
     require('include/connect_db.php');
     $uid = get_uid();
     $_map = mysqli_real_escape_string($connexion, $map);
-    $text = "INSERT INTO `user_map` (`userID`, `map`, `map_name`, `map_id`, `is_official`, `diff`) VALUES ('$uid', '$map', '$map_name', NULL, '0', '1');";
+    $text = "INSERT INTO `user_map` (`userID`, `map`, `map_name`, `map_id`, `is_official`, `diff`, `solution`) VALUES ('$uid', '$map', '$map_name', NULL, '0', '1', '$solution');";
     $req = mysqli_query($connexion, $text);
     return $req;
 }

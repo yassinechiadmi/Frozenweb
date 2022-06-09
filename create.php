@@ -39,7 +39,7 @@ if (isset($_POST['generator'])) {
 }
 
 if (isset($_POST["upload"])) {  // if the user has submitted the form
-    if (isset($_POST["map_json"])) {  // if the user as use the publish button
+    if (isset($_POST["map_json"])) {  // if the user pressed the publish button
         $map = $_POST["map_json"];
         if (isset($_POST["map_id"])) { // if the user is on edit mode
             $map_id = $_POST["map_id"];
@@ -52,6 +52,15 @@ if (isset($_POST["upload"])) {  // if the user has submitted the form
         $_file = $_FILES["map_file"]["tmp_name"]; // On choppe le nom du fichier
         try {
             $map = file_get_contents($_file); // On lit le texte
+            
+            $solved_info = json_decode($map);
+            $size = $solved_info->width;
+            $diff = "1";
+            $path = getcwd();
+            $map_name = "map.json";
+            $prog_name = "PathGenerator.exe";
+            exec("$path\\backend\\$prog_name solve $size $size $diff $map_name");
+            $solution = file_get_contents("solved/map.json");
 
         } catch (\Throwable $th) {
             $emptyFile = true;  // On indique que le fichier est vide
@@ -61,10 +70,11 @@ if (isset($_POST["upload"])) {  // if the user has submitted the form
     }
 
     $map_name = $_POST["map_name"];
-    $ret = upload_map($map, $map_name);
+    print_r($solution);
+    $ret = upload_map($map, $map_name, $solution);
     $uid = get_uid();
     if (!$ret) echo "$ret, $uid";
-    header("Location:create.php");
+    //header("Location:create.php");
 }
 
 here:

@@ -64,7 +64,7 @@ if ($map_id != "null") {
         <div class="panel">
             <h1>Congratulation !</h1>
             <?php
-            echo "<h3>You completed" . empty($map_name) ? $mes : $map_name . "in <strong>$move</strong> moves</h3>"
+            echo "<h3>You completed the map in <strong>$move</strong> moves</h3>"
             ?>
             <a class="retry-button" href="http://localhost:5500/"></a>
         </div>
