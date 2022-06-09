@@ -32,7 +32,8 @@ $map_name = "";
 if ($map_id != "null") {
     $mes = "the map";
     $res = mysqli_query($connexion, "SELECT move from score WHERE map_id = $map_id AND user_id = $user_id");
-    if (mysqli_num_rows($res) == 0) {
+    
+    if (!$res or mysqli_num_rows($res) == 0) {
         // echo "No score found";
         $res = mysqli_query($connexion, "INSERT INTO `score` (`id`, `user_id`, `map_id`, `move`) VALUES (NULL, '$user_id', '$map_id', '$move')");
         // if ($res) {
@@ -66,7 +67,7 @@ if ($map_id != "null") {
             <?php
             echo "<h3>You completed the map in <strong>$move</strong> moves</h3>"
             ?>
-            <a class="retry-button" href="http://localhost:5500/"></a>
+            <a class="retry-button" href="http://localhost/game.php"></a>
         </div>
 
     </div>

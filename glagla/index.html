@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="shortcut icon" href="./assets/icon2.png" type="image/png" />
+        <title>testing</title>
+        <link rel="stylesheet" href="style.css" />
+        <script type="module" src="./main.js"></script>
+    </head>
+
+    <body>
+        <div id="menu" class="disable">
+            <div>
+                <!-- <audio
+                    id="music"
+                    controls="controls"
+                    autoplay="autoplay"
+                    style="display: none"
+                >
+                    <source src="music/theme.mp3" type="audio/mpeg" />
+                </audio> -->
+            </div>
+            <a id="home" href="http://localhost/">
+                <img id="exitt" src="./assets/exit1.png" alt="exit" />
+            </a>
+            <input
+                class="gamebutton"
+                type="submit"
+                id="continue_btn"
+                value="CONTINUE"
+            />
+
+            <input
+                class="gamebutton"
+                id="edit_btn"
+                type="submit"
+                value="EDIT"
+            />
+            <!-- Boutons settings -->
+            <div class="modal-container">
+                <div class="overlay modal-trigger"></div>
+                <div
+                    class="modal"
+                    role="dialog"
+                    aria-labelledby="modalTitle"
+                    aria-describedby="dialogDesc"
+                >
+                    <button
+                        aria-label="close modal"
+                        class="close-modal modal-trigger"
+                    >
+                        X
+                    </button>
+
+                    <h1 id="modalTitle">Voici du Contenu</h1>
+
+                    <!-- Bouton volume -->
+                    <div class="volume">
+                        <div
+                            id="playPauseBTN"
+                            class="play"
+                            onclick="playPause()"
+                        ></div>
+
+                        <div class="slider">
+                            <div class="value left">0%</div>
+                            <input
+                                id="sound-volume"
+                                type="range"
+                                min="0"
+                                max="100"
+                                value="100"
+                                steps="1"
+                            />
+                            <div class="value right">100%</div>
+                        </div>
+                    </div>
+                    <!-- Fin bouton volume -->
+                </div>
+            </div>
+            <input
+                class="modal-btn modal-trigger gamebutton"
+                type="submit"
+                name="soumission"
+                id="soumission"
+                value="OPTIONS"
+            />
+            <!-- Fin bouton settings -->
+        </div>
+        <div id="move-counter" class="move-counter">0</div>
+        <div id="drop-area"></div>
+        <canvas id="gameWindow"></canvas>
+        <script src="./menu.js"></script>
+        <script src="./sound.js"></script>
+    </body>
+</html>
