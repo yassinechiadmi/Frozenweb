@@ -25,11 +25,12 @@ $map_id = $_POST['id'];
 $user_id = get_uid();
 $move = $_POST['move'];
 // echo $map_id . " " . $user_id . " " . $move;
-$mes = "the unregister map";
+$mes = "the unregistered map";
+$map_name = "";
+
 if ($map_id != "null") {
     $mes = "the map";
     $res = mysqli_query($connexion, "SELECT move from score WHERE map_id = $map_id AND user_id = $user_id");
-
     if (mysqli_num_rows($res) == 0) {
         // echo "No score found";
         $res = mysqli_query($connexion, "INSERT INTO `score` (`id`, `user_id`, `map_id`, `move`) VALUES (NULL, '$user_id', '$map_id', '$move')");
@@ -43,6 +44,7 @@ if ($map_id != "null") {
         if (mysqli_fetch_assoc($res)['move'] > $move) {
             mysqli_query($connexion, "UPDATE `score` SET `move`=$move WHERE `map_id` = $map_id AND `user_id` = $user_id");
         }
+        $map_name = $res["map_name"];
     }
 }
 
@@ -58,9 +60,9 @@ if ($map_id != "null") {
 
     <div class="center-div">
         <div class="panel">
-            <h1>Congratulation</h1>
+            <h1>Congratulation !</h1>
             <?php
-            echo "<h3>You completed $mes in <strong>$move</strong> move</h3>"
+            echo "<h3>You completed".empty($map_name) ? $mes : $map_name."in <strong>$move</strong> moves</h3>"
             ?>
             <a class="retry-button" href="http://localhost:5500/"></a>
         </div>
