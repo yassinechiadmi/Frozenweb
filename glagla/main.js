@@ -222,9 +222,7 @@ const edit_btn = document.getElementById("edit_btn");
 
 edit_btn.addEventListener("click", () => {
     window.location =
-        localStorage.getItem("editorUrl") +
-        "?map-data=" +
-        JSON.stringify(game.world.level);
+        "http://localhost/editor/?map-data=" + JSON.stringify(game.world.level);
 });
 
 //#region Camera //
@@ -352,9 +350,7 @@ controller.register(
     ["e"],
     () => {
         window.location =
-            localStorage.getItem("editorUrl") +
-            "?map-data=" +
-            JSON.stringify(game.world.level);
+        "http://localhost/editor/?map-data=" + JSON.stringify(game.world.level);            
         // window.location =
         //     "https://bafbi.github.io/2d-tilemap-editor/?map-data=" +
         //     JSON.stringify(game.world.level);

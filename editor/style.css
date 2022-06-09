@@ -1,0 +1,144 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+body {
+    height: 100vh;
+    overflow: hidden;
+}
+
+#editor {
+    width: 100%;
+    height: 100%;
+}
+
+.cache {
+    display: none;
+}
+
+#newMap {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+}
+
+#newMap button {
+    height: 100%;
+}
+
+#tilesheet {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: 100%;
+    width: max-content;
+}
+
+#tilesheet li img {
+    image-rendering: pixelated;
+    width: 64px;
+}
+
+#tilesheet li {
+    border: solid rgb(184, 255, 4) 2px;
+}
+
+#tilesheet li.selected {
+    border-color: rgb(255, 6, 188);
+}
+
+.tools {
+    position: absolute;
+    top: 1%;
+    right: 1%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 1rem;
+}
+
+.tools * {
+    border: 0.2rem solid rgb(0, 5, 106);
+    border-radius: 0.5rem;
+    background-color: rgb(194, 255, 255);
+    color: black;
+    padding: 0.2rem 0.6rem;
+}
+
+.tools *:hover {
+    cursor: pointer;
+}
