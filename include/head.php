@@ -9,8 +9,8 @@
   <link rel="stylesheet" href="static/header.css" />
   <link rel="stylesheet" href="static/faq.css" />
   <link rel="stylesheet" href="static/register.css" />
-  <link rel="stylesheet" href="static/game.css">
+  <link rel="stylesheet" href="static/game.css"/>
   <!-- <link rel="stylesheet" href="static/form.css"> -->
-  <link rel="shortcut icon" href="rs/icon2.png" type="image/png">
-  <i id="top"></i>
+  <link rel="shortcut icon" href="rs/icon2.png" type="image/png"/>
+  <!-- <i id="top"></i> -->
 </head>

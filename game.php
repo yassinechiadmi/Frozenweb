@@ -8,6 +8,35 @@ require("include/head.php") ?>
     <?php require("include/nav.php"); ?>
 
     <?php
+        if(isset($_POST['generator']))
+        {
+            $size = $_POST['size'];
+            $diff = $_POST['diff'];
+            $path = getcwd();
+            $map_name = "map.json";
+            $cmd = "$path\\backend\\path.exe gen $size $size $diff $map_name";
+            // echo $cmd;
+            exec("$path\\backend\\path.exe gen $size $size $diff $map_name");
+            exec("$path\\backend\\path.exe solve $size $size $diff $map_name");
+            // $newloc = GAME_URL.'?map-data=';
+            $raw_data = file_get_contents("exported/map.json");
+            // $json_data = json_decode($raw_data);
+            // echo $raw_data;
+            $game_location = GAME_URL.'?map-data='.$raw_data;
+            // echo $game_location;
+            echo "<meta http-equiv='refresh' content='0;url=$game_location'>";
+        }
+
+    ?>
+
+
+    <form action="game.php" method="post">
+        <input type="number" name="size" value=10>
+        <input type="number" min=1 max=3 name="diff" value=1>
+        <input type="submit" name="generator" value="Gen new map">
+    </form>
+
+    <?php
     require_once("include/connect_db.php");
     if(isset($_POST['rng'])){
         $req_umap = mysqli_query($connexion, "SELECT * from user_map");
@@ -26,7 +55,6 @@ require("include/head.php") ?>
 
 
     }
-
     ?>
     <form action="game.php" method="post">
         <input type="submit" name="rng" value="Random Map">
