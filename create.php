@@ -84,7 +84,12 @@ here:
             <label>Map size :</label>
             <input type="number" name="size" value=10>
             <label>Difficulty :</label>
-            <input type="number" min=1 max=3 name="diff" value=1>
+            <select name="diff">
+                <option value="1">Easy</option>
+                <option value="2">Medium</option>
+                <option value="3">Hard</option>
+            </select>
+            <!-- <input type="number" min=1 max=3 name="diff" value=1> -->
             <input type="submit" name="generator" value="Gen new map">
         </form>
 
