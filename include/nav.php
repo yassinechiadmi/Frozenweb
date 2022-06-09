@@ -18,7 +18,7 @@
 				echo "<li><a id=\"login\" href='login.php'><i class='nav-btn' aria-hidden='true'></i>Login</a></li>";
 				echo "<li><a id=\"register\" href='register.php'><i class='nav-btn' aria-hidden='true'></i>Register</a></li>";
 			} else if (isset($_SESSION["username"])) {
-				echo "<li><a href=\"upload.php\">Upload Map</a></li>";
+				echo "<li><a href=\"create.php\">Create Map</a></li>";
 				echo "<li><a id=\"login\" href='profile.php'><i class='nav-btn' aria-hidden='true'></i>" . $_SESSION['username'] . "</a></li>";
 				echo "<li><a id=\"logout\" href='logout.php'><i class='nav-btn' aria-hidden='true'></i>Logout</a></li>";
 			} else {
