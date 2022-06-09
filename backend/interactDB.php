@@ -47,12 +47,13 @@ function edit_password()
     }
 }
 
-function get_uid($username)
+function get_uid($user_pseudo)
 {
     require('include/connect_db.php');
-    $res = mysqli_query($connexion, "SELECT `id` FROM `user` WHERE `username` = '$username'");
-    $uid = mysqli_fetch_assoc($res)["id"];
-    return $uid;
+
+    $res = mysqli_query($connexion, "SELECT `id` FROM `user` WHERE `username` = '$user_pseudo'");
+    $uid = mysqli_fetch_assoc($res);
+    return $uid["id"];
 }
 
 function get_pfp()

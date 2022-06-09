@@ -1,8 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
 <?php
 require("include/head.php");
-require("include/nav.php");
-
 // session_start();
+
+require("include/connect_db.php");
+require("backend/interactDB.php");
+
+session_start();
+
 
 if (!isset($_POST['id'])) {
     header("Location:index.php");
@@ -14,8 +20,6 @@ if (!isset($_POST['id'])) {
     // die();
 }
 
-require("include/connect_db.php");
-require("backend/interactDB.php");
 
 $map_id = $_POST['id'];
 $user_id = get_uid($_SESSION['username']);
