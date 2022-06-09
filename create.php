@@ -32,7 +32,7 @@ if (isset($_POST['generator'])) {
     $solved_info = json_decode(file_get_contents("solved/map.json"));
     $move_count = count($solved_info->path);
     echo $move_count;
-    $game_location = GAME_URL . '?map-data=' . $raw_data; //.'&path=' . json_encode($solved_info->path);
+    $game_location = GAME_URL . '?map-data=' . $raw_data . '&path=' . json_encode($solved_info->path);
     $game_location = str_replace(array("\n", "\r"), '', $game_location);
     header("Location:$game_location");
 }
@@ -68,11 +68,12 @@ if (isset($_POST["upload"])) {  // if the user has submitted the form
     $solution = file_get_contents("solved/map.json");
 
     $map_name = $_POST["map_name"];
-    print_r($solution);
+    // print_r($solution);
     $ret = upload_map($map, $map_name, $solution);
     $uid = get_uid();
     if (!$ret) echo "$ret, $uid";
-    //header("Location:create.php");
+    header("Location:create.php");
+    die();
 }
 
 here:
