@@ -2,7 +2,8 @@
 <html lang="en">
 
 <?php require("include/head.php");
-define('GAME_URL', 'https://bafbi.github.io/glagla/');
+// define('GAME_URL', 'https://bafbi.github.io/glagla/');
+define('GAME_URL', 'http://localhost:5500/');
 
 $emptyFile = false;
 
@@ -55,29 +56,28 @@ here:
     require("include/nav.php");
 
     ?>
-<?php
-        if(isset($_POST['generator']))
-        {
-            $size = $_POST['size'];
-            $diff = $_POST['diff'];
-            $path = getcwd();
-            $map_name = "map.json";
-            $prog_name = "PathGenerator.exe";
-            $cmd = "$path\\backend\\$prog_name gen $size $size $diff $map_name";
-            exec("$path\\backend\\$prog_name gen $size $size $diff $map_name");
-            exec("$path\\backend\\$prog_name solve $size $size $diff $map_name");
-            $raw_data = file_get_contents("exported/map.json");
-            $solved_info = json_decode(file_get_contents("solved/map.json"));
-            $move_count = count($solved_info->path);
-            echo $move_count;
-            $game_location = GAME_URL.'?map-data='.$raw_data.'&scount='.$move_count;            
-            echo "<meta http-equiv='refresh' content='0;url=$game_location'>";
-        }
+    <?php
+    if (isset($_POST['generator'])) {
+        $size = $_POST['size'];
+        $diff = $_POST['diff'];
+        $path = getcwd();
+        $map_name = "map.json";
+        $prog_name = "PathGenerator.exe";
+        $cmd = "$path\\backend\\$prog_name gen $size $size $diff $map_name";
+        exec("$path\\backend\\$prog_name gen $size $size $diff $map_name");
+        exec("$path\\backend\\$prog_name solve $size $size $diff $map_name");
+        $raw_data = file_get_contents("exported/map.json");
+        $solved_info = json_decode(file_get_contents("solved/map.json"));
+        $move_count = count($solved_info->path);
+        echo $move_count;
+        $game_location = GAME_URL . '?map-data=' . $raw_data . '&path=' . json_encode($solved_info->path);
+        echo "<meta http-equiv='refresh' content='0;url=$game_location'>";
+    }
 
     ?>
 
 
-   
+
 
     <div id="case" class="row-container">
         <form action="create.php" method="post" class="map_generator">
