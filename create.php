@@ -83,7 +83,7 @@ here:
     <div id="case" class="row-container">
         <form action="create.php" method="post" class="map_generator">
             <label>Map size :</label>
-            <input type="number" name="size" value=10>
+            <input type="number" name="size" min=5 max=100 value=10>
             <label>Difficulty :</label>
             <select name="diff">
                 <option value="1">Easy</option>
