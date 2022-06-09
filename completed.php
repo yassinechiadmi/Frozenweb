@@ -42,7 +42,8 @@ if ($map_id != "null") {
         if (mysqli_fetch_assoc($res)['move'] > $move) {
             mysqli_query($connexion, "UPDATE `score` SET `move`=$move WHERE `map_id` = $map_id AND `user_id` = $user_id");
         }
-        $map_name = $res["map_name"];
+        // $map_name = mysqli_fetch_assoc($res)['map_name'];
+        // echo $map_name;
     }
 }
 
@@ -60,7 +61,7 @@ if ($map_id != "null") {
         <div class="panel">
             <h1>Congratulation !</h1>
             <?php
-            echo "<h3>You completed".empty($map_name) ? $mes : $map_name."in <strong>$move</strong> moves</h3>"
+            echo "<h3>You completed $mes in <strong>$move</strong> moves</h3>"
             ?>
             <a class="retry-button" href="http://localhost:5500/"></a>
         </div>
