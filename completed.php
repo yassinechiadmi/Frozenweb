@@ -3,17 +3,17 @@
 <?php
 require("include/head.php");
 // session_start();
+session_start();
 
 require("include/connect_db.php");
 require("backend/interactDB.php");
 
-session_start();
 
 
 if (!isset($_POST['id'])) {
     header("Location:index.php");
     // die();
-} elseif (!isset($_SESSION['username'])) {
+} elseif (!isset($_SESSION["username"])) {
     echo "pas de username<br>";
     var_dump($_SESSION);
     // header("Location:login.php");
@@ -22,7 +22,7 @@ if (!isset($_POST['id'])) {
 
 
 $map_id = $_POST['id'];
-$user_id = get_uid($_SESSION['username']);
+$user_id = get_uid();
 $move = $_POST['move'];
 // echo $map_id . " " . $user_id . " " . $move;
 $mes = "the unregister map";
