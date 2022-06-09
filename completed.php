@@ -1,21 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
 <?php
 require("include/head.php");
+// session_start();
+
+require("include/connect_db.php");
+require("backend/interactDB.php");
 
 session_start();
 
+
 if (!isset($_POST['id'])) {
     header("Location:index.php");
-    die();
+    // die();
 } elseif (!isset($_SESSION['username'])) {
-    header("Location:login.php");
-    die();
+    echo "pas de username<br>";
+    var_dump($_SESSION);
+    // header("Location:login.php");
+    // die();
 }
 
-require_once("include/connect_db.php");
-require_once("backend/interactDB.php");
 
 $map_id = $_POST['id'];
-$user_id = get_uid();
+$user_id = get_uid($_SESSION['username']);
 $move = $_POST['move'];
 // echo $map_id . " " . $user_id . " " . $move;
 $mes = "the unregistered map";
