@@ -7,10 +7,13 @@ define('GAME_URL', 'https://bafbi.github.io/glagla/');
 
 $emptyFile = false;
 
+if (session_status() != PHP_SESSION_ACTIVE) {
+    session_start();
+}
+
 require("include/connect_db.php");
 require("backend/interactDB.php");
 
-session_start();
 
 if (!isset($_SESSION["username"])) {
     header("Location:login.php");
@@ -31,7 +34,7 @@ if (isset($_POST['generator'])) {
     $move_count = count($solved_info->path);
     echo $move_count;
     $game_location = GAME_URL . '?map-data=' . $raw_data . '&path=' . json_encode($solved_info->path);
-    $game_location = str_replace(array("\n","\r"),'',$game_location);
+    $game_location = str_replace(array("\n", "\r"), '', $game_location);
     header("Location:$game_location");
 }
 
@@ -81,7 +84,7 @@ here:
     <?php
     require("include/nav.php");
 
-    
+
 
     ?>
 

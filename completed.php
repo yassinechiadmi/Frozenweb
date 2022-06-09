@@ -1,9 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
 <?php
+if (session_status() != PHP_SESSION_ACTIVE) {
+    session_start();
+}
 require("include/head.php");
 // session_start();
-session_start();
+
 
 require("include/connect_db.php");
 require("backend/interactDB.php");
@@ -41,7 +42,7 @@ if ($map_id != "null") {
         //     echo mysqli_error($connexion);
         // }
     } else {
-        if (mysqli_fetch_assoc($res)['move'] > $move) {
+        if ($res = mysqli_fetch_assoc($res)['move'] > $move) {
             mysqli_query($connexion, "UPDATE `score` SET `move`=$move WHERE `map_id` = $map_id AND `user_id` = $user_id");
         }
         // $map_name = mysqli_fetch_assoc($res)['map_name'];
@@ -63,7 +64,7 @@ if ($map_id != "null") {
         <div class="panel">
             <h1>Congratulation !</h1>
             <?php
-            echo "<h3>You completed $mes in <strong>$move</strong> moves</h3>"
+            echo "<h3>You completed" . empty($map_name) ? $mes : $map_name . "in <strong>$move</strong> moves</h3>"
             ?>
             <a class="retry-button" href="http://localhost:5500/"></a>
         </div>

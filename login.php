@@ -8,9 +8,9 @@
 
 
 	<?php
-	if (isset($_SESSION["username"]))
-		header('location:index.php');
 	require("include/nav.php");
+	if (isset($_SESSION["username"]))
+		header('Location:index.php');
 	require('include/connect_db.php');
 	if (empty($_SESSION["pseudo"])) {
 		$checkVal = "";
