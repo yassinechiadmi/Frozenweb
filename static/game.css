@@ -28,6 +28,15 @@
     margin: 0 auto;
 }
 
+input[type="number"], select {
+    width: 150px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--green);
+}
+
 label {
     color: #d7bdca;
 }
