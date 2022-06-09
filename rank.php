@@ -41,7 +41,6 @@
                 if ($req) {
                     $r = 1;
                     while ($row = mysqli_fetch_assoc($req)) {
-                        // print_r($row);
                         $u_name = $row['username'];
                         $u_score = $row['score'];
                         $id = (isset($_SESSION['username']) && $u_name == $_SESSION['username']) ? 'log_user' : "";
