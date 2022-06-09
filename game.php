@@ -21,7 +21,7 @@ require("include/head.php") ?>
             $endpoint = $map_array[$rand_number];
             $newloc = GAME_URL.'?map-data='.$endpoint;
             $newloc = str_replace(array("\n","\r"," "),'',$newloc);  
-            header("Location:$newloc");      
+            header("Location:$newloc");
             // echo "<meta http-equiv='refresh' content='0;url=$newloc'>";
         }
 
