@@ -7,27 +7,14 @@
 <body>
     <?php require("include/nav.php"); ?>
     <div class="center-div">
-        <!-- <div class="sub-bg"> -->
         <br>
         <div class="tbl-header">
             <h1>Community rank</h1>
-            <!-- <form action="" method="get">
-                <label style="color:white;">Select difficulty:
-                    <select name="diff" method="get">
-                        <option value="">...</option>
-                        <option value="1" <?php if (isset($_GET["diff"]) && $_GET["diff"] == 1) echo "selected='selected'"; ?>>Easy</option>
-                        <option value="2" <?php if (isset($_GET["diff"]) && $_GET["diff"] == 2) echo "selected='selected'"; ?>>Medium</option>
-                        <option value="3" <?php if (isset($_GET["diff"]) && $_GET["diff"] == 3) echo "selected='selected'"; ?>>Hard</option>
-                    </select>
-                </label>
-                <input type="submit" value="Select" style="width: fit-content; height: fit-content;">
-            </form> -->
             <table>
                 <tr>
                     <th>Rank</th>
                     <th>Username</th>
                     <th>Score</th>
-                    <!-- <th>Date</th> -->
                 </tr>
                 <table>
         </div>
@@ -55,7 +42,6 @@
             </table>
 
         </div>
-        <!-- </div> -->
 
     </div>
     <?php require("include/foot.php") ?>
