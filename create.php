@@ -128,7 +128,6 @@ here:
     <div class="map-container">
         <h2 style="color: white; text-align: center; text-shadow: 2px 2px 4px rgb(0 0 0);">Your maps</h2>
         <?php
-        echo "create : session uname : ".$_SESSION['username'];
         $uid = get_uid($_SESSION['username']);
         $req = mysqli_query($connexion, "SELECT * from `user_map` WHERE `userID` = $uid");
         if ($req == true) {
