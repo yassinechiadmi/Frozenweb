@@ -47,10 +47,9 @@ function edit_password()
     }
 }
 
-function get_uid()
+function get_uid($username)
 {
     require('include/connect_db.php');
-    $username = $_SESSION['username'];
     $res = mysqli_query($connexion, "SELECT `id` FROM `user` WHERE `username` = '$username'");
     $uid = mysqli_fetch_assoc($res)["id"];
     return $uid;
