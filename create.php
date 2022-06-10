@@ -20,19 +20,21 @@ if (!isset($_SESSION["username"])) {
 }
 
 if (isset($_POST['generator'])) {
-    $size = $_POST['size'];
+    $height = $_POST['height'];
+    $width = $_POST['width'];
+
     $diff = $_POST['diff'];
     $path = getcwd();
     $map_name = "map.json";
     $prog_name = "PathGenerator.exe";
-    $cmd = "$path\\backend\\$prog_name gen $size $size $diff $map_name";
-    exec("$path\\backend\\$prog_name gen $size $size $diff $map_name");
-    exec("$path\\backend\\$prog_name solve $size $size $diff $map_name");
+    $cmd = "$path\\backend\\$prog_name gen $height $width $diff $map_name";
+    exec("$path\\backend\\$prog_name gen $height $width $diff $map_name");
+    exec("$path\\backend\\$prog_name solve $height $width $diff $map_name");
     $raw_data = file_get_contents("exported/map.json");
     $solved_info = json_decode(file_get_contents("solved/map.json"));
     $move_count = count($solved_info->path);
     echo $move_count;
-    $game_location = GAME_URL . '?map-data=' . $raw_data;//.'&path=' . json_encode($solved_info->path);
+    $game_location = GAME_URL . '?map-data=' . $raw_data . '&path=' . json_encode($solved_info->path);
     $game_location = str_replace(array("\n", "\r"), '', $game_location);
     header("Location:$game_location");
 }
@@ -51,28 +53,29 @@ if (isset($_POST["upload"])) {  // if the user has submitted the form
         $_file = $_FILES["map_file"]["tmp_name"]; // On choppe le nom du fichier
         try {
             $map = file_get_contents($_file); // On lit le texte
-            
-            $solved_info = json_decode($map);
-            $size = $solved_info->width;
-            $diff = "1";
-            $path = getcwd();
-            $map_name = "map.json";
-            $prog_name = "PathGenerator.exe";
-            exec("$path\\backend\\$prog_name solve $size $size $diff $map_name");
-            $solution = file_get_contents("solved/map.json"); 
-
         } catch (\Throwable $th) {
             $emptyFile = true;  // On indique que le fichier est vide
             goto here;
         }
         unlink($_file); // On supprime le fichier temp
     }
+    $solved_info = json_decode($map);
+    $width = $solved_info->width;
+    $height = $solved_info->height;
+    $diff = "1";
+    $path = getcwd();
+    $map_name = "map.json";
+    $prog_name = "PathGenerator.exe";
+    exec("$path\\backend\\$prog_name solve $width $height $diff $map_name");
+    $solution = file_get_contents("solved/map.json");
 
     $map_name = $_POST["map_name"];
+    // print_r($solution);
     $ret = upload_map($map, $map_name, $solution);
     $uid = get_uid();
     if (!$ret) echo "$ret, $uid";
-    //header("Location:create.php");
+    header("Location:create.php");
+    die();
 }
 
 here:
@@ -81,17 +84,26 @@ here:
 
 <body>
     <link rel="stylesheet" href="static/forum.css">
-     <?php
+    <?php
     require("include/nav.php");
-    ?> 
+    ?>
 
 
 
 
     <div id="case" class="row-container">
         <form action="create.php" method="post" class="map_generator">
-            <label>Map size :</label>
-            <input type="number" name="size" min=5 max=100 value=10>
+            <a href="editor" class="editor">Edit a blank map</a>
+            <div class="row-container">
+                <div class="w">
+                    <label>Height :</label>
+                    <input type="number" name="width" min=5 max=100 value=10>
+                </div>
+                <div class="h">
+                    <label>Width :</label>
+                    <input type="number" name="height" min=5 max=100 value=10>
+                </div>
+            </div>
             <label>Difficulty :</label>
             <select name="diff">
                 <option value="1">Easy</option>
@@ -101,7 +113,7 @@ here:
             <!-- <input type="number" min=1 max=3 name="diff" value=1> -->
             <input type="submit" name="generator" value="Gen new map">
         </form>
-
+        
         <form method="post" action="" enctype="multipart/form-data" class="logform">
 
 
@@ -131,7 +143,6 @@ here:
 
         </form>
     </div>
-
 
 
     <div class="map-container">
