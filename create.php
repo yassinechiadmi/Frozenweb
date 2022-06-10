@@ -69,7 +69,6 @@ if (isset($_POST["upload"])) {  // if the user has submitted the form
     }
 
     $map_name = $_POST["map_name"];
-    print_r($solution);
     $ret = upload_map($map, $map_name, $solution);
     $uid = get_uid();
     if (!$ret) echo "$ret, $uid";
