@@ -59,7 +59,7 @@ if (isset($_POST["upload"])) {  // if the user has submitted the form
             $map_name = "map.json";
             $prog_name = "PathGenerator.exe";
             exec("$path\\backend\\$prog_name solve $size $size $diff $map_name");
-            $solution = file_get_contents("solved/map.json");
+            $solution = file_get_contents("solved/map.json"); 
 
         } catch (\Throwable $th) {
             $emptyFile = true;  // On indique que le fichier est vide
